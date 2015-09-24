@@ -1,0 +1,52 @@
+div , section{
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+}
+
+/* ====================    leftframe   =================*/
+
+.leftframe{
+	height: 1000px;
+	width: 25%;
+	float: left;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.leftframe .labels{
+	height: 50%;
+	width: 40%;
+}
+
+.leftframe .labels .active{
+	color: blue;
+	font-weight: bold;
+}
+
+/* ====================    cemterframe   =================*/
+
+.centerframe{
+	height: 3000px;
+	width: 50%;
+	float: left;
+}
+.centerframe p{
+	font-size: 20px;
+
+}
+
+.centerframe .test{
+	height: 500px;
+	width: 100%;
+}
+.centerframe img{
+	width: 100%;
+}
+
+/* ====================    rightframe   =================*/
+
+.rightframe{
+	height: 1000px;
+	width: 25%;
+}

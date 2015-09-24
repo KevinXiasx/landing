@@ -1,0 +1,35 @@
+
+/* ----------------------------- bottomframe -----------------------*/
+
+.bottomframe{
+	height:160px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #2C3E50;;	
+}
+
+.bottomframe > div{
+	height: 100%;
+	width: 20%;
+	float: left;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	color: white;
+	font-size:15px;
+}
+
+.bottomframe > div > div{
+	display: flex;
+	justify-content: center;
+}
+
+.bottomframe > div > div > div{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+}

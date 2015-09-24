@@ -1,0 +1,137 @@
+.page{
+	width: 100%;
+	height: 900px;
+	position: relative;
+	opacity: 0;
+	overflow: hidden;
+}
+
+.page div{
+/*	border: 1px solid #ccc;*/
+}
+
+
+.page > .imgs, .page > .text{
+	position: absolute;
+}
+
+.flexbox{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.direc-col{
+	display: flex;
+	flex-direction: column;
+}
+
+.main-start{
+	justify-content: flex-start;
+}
+
+.main-end{
+	justify-content: flex-end;
+}
+
+.main-between{
+	justify-content: space-between;
+}
+
+.main-around{
+	justify-content: space-around;
+}
+
+.title-line{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #333333;
+	font-size: 40px;
+	font-family: Roboto-Regular; 
+}
+
+.title-line:before, .title-line:after{
+	content: "";
+	display: inline-block;
+	height: 5px;
+	width: 30%;
+	background-color: #0199cb;
+}
+
+.title-line span{
+	height: 50%;
+	width: 30%;
+	display: inline-block;
+	text-align: center;
+}
+
+@-webkit-keyframes seemore{
+	0%{
+		transform:translateX(0px);
+	}
+	25%{
+		transform:translateX(-4px);
+	}
+	75%{
+		transform:translateX(4px);
+	}
+	100%{
+		transform:translateX(0px);
+	}
+}
+@-moz-keyframes seemore{
+	0%{
+		transform:translateX(0px);
+	}
+	25%{
+		transform:translateX(-4px);
+	}
+	75%{
+		transform:translateX(4px);
+	}
+	100%{
+		transform:translateX(0px);
+	}
+}
+@-o-keyframes seemore{
+	0%{
+		transform:translateX(0px);
+	}
+	25%{
+		transform:translateX(-4px);
+	}
+	75%{
+		transform:translateX(4px);
+	}
+	100%{
+		transform:translateX(0px);
+	}
+}
+@keyframes seemore{
+	0%{
+		transform:translateX(0px);
+	}
+	25%{
+		transform:translateX(-4px);
+	}
+	75%{
+		transform:translateX(4px);
+	}
+	100%{
+		transform:translateX(0px);
+	}
+}
+
+
+.morebtn button{
+	color: #f4972a;
+}
+
+.morebtn span{
+	display: inline-block;
+	-webkit-animation: seemore 4s linear 0s infinite;
+	animation: seemore 4s linear 0s infinite;
+	-moz-animation: seemore 4s linear 0s infinite;
+	-o-animation: seemore 4s linear 0s infinite;
+}

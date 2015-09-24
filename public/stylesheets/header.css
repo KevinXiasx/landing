@@ -1,0 +1,72 @@
+.alink-group ,.alink-group .btnx{
+	display: flex;
+}
+
+.alink-group{
+	height:96px;
+	width: 100%;
+	justify-content: space-around;
+	align-items: flex-end;
+	background-color: white;
+	color: #404040;
+	text-transform: uppercase;
+
+}
+.alink-group .logo{
+	height: 100%;
+	font-size:60px;
+	color: #404040;
+	font-family: Roboto-Black; 
+}
+
+.alink-group  a{
+	outline: none;
+	border: none;
+	text-decoration:none;
+}
+
+.alink-group .logo a:hover , .alink-group .logo a{
+	color: #404040;
+}
+.alink-group .btnx a:hover , .alink-group .btnx a{
+	color: #404040;
+}
+
+.alink-group .btnx span{
+	display: inline-block;
+	border-radius: 40%;
+	transition: all 0.25s ease-out;
+	font-size:24px;
+	cursor: pointer;
+}
+
+/*.alink-group .btnx i{
+	border-radius: 50%;
+	height: 30px;
+	width: 30px;
+	font-size: 20px;
+	background-color: white;
+	color: #2C3E50;
+	text-align: center;
+	display: inline-block;
+	padding-top: 8px;
+}*/
+.btnx:hover span{
+	color: #00CD66;
+}
+.alink-group .btnx{
+	height: 50%;
+	padding:12px;
+	justify-content: center;
+	align-items: center;
+	float: left;
+	position: relative;
+}
+
+.alink-group .btnx:not(:nth-child(1)){
+	margin-left: 50px;
+}
+.alink-group .btns{
+	border-top: 2px solid #0199cb;
+	font-family: Candara; 
+}

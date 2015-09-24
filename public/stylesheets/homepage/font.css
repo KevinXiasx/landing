@@ -1,0 +1,149 @@
+/* ========================= server font =================*/
+
+@font-face {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 700;
+  src:url("/fonts/fonts-1.woff2") format("woff2");
+}
+
+@font-face{
+	font-family: textfont;
+	src:url("/fonts/antrf___.ttf") format("truetype");
+}
+
+@font-face{
+	font-family: textfont2;
+	src:url("/fonts/hee.ttf") format("truetype");
+}
+
+@font-face { 
+font-family: seguisb; 
+ src:url("/fonts/SegoeUI/seguisb.ttf") format("truetype");
+}
+
+@font-face { 
+font-family: segoeuiz; 
+ src:url("/fonts/SegoeUI/segoeuiz.ttf") format("truetype");
+}
+
+@font-face { 
+font-family: segoeuil; 
+ src:url("/fonts/SegoeUI/segoeuil.ttf") format("truetype");
+}
+
+@font-face { 
+font-family: segoeuii; 
+ src:url("/fonts/SegoeUI/segoeuii.ttf") format("truetype");
+}
+
+@font-face { 
+font-family: segoeuib; 
+ src:url("/fonts/SegoeUI/segoeuib.ttf") format("truetype");
+}
+
+@font-face { 
+font-family: segoeui; 
+ src:url("/fonts/SegoeUI/segoeui.ttf") format("truetype");
+}
+
+@font-face { 
+font-family: Roboto-ThinItalic; 
+ src:url("/fonts/Roboto/Roboto-ThinItalic.ttf") format("truetype");
+}
+
+@font-face { 
+font-family: Roboto-Thin; 
+ src:url("/fonts/Roboto/Roboto-Thin.ttf") format("truetype");
+}
+
+@font-face { 
+font-family: Roboto-Regular; 
+ src:url("/fonts/Roboto/Roboto-Regular.ttf") format("truetype");
+}
+
+@font-face { 
+font-family: Roboto-MediumItalic; 
+ src:url("/fonts/Roboto/Roboto-MediumItalic.ttf") format("truetype");
+}
+
+@font-face { 
+font-family: Roboto-Medium; 
+ src:url("/fonts/Roboto/Roboto-Medium.ttf") format("truetype");
+}
+
+@font-face { 
+font-family: Roboto-LightItalic; 
+ src:url("/fonts/Roboto/Roboto-LightItalic.ttf") format("truetype");
+}
+
+@font-face { 
+font-family: Roboto-Light; 
+ src:url("/fonts/Roboto/Roboto-Light.ttf") format("truetype");
+}
+
+@font-face { 
+font-family: Roboto-Italic; 
+ src:url("/fonts/Roboto/Roboto-Italic.ttf") format("truetype");
+}
+
+@font-face { 
+font-family: Roboto-CondensedItalic; 
+ src:url("/fonts/Roboto/Roboto-CondensedItalic.ttf") format("truetype");
+}
+
+@font-face { 
+font-family: Roboto-Condensed; 
+ src:url("/fonts/Roboto/Roboto-Condensed.ttf") format("truetype");
+}
+
+@font-face { 
+font-family: Roboto-BoldItalic; 
+ src:url("/fonts/Roboto/Roboto-BoldItalic.ttf") format("truetype");
+}
+
+@font-face { 
+font-family: Roboto-BoldCondensedItalic; 
+ src:url("/fonts/Roboto/Roboto-BoldCondensedItalic.ttf") format("truetype");
+}
+
+@font-face { 
+font-family: Roboto-BoldCondensed; 
+ src:url("/fonts/Roboto/Roboto-BoldCondensed.ttf") format("truetype");
+}
+
+@font-face { 
+font-family: Roboto-Bold; 
+ src:url("/fonts/Roboto/Roboto-Bold.ttf") format("truetype");
+}
+
+@font-face { 
+font-family: Roboto-BlackItalic; 
+ src:url("/fonts/Roboto/Roboto-BlackItalic.ttf") format("truetype");
+}
+
+@font-face { 
+font-family: Roboto-Black; 
+ src:url("/fonts/Roboto/Roboto-Black.ttf") format("truetype");
+}
+
+@font-face { 
+font-family: Candaraz; 
+ src:url("/fonts/Candara/Candaraz.ttf") format("truetype");
+}
+
+@font-face { 
+font-family: Candarai; 
+ src:url("/fonts/Candara/Candarai.ttf") format("truetype");
+}
+
+@font-face { 
+font-family: Candarab; 
+ src:url("/fonts/Candara/Candarab.ttf") format("truetype");
+}
+
+@font-face { 
+font-family: Candara; 
+ src:url("/fonts/Candara/Candara.ttf") format("truetype");
+}
+

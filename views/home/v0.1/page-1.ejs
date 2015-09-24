@@ -1,0 +1,43 @@
+<link rel="stylesheet" type="text/css" href="/stylesheets/homepage/v0.1/page-1.css">
+
+<section class="page flexbox" id="page-1" data-title="1">
+
+	<div class="allcontent flexbox direc-col main-start" >
+		<div class="title-line">
+			<span>What we offer</span>
+		</div>
+		<div class="info-group flexbox main-between">
+			<div class="info">
+				<div class="iconimg "></div>
+				<div class="texts">
+
+				</div>
+			</div>
+			<div class="info">
+				<div class="iconimg"></div>
+				<div class="texts">
+
+				</div>
+			</div>
+			<div class="info">
+				<div class="iconimg"></div>
+				<div class="texts">
+					<p >Factory</p>
+					<p>  we make it in here</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<script type="text/javascript">
+	$(document).ready(function () {
+		var i = 2;
+
+		$('#page-1 .info:not(:last-child) .texts').each(function () {
+			var srcele = '#page-'+ i;
+			$(this).append('<p>'+ $(srcele+' .pagetitle').text() +'</p>').append('<p>' + $(srcele+' .onestatment').text() + '</p>');
+			i++;
+		})
+	});
+</script>

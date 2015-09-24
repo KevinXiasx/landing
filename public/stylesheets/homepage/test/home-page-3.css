@@ -1,0 +1,86 @@
+/* -----------------------------page-3 -----------------------*/
+
+#page-3 #text1{
+	height: 25%;
+	width: 50%;
+	left: 25%;
+	top: 8%;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
+
+#page-3 #text1 hr{
+	background-color: #2C3E50;
+	height:3px;
+}
+
+#page-3 .iconline{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 0.6;
+}
+
+.iconline .doublelinebox{
+	justify-content: center;
+	flex-direction: column;
+	display: flex;
+}
+
+.iconline .doublelinebox:nth-child(1){
+	align-items: flex-end;
+	margin-right: 10px;
+	
+}
+.iconline .doublelinebox:nth-child(3){
+	align-items: flex-start;
+	margin-left: 10px;
+}
+.iconline .doublelinebox div:nth-child(1){
+	width: 200px;
+	height: 20px;
+}
+
+.iconline .doublelinebox div:nth-child(2){
+	width: 100px;
+	height: 20px;
+}
+
+#page-3 .img{
+	position: absolute;
+	height: 300px;
+	width: 300px;
+	opacity: 0;
+}
+
+#page-3  #partner-1{
+	left: 10%;
+	top: 20%;
+	background:url("/images/partner/hvpd.jpg") no-repeat center center;
+}
+
+#page-3  #partner-2{
+	left: 25%;
+	top: 35%;
+	background:url("/images/partner/hitech.png") no-repeat center center;
+}
+
+#page-3  #partner-3{
+	left: 42%;
+	top: 42%;
+	background:url("/images/partner/mozilla.jpg") no-repeat center center;
+}
+
+#page-3  #partner-4{
+	left: 59%;
+	top: 35%;
+	background:url("/images/partner/spectek_logo.gif") no-repeat center center;
+}
+#page-3  #partner-5{
+	left: 74%;
+	top: 20%;
+	background:url("/images/partner/kddi.jpg") no-repeat center center;
+}
+
