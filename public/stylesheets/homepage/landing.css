@@ -1,6 +1,5 @@
 
 /* ------------------------- server font -----------------*/
-
 body{
 	margin: 0px;
 	padding: 0px;
@@ -101,53 +100,6 @@ div, section{
 	float: left;
 	position: relative;
 }
-
-
-/* ========================= top frame =================*/
-
-.topframe {
-	display: flex;
-}
-
-.topframe{
-	width: 100%;
-	background-color:#101010;
-	height:992px;
-	font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-	position: relative;
-}
-
-.topframe #bgimg{
-	background-image: url("/images/homepage/3.png");
-	opacity: 0.1;
-	width: 100%;
-	height: 100%;
-	background-size: cover;
-	position: absolute;
-}
-
-.maintitle{
-	position: relative;
-	opacity: 0;
-	left: 10%;
-	top: 30%;
-	width: 80%;
-	color: white;
-	height: 35%;
-}
-.maintitle span{
-	text-align: right;
-	display: block;
-	margin:10px;
-}
-.maintitle span:nth-child(1){
-	font-size:80px;
-	text-transform: uppercase;
-}
-.maintitle span:nth-child(2){
-	font-size:40px;
-}
-/* ------------------------- top frame -----------------*/
 
 
 

@@ -1,0 +1,332 @@
+@import "animation.less";
+
+h1{
+	font-family: Roboto-Regular;
+}
+
+h2{
+	color: @radxa-sdark;
+	font-family: Candara;
+	font-size: 30px;		
+}
+h3{
+	color: #686767;
+	font-family: Roboto-Condensed;
+	font-size: 28px;		
+}
+
+
+/*====================   header  ====================*/
+
+#header {
+	background-color: #FFFFFF;
+	border: none;
+	.container{
+		margin-top: 20px;
+		margin-bottom: 10px;
+	}
+	.logo{
+		font-size:60px;
+		color: @radxa-dark;
+		font-family: Roboto-Black; 	
+	}
+	.links{
+		font-size:24px;
+		cursor: pointer;
+		color: @radxa-sdark;
+		font-family: Candara;
+	}
+	.navbar-right{
+		margin-top: 10px;
+		border-top: 2px solid @radxa-blue;
+		a:hover{
+			color:@radxa-blue;
+		}
+		a{
+			margin-left: 30px;
+		}
+	}
+}
+
+/* ========================= top frame =================*/
+
+.topframe{
+	width: 100%;
+	background-color:#101010;
+	height:990px;
+	font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	position: relative;
+	background: url("/images/homepage/3.png") no-repeat center center;
+	background-size: cover;
+	.cover{
+		background-color: black;
+		opacity: 0.85;
+	}
+}
+
+.maintitle{
+	opacity: 0;
+	color: white;
+	span{
+		text-align: center;
+		display: block;
+		margin:10px;
+		&:nth-child(1){
+			font-size:70px;
+		}
+		&:nth-child(2){
+			font-size:40px;
+		}
+	}
+}
+
+
+/* ========================= pages =================*/
+.page{
+	width: 100%;
+	position: relative;
+	opacity: 0;
+	padding-top: 100px;
+	div{
+/*		border: 1px solid #ccc;*/
+	}
+
+	.title-line{
+		color: @radxa-sdark;
+		font-size: 40px;
+		height: 15%;
+		width: 80%;
+		&:before,
+		&:after{
+			content: "";
+			display: inline-block;
+			height: 5px;
+			width: 30%;
+			background-color: @radxa-blue;			
+		}
+	}
+	.iconimg{
+		background-position: center center;
+		background-repeat: no-repeat;
+	}
+
+	.texts{
+		h2,h3{
+			padding-top: 30px;
+			text-align: center;
+		}
+		p{
+			padding-top: 10px;
+			font-size: 25px;
+			font-family: Roboto-Light;
+		}
+	}
+	button{
+		margin-top: 50px;
+	}
+}
+
+#page-1{
+	.info-group{
+		height: 80%;
+		width: 90%;
+	}
+	#row-1{
+
+	}
+	#row-2{
+		@iconwidth:250px;
+		.iconimg{
+			width: @iconwidth;
+			height: @iconwidth*0.95;
+			background-size: 80% auto;
+		}
+		.col{	
+			&:nth-of-type(1) .iconimg{
+				background-image: url("/images/page1/product.png");
+			}
+			&:nth-of-type(2) .iconimg{
+				background-image: url("/images/page1/10ai.png");
+			}
+			&:nth-of-type(3) .iconimg{
+				background-image: url("/images/page1/family.png");
+			}
+		}
+	}
+	#row-3{
+		hr{
+			height: 5px;
+			width: 80%;
+			background-color:  @radxa-blue;
+		}
+	}
+}
+
+
+#page-2{
+	.row:nth-of-type(1){
+		@iconwidth: 150px;
+		.iconimg{
+			width: @iconwidth;
+			height: @iconwidth;
+			background-image: url("/images/pages/hardware.png");
+			background-size: 90% auto;
+		}
+	}
+	.row:nth-of-type(2){
+		@iconwidth: 450px;
+		.iconimg{
+			width: @iconwidth;
+			height: @iconwidth;
+			background-image: url("/images/pages/rock.png");
+			background-size: 100% auto;
+		}
+	}
+}
+
+#page-3{
+	.col-1{
+		margin-bottom: 100px;
+		@iconwidth: 80px;
+		.iconimg{
+			height: @iconwidth;
+			width:  @iconwidth;
+			background-size: 80% auto;
+			border-radius: 50%;
+			border: 1px solid #0199cb;
+		}
+	}
+	.col-1 .row .icon{
+	 	&:nth-of-type(1) .stepicon{
+	 		background-image: url('/images/workflow-icon/bulb-icon.png')
+	 	}
+	 	&:nth-of-type(3) .stepicon{
+	 		background-image: url('/images/workflow-icon/design-icon.png')
+	 	}
+	 	&:nth-of-type(5) .stepicon{
+	 		background-image: url('/images/workflow-icon/product icon.png')
+	 	}
+	 	&:nth-of-type(7) .stepicon{
+	 		background-image: url('/images/workflow-icon/test icon.png')
+	 	}
+	 	&:nth-of-type(9) .stepicon{
+	 		background-image: url('/images/workflow-icon/thumb icon.png')
+	 	}
+	}
+
+	.col-2 .col{
+		&:nth-child(1) .iconimg{
+			@iconwidth: 400px;
+			height: @iconwidth;
+			width:  @iconwidth;
+			background-image: url('/images/pages/prototype (2).png');
+			background-size: 100% auto;
+			margin-top: 100px;
+		}
+		&:nth-child(2){
+			h1{
+				display: inline-block;
+			}
+			.iconimg{
+				@iconwidth: 100px;
+				height: @iconwidth;
+				width:  @iconwidth;
+				background-image: url('/images/pages/prototype.png');
+				background-size: 100% auto;
+				display: inline-block;
+			}				
+		}
+
+	}
+
+/*	.right-box{
+		position: relative;
+		height: 50%;
+		width: 80px;
+		.direction-right{
+			position: relative;
+			display: inline-block;
+		}
+
+		.direction-right:before{
+			content: "";
+			height: 2px;
+			width: 100%;
+			background-color: @radxa-blue;
+			display: block;
+			position: absolute;
+			float: left;
+			margin-top:23%;
+		}
+
+		.direction-right:after{
+			content: "";
+			padding-bottom: 40%;
+			width: 40%;
+			border-top: 3px solid @radxa-blue;
+			border-right: 3px solid @radxa-blue;
+			position: absolute;
+			display: block;
+			top: 4%;
+			left: 60%;
+
+			transform:rotate(45deg) scale(0.75) ;
+			-ms-transform:rotate(45deg) scale(0.75); 
+			-moz-transform:rotate(45deg) scale(0.75); 
+			-webkit-transform:rotate(45deg) scale(0.75); 
+			-o-transform:rotate(45deg) scale(0.75); 	
+		}
+	}*/
+
+
+
+}
+
+
+
+
+
+@media (max-width: @phonewidth ){
+	#header .navbar-right{
+		border-top: none;
+		a{
+			margin-left: 0px;
+		}
+	}
+	.page {
+		.title-line:before,
+		.title-line:after{
+			width: 0;
+		}
+		.texts{
+			p{
+				font-size:15px;
+			}
+		}
+	}
+}
+
+@media (max-width: @mdwidth ){
+	#page-2 .direc-col{
+		flex-direction: row;
+		justify-content: space-around;
+	}
+}
+
+
+@media (max-width: @padwidth ) and (min-width: @phonewidth){
+	.maintitle span{
+		&:nth-child(1){
+			font-size:50px;
+		}
+		&:nth-child(2){
+			font-size:30px;
+		}
+	}
+	.page {
+		.title-line:before,
+		.title-line:after{
+			width: 0;
+		}
+	}
+}

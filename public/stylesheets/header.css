@@ -1,7 +1,3 @@
-.alink-group ,.alink-group .btnx{
-	display: flex;
-}
-
 .alink-group{
 	height:96px;
 	width: 100%;
@@ -10,8 +6,18 @@
 	background-color: white;
 	color: #404040;
 	text-transform: uppercase;
-
 }
+
+.navbar{
+	background-color: #FFFFFF;
+	border: none;
+}
+
+/*.alink-group ,.alink-group .btnx{
+	display: flex;
+}
+
+
 .alink-group .logo{
 	height: 100%;
 	font-size:60px;
@@ -40,17 +46,6 @@
 	cursor: pointer;
 }
 
-/*.alink-group .btnx i{
-	border-radius: 50%;
-	height: 30px;
-	width: 30px;
-	font-size: 20px;
-	background-color: white;
-	color: #2C3E50;
-	text-align: center;
-	display: inline-block;
-	padding-top: 8px;
-}*/
 .btnx:hover span{
 	color: #00CD66;
 }
@@ -70,3 +65,4 @@
 	border-top: 2px solid #0199cb;
 	font-family: Candara; 
 }
+*/

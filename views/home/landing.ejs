@@ -2,41 +2,44 @@
 <html lang="zh-cn">
 <head>
 	<title></title>
-	<link rel="stylesheet" type="text/css" href="http://172.168.1.109:3000/stylesheets/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="http://172.168.1.88:3000/stylesheets/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="/stylesheets/Font-Awesome/css/font-awesome.min.css">
 
-	<script type="text/javascript" src="http://172.168.1.109:3000/javascripts/jquery/jquery-1.11.2.js"></script>
-	<script type="text/javascript" src="http://172.168.1.109:3000/javascripts/jquery/jq-mousewheel.js"></script>
-	<script type="text/javascript" src="http://172.168.1.109:3000/javascripts/jquery/jq-transition.js"></script>
+	<script type="text/javascript" src="http://172.168.1.88:3000/javascripts/jquery/jquery-1.11.2.js"></script>
+	<script type="text/javascript" src="http://172.168.1.88:3000/javascripts/jquery/jq-mousewheel.js"></script>
+	<script type="text/javascript" src="http://172.168.1.88:3000/javascripts/jquery/jq-transition.js"></script>
+	<script type="text/javascript" src="http://172.168.1.88:3000/stylesheets/bootstrap/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="/stylesheets/homepage/font.css">
 	<link rel="stylesheet" type="text/css" href="/stylesheets/homepage/landing.css">
-	<link rel="stylesheet" type="text/css" href="/stylesheets/homepage/page.css">
+
+	<link rel="stylesheet/less" type="text/css" href="/less/header.less">
+
+	<script type="text/javascript" src="http://172.168.1.88:3000/javascripts/less.js"></script>
 	
 </head>
 <body>
 	<div class="leftframe"></div>
 	<div class="centerframe">
-
+		<% include ../header %>
 		<div class="topframe" data-title="Home">
-			<div id="bgimg" ></div >
 
-			<% include ../header %>
-
-			<div class="maintitle flexbox direc-col">
-				<span>Your idea, your product</span>
-				<span>We help to make it</span>
-			</div>
-			<div class="downdir">
-				<li class="nextpage fa fa-angle-double-down" style='color:white;'></li>	
+			<div class="cover flexbox full">
+				<div class="maintitle flexbox direc-col full">
+					<span>Your idea, your product</span>
+					<h1>We help to make it</h1>
+				</div>
+				<div class="downdir">
+					<li class="nextpage fa fa-angle-double-down" style='color:white;'></li>	
+				</div>
 			</div>
 		</div>
 		<div class="pageframe">
 
 			<% include v0.1/page-1 %>
-			<% include v0.1/page-2 %>
+  			<% include v0.1/page-2 %>
 			<% include v0.1/page-3 %>
 			<% include v0.1/page-5 %>
-			<% include test/page-4 %>
+			<% include test/page-4 %>  
 
 		</div>
 
@@ -44,6 +47,7 @@
 	</div>
 	<div class="rightframe">
 	</div>
+	
 	<script type="text/javascript" src="/javascripts/landing.js"></script>
 </body>
 </html>
