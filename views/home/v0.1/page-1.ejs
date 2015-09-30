@@ -1,12 +1,12 @@
 
-<section class="page flexbox" id="page-1" data-title="1">
+<section class="page" id="page-1" data-title="1">
 
 	<div class="allcontent container" >
 
 		<div class="row " id="row-1">
 			<div class="col-lg-12  ">
 				<div class="title-line container flexbox main-around">
-				<h1>What we offer</h1>
+				<h1 txt="p1_t1"></h1>
 				</div>
 			</div>
 		</div>
@@ -20,8 +20,9 @@
 				</div>
 				<div class="row">
 					<div class="col-lg-12">
-						<div class="texts">
-							
+						<div class="texts flexbox direc-col main-around">
+							<h2></h2>
+							<h3></h3>
 						</div>
 					</div>
 				</div>
@@ -36,7 +37,10 @@
 				</div>
 				<div class="row">
 					<div class="col-lg-12">
-						<div class="texts"></div>
+						<div class="texts flexbox direc-col main-around">
+							<h2></h2>
+							<h3></h3>
+						</div>
 					</div>
 				</div>
 	
@@ -50,7 +54,7 @@
 				</div>
 				<div class="row">
 					<div class="col-lg-12">
-						<div class="texts">
+						<div class="texts flexbox direc-col main-around">
 							<h2 >Factory</h2>
 							<h3>  we make it in here</h3>
 						</div>
@@ -67,14 +71,4 @@
 	</div>
 </section>
 
-<script type="text/javascript">
-	$(document).ready(function () {
-		var i = 2;
 
-		$('#page-1 #row-2 .col:not(:last-child) .texts').each(function () {
-			var srcele = '#page-'+ i;
-			$(this).append('<h2>'+ $(srcele+' .pagetitle').text() +'</h2>').append('<h3>' + $(srcele+' .onestatment').text() + '</h3>');
-			i++;
-		})
-	});
-</script>

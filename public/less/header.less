@@ -20,7 +20,7 @@ h3{
 
 #header {
 	background-color: #FFFFFF;
-	border: none;
+
 	.container{
 		margin-top: 20px;
 		margin-bottom: 10px;
@@ -30,6 +30,7 @@ h3{
 		color: @radxa-dark;
 		font-family: Roboto-Black; 	
 	}
+	.dropdown-menu,
 	.links{
 		font-size:24px;
 		cursor: pointer;
@@ -42,8 +43,33 @@ h3{
 		a:hover{
 			color:@radxa-blue;
 		}
-		a{
-			margin-left: 30px;
+		li{
+			margin-left: 0px;
+		}
+		[txt='language_active']{
+			&:after{
+				content:'▼';
+				font-size: 20px;
+			}
+		}
+	}
+}
+
+/*====================   bottom  ====================*/
+.bottomframe{
+	width: 100%;
+	background-color: #2C3E50;
+	color: white;
+	font-size:12px;
+	.col{
+		& > div{
+			align-items: flex-start;
+			-webkit-align-items: flex-start;
+		}
+		min-height: 100px;
+		.links span{
+			display: inline-block;
+			min-width: 70px;
 		}
 	}
 }
@@ -65,8 +91,8 @@ h3{
 }
 
 .maintitle{
-	opacity: 0;
 	color: white;
+	text-transform:uppercase;
 	span{
 		text-align: center;
 		display: block;
@@ -85,8 +111,8 @@ h3{
 .page{
 	width: 100%;
 	position: relative;
-	opacity: 0;
-	padding-top: 100px;
+	padding-top: 50px;
+	margin-bottom: 100px;
 	div{
 /*		border: 1px solid #ccc;*/
 	}
@@ -112,7 +138,6 @@ h3{
 
 	.texts{
 		h2,h3{
-			padding-top: 30px;
 			text-align: center;
 		}
 		p{
@@ -131,9 +156,6 @@ h3{
 		height: 80%;
 		width: 90%;
 	}
-	#row-1{
-
-	}
 	#row-2{
 		@iconwidth:250px;
 		.iconimg{
@@ -150,6 +172,9 @@ h3{
 			}
 			&:nth-of-type(3) .iconimg{
 				background-image: url("/images/page1/family.png");
+			}
+			.texts{
+				min-height: 300px;
 			}
 		}
 	}
@@ -186,7 +211,10 @@ h3{
 
 #page-3{
 	.col-1{
-		margin-bottom: 100px;
+		@colline: 30px;
+		padding-bottom: @colline;
+		margin-bottom: 50px;
+		border-bottom: 1px solid @radxa-blue;
 		@iconwidth: 80px;
 		.iconimg{
 			height: @iconwidth;
@@ -195,27 +223,58 @@ h3{
 			border-radius: 50%;
 			border: 1px solid #0199cb;
 		}
+		.col-lg-1:not(.icon){
+			min-height: @colline;
+		}
+		.days{
+			span{
+				position: absolute;
+				font-size: 60px;
+				color: @radxa-blue;
+				font-weight: bold;
+				font-family:  Candara;
+				text-shadow: 0px 0px 1px black;
+			}
+		}
+		.icon{
+			padding: 0px;
+			display: flex;
+			justify-content:center;
+		}
+		.stepicon{
+			&:after{
+				content:"";
+				display: inline-block;
+				height: @colline;
+				width: 1px;
+				background-color: @radxa-blue;
+				position: relative;
+				top: 100%;
+				left: 50%;
+			}
+		}
 	}
+
 	.col-1 .row .icon{
-	 	&:nth-of-type(1) .stepicon{
+	 	&:nth-of-type(2) .stepicon{
 	 		background-image: url('/images/workflow-icon/bulb-icon.png')
 	 	}
-	 	&:nth-of-type(3) .stepicon{
+	 	&:nth-of-type(4) .stepicon{
 	 		background-image: url('/images/workflow-icon/design-icon.png')
 	 	}
-	 	&:nth-of-type(5) .stepicon{
+	 	&:nth-of-type(6) .stepicon{
 	 		background-image: url('/images/workflow-icon/product icon.png')
 	 	}
-	 	&:nth-of-type(7) .stepicon{
+	 	&:nth-of-type(8) .stepicon{
 	 		background-image: url('/images/workflow-icon/test icon.png')
 	 	}
-	 	&:nth-of-type(9) .stepicon{
+	 	&:nth-of-type(10) .stepicon{
 	 		background-image: url('/images/workflow-icon/thumb icon.png')
 	 	}
 	}
 
 	.col-2 .col{
-		&:nth-child(1) .iconimg{
+		&:nth-child(2) .iconimg{
 			@iconwidth: 400px;
 			height: @iconwidth;
 			width:  @iconwidth;
@@ -223,7 +282,7 @@ h3{
 			background-size: 100% auto;
 			margin-top: 100px;
 		}
-		&:nth-child(2){
+		&:nth-child(1){
 			h1{
 				display: inline-block;
 			}
@@ -236,52 +295,178 @@ h3{
 				display: inline-block;
 			}				
 		}
-
 	}
-
-/*	.right-box{
-		position: relative;
-		height: 50%;
-		width: 80px;
-		.direction-right{
-			position: relative;
-			display: inline-block;
-		}
-
-		.direction-right:before{
-			content: "";
-			height: 2px;
-			width: 100%;
-			background-color: @radxa-blue;
-			display: block;
-			position: absolute;
-			float: left;
-			margin-top:23%;
-		}
-
-		.direction-right:after{
-			content: "";
-			padding-bottom: 40%;
-			width: 40%;
-			border-top: 3px solid @radxa-blue;
-			border-right: 3px solid @radxa-blue;
-			position: absolute;
-			display: block;
-			top: 4%;
-			left: 60%;
-
-			transform:rotate(45deg) scale(0.75) ;
-			-ms-transform:rotate(45deg) scale(0.75); 
-			-moz-transform:rotate(45deg) scale(0.75); 
-			-webkit-transform:rotate(45deg) scale(0.75); 
-			-o-transform:rotate(45deg) scale(0.75); 	
-		}
-	}*/
-
-
 
 }
 
+#page-4{
+	min-height: 65	0px;
+	.form{
+		font-size: 30px;
+		color: #F08080;
+		input{
+			height: 100%;
+			width: 100%;
+			font-size: 20px;
+		}
+		button{
+			height: 60px;
+		}
+		textarea{
+			font-size: 20px;
+		}
+	}
+}
+
+#page-5{
+	#text1{
+		font-size: 60px;
+		font-family: Candara;
+		text-align: center;
+		hr{
+			background-color: #2C3E50;
+			height:3px;
+		}
+	}
+	.iconline{
+		opacity: 0.6;
+		.doublelinebox{
+			justify-content: center;
+			flex-direction: column;
+			display: flex;
+		}
+
+		.doublelinebox:nth-child(1){
+			align-items: flex-end;
+			margin-right: 10px;
+			
+		}
+		.doublelinebox:nth-child(3){
+			align-items: flex-start;
+			margin-left: 10px;
+		}
+		.doublelinebox div:nth-child(1){
+			width: 200px;
+			height: 20px;
+		}
+
+		.doublelinebox div:nth-child(2){
+			width: 100px;
+			height: 20px;
+		}
+	}
+	@iconwidth: 300px;
+
+	.iconimg{
+		height: @iconwidth/2;
+		width: @iconwidth;
+	}
+	#partner-1{
+		background-image:url("/images/partner/hvpd.jpg");
+	}
+	#partner-2{
+		background-image:url("/images/partner/hitech.png");
+	}
+	#partner-3{
+		background-image:url("/images/partner/mozilla.jpg");
+		background-size: 60% auto;
+		height: 160px;
+
+	}
+	#partner-4{
+		background-image:url("/images/partner/spectek_logo.gif");
+	}
+	#partner-5{
+		background-image:url("/images/partner/kddi.jpg");
+		
+	}
+}
+
+#page-6{
+	padding: 0 15px;
+	#row-1{
+		margin-top: 50px;
+		font-size: 60px;
+		color: @radxa-blue;
+		font-weight: bold;
+		font-family:  Candara;
+		border-bottom: 1px solid #EEE;
+		position: relative;
+		overflow: hidden;
+	}
+	.allcontent{
+		width: 100%;
+		min-height: 350px;
+		align-items: flex-start;
+		.projectborder{
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: center;
+			min-height: 250px;
+			transition: all 0.25s linear;
+			-moz-transition: all 0.25s linear;
+			-webkit-transition: all 0.25s linear;
+			-o-transition: all 0.25s linear;
+
+			opacity: 0.75;
+			&:hover{
+				-moz-transform: scale(1.1);
+				-webkit-transform: scale(1.1);
+				-o-transform: scale(1.1);
+				transform: scale(1.1);
+				opacity: 1;
+				.project-text{
+					opacity: 1;
+				}
+			}
+			.project{
+				height: 150px;
+				width: 150px;
+				background-repeat: no-repeat;
+				background-position: top center;
+				background-size: 100% auto;
+				-webkit-background-size: 100% auto;
+				width: 100%;
+
+			}
+			.project-text{
+				color: #686767;
+				font-family: Roboto-Condensed;
+				font-size: 20px;
+				opacity: 0;
+				transition: all 0.25s linear;
+				transition: all 0.25s linear;
+				-moz-transition: all 0.25s linear;
+				-webkit-transition: all 0.25s linear;
+				-o-transition: all 0.25s linear;		
+			}
+		}
+
+	}
+
+	#project-1{
+		background-image: url("/images/Kali-linux.png");
+	}
+	#project-2{
+		background-image: url("/images/project_kodi.png");
+	}
+	#project-3{
+		background-image: url("/images/project_firefox.png");
+	}
+	#project-4{
+		background-image: url("/images/Kali-linux.png");
+	}
+	#project-5{
+		background-image: url("/images/project_kodi.png");
+	}
+}
+
+@media (max-width: @padwidth){
+	#page-6{
+
+	}
+}
 
 
 
@@ -311,6 +496,11 @@ h3{
 		flex-direction: row;
 		justify-content: space-around;
 	}
+	#page-3 .col-2 .col{
+		&:nth-child(2) .iconimg{
+			margin-top: 0px;
+		}
+	}
 }
 
 
@@ -328,5 +518,16 @@ h3{
 		.title-line:after{
 			width: 0;
 		}
+		.texts{
+			p{
+				font-size:20px;
+			}
+		}
+	}
+}
+
+@media (max-width: @padwidth){
+	.rightframe{
+		display: none;
 	}
 }

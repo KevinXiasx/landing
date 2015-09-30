@@ -10,13 +10,6 @@ function myshowfunc (obj, anima, time, event, func) {
 		obj.transition({scale: 1,y:0, x:0, opacity: 1, rotateY:0}, time.amtime);
 };
 
-//-----disable mousewheel event
-/*$(document).on('mousewheel', function () {
-	return false;
-})
-*/
-
-
 
 /*-----		create circle on rightframe		------*/
 $(document).ready(function () {
@@ -150,15 +143,15 @@ pageshowlist['page-3'] = function () {
 pageshowlist['page-5'] = function () {
 	if( arrive('#page-5') ){
 		var timerout = 0;
-		$('#page-5 #text1 .title').transition({scale:2, y:100}, 0);
+	//	$('#page-5 #text1 .title').transition({scale:2, y:100}, 0);
 		myshowfunc($('#page-5'), {scale:0.9, y:100}, {"amtime":1000});
-		setTimeout("$('#page-5 #text1 .title').transition({scale:1, y:0}, 1000)",timerout+=1500);
+/*		setTimeout("$('#page-5 #text1 .title').transition({scale:1, y:0}, 1000)",timerout+=1500);
 		setTimeout('myshowfunc( $("#page-5  #partner-1"),{y:100}, {"amtime":1500})',timerout+=250);
 		setTimeout('myshowfunc( $("#page-5  #partner-2"),{y:100}, {"amtime":1500})',timerout+=250);
 		setTimeout('myshowfunc( $("#page-5  #partner-3"),{y:100}, {"amtime":1500})',timerout+=250);
 		setTimeout('myshowfunc( $("#page-5  #partner-4"),{y:100}, {"amtime":1500})',timerout+=250);
 		setTimeout('myshowfunc( $("#page-5  #partner-5"),{y:100}, {"amtime":1500})',timerout+=250);
-
+*/
 		$(document).off('scroll', pageshowlist['page-5']);
 	}
 }
@@ -167,12 +160,20 @@ pageshowlist['page-4'] = function () {
 	if( arrive('#page-4') ){
 		myshowfunc($('#page-4'), {scale:0.9, y:100}, {"amtime":1000});
 		myshowfunc($('.formbox .form'), {rotateY: '90deg'}, {"amtime":2000});
-
-
 		$(document).off('scroll', pageshowlist['page-4']);
 
 	}
 }
+
+pageshowlist['page-6'] = function () {
+	if( arrive('#page-6') ){
+		myshowfunc($('#page-6'), {scale:0.9, y:100}, {"amtime":1000});
+		$(document).off('scroll', pageshowlist['page-6']);
+	}
+}
+
+
+
 $(document).ready(function () {
 	for(var page in pageshowlist){
 		$(document).on('scroll',pageshowlist[page]);	

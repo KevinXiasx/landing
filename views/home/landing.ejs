@@ -25,8 +25,8 @@
 
 			<div class="cover flexbox full">
 				<div class="maintitle flexbox direc-col full">
-					<span>Your idea, your product</span>
-					<h1>We help to make it</h1>
+					<span txt="h1"></span>
+					<h1 txt="h2"></h1>
 				</div>
 				<div class="downdir">
 					<li class="nextpage fa fa-angle-double-down" style='color:white;'></li>	
@@ -34,20 +34,56 @@
 			</div>
 		</div>
 		<div class="pageframe">
-
 			<% include v0.1/page-1 %>
   			<% include v0.1/page-2 %>
 			<% include v0.1/page-3 %>
+			<% include v0.1/page-6 %>  
 			<% include v0.1/page-5 %>
-			<% include test/page-4 %>  
-
+			<% include v0.1/page-4 %> 
 		</div>
 
 		<% include ../bottom %>
-	</div>
+<!-- 	</div>
 	<div class="rightframe">
 	</div>
-	
-	<script type="text/javascript" src="/javascripts/landing.js"></script>
+	 -->
+	<!--<script type="text/javascript" src="/javascripts/landing.js"></script> -->
+	<script type="text/javascript">
+
+
+	function loadlang(lang) {
+		$.ajax({
+			'url':'/gettext',
+			'type' : 'get',
+			'data' : {language: lang},
+			'success' : function (data) {
+					$('[txt]').each(function () {
+						$(this).text(data[$(this).attr('txt')]);
+					})
+					rendertext();
+				},
+			'error' : function () {
+					alert('loading fail, network disconnect');
+				}
+		});			
+	}
+
+	$(document).ready(loadlang('English'));
+
+	$('.changelanguage').on('click', function () {
+		loadlang($(this).text());
+	})
+
+	function rendertext () {
+		var i = 2;
+		$('#page-1 #row-2 .col:not(:last-child) .texts').each(function () {
+			var srcele = '#page-'+ i;
+			$(this).children('h2').text($(srcele+' .pagetitle').text());
+			$(this).children('h3').text($(srcele+' .onestatment').text());
+			i++;
+		})
+	}
+
+	</script>
 </body>
 </html>
