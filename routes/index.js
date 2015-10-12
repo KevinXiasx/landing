@@ -1,15 +1,18 @@
 var express = require('express');
 var fs = require('fs');
 var router = express.Router();
-var markdown = require('markdown').markdown;
 var MongoClient = require('mongodb').MongoClient;
 var url = require("url");
+var mark = require("../myclass/mark.js");
 
 var dataurl = 'mongodb://localhost:27017/landing';
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render("home/landing");
+	mark.readnameimg('views/project/markdown/', function (data) {
+		console.log(data);
+		res.render("home/landing", {"projectname": data});
+	})
 });
 
 
@@ -21,8 +24,9 @@ router.get('/gettext', function(req, res, next) {
 			db.close();
 		}
 	  	else{
-	  		var collection = db.collection('text');
-	  		collection.find({"language_active":params.language}).toArray(function(err, docs) {
+	  		var collection = db.collection( params.page );
+	  		var language = (params.language == '')||(params.language == 'null')||(params.language == undefined)?'中文':params.language;
+	  		collection.find({"language_active":language}).toArray(function(err, docs) {
 	  			res.send(docs[0]);
 	  		});
 	  	}
@@ -30,15 +34,18 @@ router.get('/gettext', function(req, res, next) {
 })
 
 router.get('/project', function (req, res, next) {
-	fs.readFile('views/project/note-words.md', 'utf8', function (err, data) {
-		if(err)
-			console.log(err);
-		else{
-			var renderdata = {'markdown': markdown.toHTML(data)};
-			res.render('project/projectpage', renderdata);
-			console.log(markdown.toHTML(data));
-		}
+	mark.readmarkdirs('views/project/markdown/', function (data, index) {
+		res.render('project/projectpage', {"marks": data, "index": index});
 	});
 })
+
+
+router.get('/more', function (req, res, next) {
+	mark.readmarkdir('views/more/', function (data, index) {
+		res.render('more/more', {"marks": data, "index": index});
+	});
+	
+})
+
 
 module.exports = router;

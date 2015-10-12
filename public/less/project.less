@@ -1,0 +1,82 @@
+@import "animation.less";
+@import "mark.less";
+
+div{
+
+}
+
+.jumbotron{
+	background: url("/images/sky.jpg") no-repeat center center;
+	background-size: cover;
+	height: 400px;
+	#bigbord{
+		position: relative;
+		top: 100px;
+	}
+	margin-bottom: 0px;
+}
+
+.allcontent{
+	.sec{
+		margin-bottom: 150px;
+		a:hover{
+			opacity: 0.8;
+		}
+	}
+	img{
+		max-width: 32%;
+		margin-bottom: 5px;
+		width: 100%;
+		max-height: 160px;
+	}
+	.rightframe{
+		.active{
+			font-weight: bold;
+			a{
+				background-color: @radxa-blue;
+				color: white ;
+			}
+		}
+		.affix{
+			top: 20px;
+		}
+	}
+
+	.centerframe{
+		background-color: #F5FFFA;
+		border-left: 1px solid #ccc;
+		border-right: 1px solid #ccc;
+		#ss{
+			height: 300px;
+		}
+	}
+
+	.leftframe{
+		.gototop{
+			height: 100px;
+			font-size: 30px;
+			width: 100px;
+			top: 10px;
+			border: 1px solid #ccc;
+		}
+	}
+}
+
+.portfolio-modal {
+	.modal-content {
+	    border-radius: 0;
+	    background-clip: border-box;
+	    -webkit-box-shadow: none;
+	    box-shadow: none;   
+	    border: none;
+	    min-height: 100%;
+	    padding: 0px;
+	    text-align: center;
+		img {
+			margin-bottom: 30px;
+		}
+		.item-details {
+			margin: 30px 0;
+		}
+	}
+}

@@ -1,6 +1,6 @@
 /* ========================= server font =================*/
 
-@font-face {
+@font-face { 
   font-family: Montserrat;
   font-style: normal;
   font-weight: 700;
@@ -15,6 +15,31 @@
 @font-face{
 	font-family: textfont2;
 	src:url("/fonts/hee.ttf") format("truetype");
+}
+
+@font-face { 
+font-family: simhei; 
+ src:url("/fonts/typo/simhei.ttf") format("truetype");
+}
+
+@font-face { 
+font-family: msjhbd; 
+ src:url("/fonts/typo/msjhbd.ttf") format("truetype");
+}
+
+@font-face { 
+font-family: msjh; 
+ src:url("/fonts/typo/msjh.ttf") format("truetype");
+}
+
+@font-face { 
+font-family: FZLTCXHJW; 
+ src:url("/fonts/typo/FZLTCXHJW.ttf") format("truetype");
+}
+
+@font-face { 
+font-family: AdobeHeitiStd-Regular; 
+ src:url("/fonts/typo/AdobeHeitiStd-Regular.otf") format("opentype");
 }
 
 @font-face { 

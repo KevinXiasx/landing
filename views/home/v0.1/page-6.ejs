@@ -8,27 +8,33 @@
 		<div class="shadowbox"></div>
 	</div>
 </div>
-	<div class="row allcontent">
-		<div class="col-lg-2 col-sm-4 col-lg-offset-1 col-sm-offset-2 projectborder">
+ 	<div class="row allcontent">
+ 		<% for( var s = 0; s < projectname.length; s++ ){ %>
+
+ 			<div class="col-lg-3 col-sm-4  projectborder">
+ 			<a href="/project/#<%= projectname[s].name %>">
+				<div class="project" id="project-1" style='background-image: url("<%= projectname[s].imgs %>");'></div>
+				<div class="project-text"><%= projectname[s].name %></div>
+			</a>
+			</div>
+
+ 		<% } %>
+<!-- 		<div class="col-lg-3 col-sm-4  projectborder">
 			<div class="project" id="project-1"></div>
 			<div class="project-text">the software hardware design is freely available from the internet,</div>
 		</div>
-		<div class="col-lg-2 col-sm-4 projectborder ">
+		<div class="col-lg-3 col-sm-4 projectborder ">
 			<div class="project" id="project-2"></div>
 			<div class="project-text">the software hardware design is freely available from the internet,</div>
 		</div>
-		<div class="col-lg-2 col-sm-4 col-sm-offset-2 col-lg-offset-0 projectborder ">
+		<div class="col-lg-3 col-sm-4 projectborder ">
 			<div class="project" id="project-3"></div>
 			<div class="project-text">the software hardware design is freely available from the internet,</div>
 		</div>
-		<div class="col-lg-2 col-sm-4 projectborder">
+		<div class="col-lg-3 col-sm-4 projectborder">
 			<div class="project" id="project-4"></div>
 			<div class="project-text">the software hardware design is freely available from the internet,</div>
-		</div>
-		<div class="col-lg-2 col-sm-4 projectborder col-sm-offset-4 col-lg-offset-0 ">
-			<div class="project" id="project-5"></div>
-			<div class="project-text">the software hardware design is freely available from the internet,</div>
-		</div>
-	</div>
+		</div> -->
+	</div> 
 
 </section>

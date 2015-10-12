@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Radxa project</title>
+	<link rel="stylesheet" type="text/css" href="http://172.168.1.88:3000/stylesheets/bootstrap/css/bootstrap.min.css">
+	<script type="text/javascript" src="http://localhost:3000/stylesheets/bootstrap/js/bootstrap.min.js"></script>
+	
+</head>
+<body>
+	<% include ../header %>
+
+
+	<% include ../bottom %>
+
+	<script type="text/javascript" src="http://172.168.1.88:3000/javascripts/less.js"></script>
+	<script type="text/javascript" src="http://172.168.1.88:3003/javascripts/language.js"></script>
+</body>
+</html>
