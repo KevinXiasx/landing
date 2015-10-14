@@ -17,7 +17,7 @@
 
 <body data-spy="scroll" data-target=".hehee">
 	<% include ../header %>
-	<div class="jumbotron">
+	<div class="jumbotron marked">
 		<div class="container" id="bigbord">
 			<%- index %>
 	  	</div>
@@ -38,7 +38,7 @@
 						<%- marks[s].text %>
 					</div>
 					<div class="imgswrap">
-						<% for( var k = 0; k < (marks[s].imgs).length; k++ ){ %>
+						<% for( var k = 0; k < (marks[s].imgs).length; k++ ){ %>	
 							<a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
 								<%- (marks[s].imgs)[k] %>
 							</a>
@@ -79,7 +79,7 @@
 	loadl('project');
 
 	$(document).ready(function () {
-		$('.imgswrap img').on("click", function () {
+		$('.portfolio-link img').on("click", function () {
 			$('#portfolioModal1 img').attr('src', $(this).attr('src'));
 		})
 	})

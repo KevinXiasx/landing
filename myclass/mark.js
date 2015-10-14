@@ -15,7 +15,7 @@ function readmark (pa, callback) {
 }
 
 function readmarkdir(pa , callback){
-	var marks = new Array();
+	var marks = Array();
 	var index;
 	var count = 0,
 		contu2 = 0;
@@ -30,7 +30,7 @@ function readmarkdir(pa , callback){
 						$ = cheerio.load(data);
 						var img = '';
 						if( $('img').length != 0 )
-							img = '<img src="'+$('img').attr('src') +'"/>';
+							img = $('img').attr('src');
 						$('img').remove();
 						marks.push({"text":$.html(), "img":img});
 						count--;

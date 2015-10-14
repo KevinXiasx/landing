@@ -9,7 +9,7 @@ var dataurl = 'mongodb://localhost:27017/landing';
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-	mark.readnameimg('views/project/markdown/', function (data) {
+	mark.readnameimg('views/project/markdown-ch/', function (data) {
 		console.log(data);
 		res.render("home/landing", {"projectname": data});
 	})
@@ -34,17 +34,16 @@ router.get('/gettext', function(req, res, next) {
 })
 
 router.get('/project', function (req, res, next) {
-	mark.readmarkdirs('views/project/markdown/', function (data, index) {
+	mark.readmarkdirs('views/project/markdown-ch/', function (data, index) {
 		res.render('project/projectpage', {"marks": data, "index": index});
 	});
 })
 
 
 router.get('/more', function (req, res, next) {
-	mark.readmarkdir('views/more/', function (data, index) {
+	mark.readmarkdir('views/more/plat-mark-ch/', function (data, index) {
 		res.render('more/more', {"marks": data, "index": index});
 	});
-	
 })
 
 

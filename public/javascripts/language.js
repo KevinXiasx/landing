@@ -23,7 +23,8 @@ function loadlangpage (lang, page) {
 }
 
 function loadl ( page) {
-	$(document).ready(loadlangpage(sessionStorage.getItem('language'), page));
+	var lang = sessionStorage.getItem('language') == "null"?"中文":sessionStorage.getItem('language');
+	$(document).ready(loadlangpage(lang, page));
 
 	$('.changelanguage').on('click', function () {
 		loadlangpage($(this).text(), page);
@@ -31,7 +32,6 @@ function loadl ( page) {
 }
 
 function setfontfamily (lang) {
-	console.log("sdf");
 	if( lang ==  'English'){
 		$('.maintitle span').css('font-family', 'Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif');
 		$('h1').css('font-family', 'Roboto-Regular');

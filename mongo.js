@@ -48,14 +48,6 @@ db.home.insert({
 
 });
 
-db.project.insert({
-	"language_active": "English",
-});
-
-db.project.insert({
-	"language_active": "中文",
-});
-
 
 db.header.insert({
 	"language_active": "中文",

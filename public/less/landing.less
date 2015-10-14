@@ -2,18 +2,19 @@
 
 h1{
 	font-family: Roboto-Regular;
-	font-size: 45px;	
+	font-size: 45px;
 }
 
 h2{
 	color: @radxa-sdark;
 	font-family: Candara;
-	font-size: 30px;		
+	font-size: 30px;
+
 }
 h3{
 	color: #686767;
 	font-family: Roboto-Condensed;
-	font-size: 22px;		
+	font-size: 22px;
 }
 
 
@@ -35,7 +36,9 @@ h3{
 }
 
 .maintitle{
+	opacity: 0;
 	color: white;
+	overflow: hidden;
 	text-transform:uppercase;
 	span{
 		text-align: center;
@@ -43,6 +46,8 @@ h3{
 		margin:10px;
 		&:nth-child(1){
 			font-size:100px;
+			white-space:nowrap;
+			overflow: hidden;
 		}
 	}
 }
@@ -50,10 +55,17 @@ h3{
 
 /* ========================= pages =================*/
 .page{
+	.showner{
+		opacity: 0;
+	}
+	.allcontent{
+		opacity: 0;
+	}
 	width: 100%;
 	position: relative;
 	padding-top: 50px;
 	padding-bottom: 50px;
+	overflow: hidden;
 	div{
 /*		border: 1px solid #ccc;*/
 	}
@@ -76,7 +88,6 @@ h3{
 		background-repeat: no-repeat;
 	}
 	.morebtn button{
-		margin-top: 50px;
 		background-color: inherit;
 		border: 2px solid @radxa-blue;
 		color: @radxa-oring;
@@ -127,6 +138,7 @@ h3{
 
 #page-2{
 	min-height: 770px;
+	padding-bottom: 0px;
 	background-color: #f5eeeb;
 	.texts{
 		h1,h2,h3{
@@ -144,133 +156,65 @@ h3{
 		#col-2{
 			min-height: @iconwidth;
 		}
+		margin-bottom:50px;
 	}
 	.row:nth-of-type(2){
-		@iconwidth: 450px;
+		.col,  .col .texts{
+			align-items: flex-start;
+		}
+		@iconwidth: 600px;
 		.iconimg{
 			width: @iconwidth;
 			height: @iconwidth;
 			background-image: url("/images/web/open platform/board.png");
+			background-position: top left;
 			background-size: 100% auto;
 		}
-		.col{
-			min-height: @iconwidth;
-			.texts{
-				min-height: @iconwidth/3 * 2 ;
-			}
-		}
-
 	}
 }
 
 #page-3{
 	min-height: 770px;
 	background-color: #e2f1ea;
-	#row-2{
-		text-align: right;
-	}
-	.col-1{
-		@colline: 30px;
-		padding-bottom: @colline;
-		margin-bottom: 50px;
-		border-bottom: 1px solid @radxa-blue;
-		@iconwidth: 80px;
+	#row-1{
+		margin-bottom:100px;
+		@iconwidth: 150px;
 		.iconimg{
+			width: @iconwidth;
 			height: @iconwidth;
+			background-image: url("/images/pages/hardware.png");
+			background-size: 90% auto;
+		}
+		.col{
+			min-height: @iconwidth;
+		}
+	}
+	#row-1-1{
+		margin-bottom:50px;
+		@iconwidth: 600px;
+		.iconimg{
+			height: @iconwidth/3;
 			width:  @iconwidth;
-			background-size: 80% auto;
-			border-radius: 50%;
-			border: 1px solid #0199cb;
+			background-image: url('/images/web/design service/design2.png');
+			background-size: 100% auto;
 		}
-		.col-lg-1:not(.icon){
-			min-height: @colline;
-		}
-		.days{
-			span{
-				position: absolute;
-				font-size: 60px;
-				color: @radxa-blue;
-				font-weight: bold;
-				font-family:  Candara;
-				text-shadow: 0px 0px 1px black;
-			}
-		}
-		.icon{
-			padding: 0px;
-			display: flex;
-			justify-content:center;
-		}
-		.stepicon{
-			&:after{
-				content:"";
-				display: inline-block;
-				height: @colline;
-				width: 1px;
-				background-color: @radxa-blue;
-				position: relative;
-				top: 100%;
-				left: 50%;
-			}
+
+		.col{
+			height: @iconwidth/3;
 		}
 	}
 
-	.col-1 .row .icon{
-	 	&:nth-of-type(2) .stepicon{
-	 		background-image: url('/images/workflow-icon/bulb-icon.png')
-	 	}
-	 	&:nth-of-type(4) .stepicon{
-	 		background-image: url('/images/workflow-icon/design-icon.png')
-	 	}
-	 	&:nth-of-type(6) .stepicon{
-	 		background-image: url('/images/workflow-icon/product icon.png')
-	 	}
-	 	&:nth-of-type(8) .stepicon{
-	 		background-image: url('/images/workflow-icon/test icon.png')
-	 	}
-	 	&:nth-of-type(10) .stepicon{
-	 		background-image: url('/images/workflow-icon/thumb icon.png')
-	 	}
-	}
-
-	.col-2 {
-		#row-1-1{
-			@iconwidth: 600px;
-			.iconimg{
-				height: @iconwidth/3;
-				width:  @iconwidth;
-				background-image: url('/images/web/design service/design2.png');
-				background-size: 100% auto;
-			}
-
-			.col{
-				min-height: @iconwidth/3;
-			}
+	#row-1-2{
+		@iconwidth: 600px;
+		.col{
+			height: @iconwidth/3;
 		}
-
-		#row-1-2{
-			@iconwidth: 400px;
-			.iconimg{
-				&:nth-of-type(1){
-					height: @iconwidth/3;
-					width:  @iconwidth;
-					background-image: url('/images/web/design service/platform1.png');
-					background-size: 100% auto;
-				}
-				&:nth-of-type(2){
-					@iconwidth: 350px;
-					height: @iconwidth/2;
-					width:  @iconwidth;
-					background-image: url('/images/web/design service/factory3.png');
-					background-size: 80% auto;
-				}
-			}
-			.col{
-					min-height: @iconwidth/3;
-			}
+		img{
+			height: 70%;
+			float: left;
 		}
 	}
 }
-
 
 #page-4{
 	min-height: 65	0px;
@@ -369,25 +313,22 @@ h3{
 		position: relative;
 		overflow: hidden;
 	}
-	.allcontent{
+	.pro{
 		width: 100%;
 		min-height: 350px;
 		align-items: flex-start;
 		.projectborder{
 			align-items: center;
 			min-height: 250px;
-			transition: all 0.25s linear;
 			-moz-transition: all 0.25s linear;
 			-webkit-transition: all 0.25s linear;
 			-o-transition: all 0.25s linear;
-
-			opacity: 0.85;
+			transition: all 0.25s linear;
 			&:hover{
 				-moz-transform: scale(1.1);
 				-webkit-transform: scale(1.1);
 				-o-transform: scale(1.1);
 				transform: scale(1.1);
-				opacity: 1;
 				a{
 					text-decoration: none;
 				}
@@ -403,15 +344,9 @@ h3{
 			.project-text{
 				color: #686767;
 				font-family: Roboto-Condensed;
-				font-size: 20px;
-				transition: all 0.25s linear;
-				transition: all 0.25s linear;
-				-moz-transition: all 0.25s linear;
-				-webkit-transition: all 0.25s linear;
-				-o-transition: all 0.25s linear;		
+				font-size: 20px;		
 			}
 		}
-
 	}
 /*
 	#project-1{
@@ -441,12 +376,6 @@ h3{
 			max-height: 600px;
 			width: 100%;
 		}
-	}
-}
-
-@media (max-width: @padwidth){
-	#page-6{
-
 	}
 }
 
@@ -501,7 +430,5 @@ h3{
 }
 
 @media (max-width: @padwidth){
-	.rightframe{
-		display: none;
-	}
+
 }

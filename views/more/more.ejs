@@ -23,40 +23,60 @@
 	  	</div>
 	</div>
 	<div class="content marked">
+		<% var color = [{"bgd": "#E55E5E", "border": "#2DE89A", "font": "#F2F2F2"},{"bgd": "#E8C95E", "border": "#C05EE5" , "font": "#000000"},{"bgd": "#5E68E5", "border": "#E5755E", "font": "#1A1A1A"}]%>
 		<% for( var s = 0; s < marks.length; s++ ){ %>
 			<% if( s%2 == 0){ %>
-			<div class="boxborder " style="background-color:#56BC8A ; ">
+			<section class="boxborder flexbox" style="background-color:<%= color[s%3].bgd %>;color:<%= color[s%3].font %>;">
 			<div class="container">
 				<div class="row flexbox " >
 					<div class="col-xs-7">
 						 <%- marks[s].text %>
 					</div>
 					<div class="col-xs-5">
-						<%- marks[s].img %>
+					<a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+						<img src="<%- marks[s].img %>" style="border:6px solid <%= color[s%3].border %>;">
+						</a>
 					</div>
 				</div>
 				</div>
-			</div>
+			</section>
 			<% } else { %>
-			<div class="boxborder" style="background-color:#0199cb">
+			<section class="boxborder flexbox" style="background-color:<%= color[s%3].bgd %>;color:<%= color[s%3].font %>;">
 			<div class="container">
 				<div class="row flexbox ">					
 					<div class="col-xs-5">
-						<%- marks[s].img %>
+					<a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+						<img src="<%- marks[s].img %>" style="border:6px solid <%= color[s%3].border %>;">
+						</a>
 					</div>
 					<div class="col-xs-7">
 						 <%- marks[s].text %>
 					</div>
 				</div>
 				</div>
-			</div>
+			</section>
 			<% } }%>
 	</div>
-	</div>
+	<div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="container">
+                <div class="modal-body flexbox direc-col">
+                	<button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                    <img src="" class="img-responsive img-centered" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
 	<% include ../bottom %>
 
 	<script type="text/javascript">
 		loadl('more');
+
+		$(document).ready(function () {
+		$('.portfolio-link img').on("click", function () {
+			$('#portfolioModal1 img').attr('src', $(this).attr('src'));
+		})
+	})
 	</script>
 
 	<script type="text/javascript" src="http://172.168.1.88:3000/javascripts/less.js">
