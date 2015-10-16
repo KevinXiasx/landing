@@ -1,34 +1,37 @@
-var marked = require('marked');
-var fs = require('fs');
-var path = require('path');
-var cheerio = require("cheerio");
+"use strict";
 
-function readmark (pa, callback) {
+let marked = require('marked');
+let fs = require('fs');
+let path = require('path');
+let cheerio = require("cheerio");
+
+let readmark = function (pa, callback) {
 	fs.readFile(pa,  'utf8', function (err, data) {
 		if(err)
 			console.log(err);
 		else{
-			var s = marked(data);
+			let s = marked(data);
 			callback(s);
 		}
 	})
 }
 
 function readmarkdir(pa , callback){
-	var marks = Array();
-	var index;
-	var count = 0,
-		contu2 = 0;
-	fs.readdir(pa, function (err, files) {
+	let marks = Array();
+	let index;
+	let count = 0;
+	let count2 = 0;
+
+	fs.readdir(pa, (err, files) => {
 		if(err)
 			console.log(err);
 		else{
-			for (var i = files.length - 1; i >= 0; i--) {
+			for (let i = files.length - 1; i >= 0; i--) {
 				if( path.extname(files[i]) == ".md" ){
 					count++;
 					readmark(path.join(pa, files[i]), function (data) {
 						$ = cheerio.load(data);
-						var img = '';
+						let img = '';
 						if( $('img').length != 0 )
 							img = $('img').attr('src');
 						$('img').remove();
@@ -55,23 +58,23 @@ function readmarkdir(pa , callback){
 
 
 function readmarkdirs(pa , callback){
-	var marks = new Array();
-	var index;
-	var count = 0,
+	let marks = new Array();
+	let index;
+	let count = 0,
 		contu2 = 0;
 	fs.readdir(pa, function (err, files) {
 		if(err)
 			console.log(err);
 		else{
-			for (var i = files.length - 1; i >= 0; i--) {
+			for (let i = files.length - 1; i >= 0; i--) {
 				if( path.extname(files[i]) == ".md" ){
 					count++;
 					readmark(path.join(pa, files[i]), function (data) {
 						$ = cheerio.load(data);
-						var img = new Array();
-						var ele = $('img');
+						let img = new Array();
+						let ele = $('img');
 						if( ele.length != 0 ){
-							for (var k = ele.length - 1; k >= 0; k--) {
+							for (let k = ele.length - 1; k >= 0; k--) {
 								img.push('<img src="'+ele.eq(k).attr('src')+'"/>');
 							};
 						}
@@ -98,12 +101,12 @@ function readmarkdirs(pa , callback){
 }
 
 function readmarkname (pa, callback) {
-	var marks = new Array();
+	let marks = new Array();
 	fs.readdir(pa, function (err, files) {
 		if(err)
 			console.log(err);
 		else{
-			for (var i = files.length - 1; i >= 0; i--) {
+			for (let i = files.length - 1; i >= 0; i--) {
 				if( path.extname(files[i]) == ".md" ){
 					marks.push(files[i]);
 				}
@@ -114,21 +117,21 @@ function readmarkname (pa, callback) {
 }
 
 function readnameimg(pa , callback){
-	var marks = new Array();
-	var index;
-	var count = 0,
+	let marks = new Array();
+	let index;
+	let count = 0,
 		contu2 = 0;
 	fs.readdir(pa, function (err, files) {
 		if(err)
 			console.log(err);
 		else{
-			for (var i = files.length - 1; i >= 0; i--) {
+			for (let i = files.length - 1; i >= 0; i--) {
 				if( path.extname(files[i]) == ".md" ){
 					count++;
 					readmark(path.join(pa, files[i]), function (data) {
-						$ = cheerio.load(data);
-						var ele = $('img').first().attr('src');
-						var tit = $('h2').text();
+						let $ = cheerio.load(data);
+						let ele = $('img').first().attr('src');
+						let tit = $('h2').text();
 						$('img').remove();
 						marks.push({"name":tit, "imgs":ele});
 						count--;

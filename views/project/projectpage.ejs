@@ -4,11 +4,6 @@
 	<title>Radxa project</title>
 	<link rel="stylesheet" type="text/css" href="http://172.168.1.88:3000/stylesheets/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="/stylesheets/Font-Awesome/css/font-awesome.min.css">
-
-	<script type="text/javascript" src="http://172.168.1.88:3000/javascripts/jquery/jquery-1.11.2.js"></script>
-	<script type="text/javascript" src="http://172.168.1.88:3000/javascripts/jquery/jq-mousewheel.js"></script>
-	<script type="text/javascript" src="http://172.168.1.88:3000/javascripts/jquery/jq-transition.js"></script>
-	<script type="text/javascript" src="http://172.168.1.88:3000/stylesheets/bootstrap/js/bootstrap.min.js"></script>
 	
 	<link rel="stylesheet" type="text/css" href="/stylesheets/homepage/font.css">
 	<link rel="stylesheet" type="text/less" href="/less/project.less">
@@ -70,24 +65,20 @@
     </div>
 	<% include ../bottom %>
 
-	<script type="text/javascript">
-	$('.marktext').children('h2').each(function () {
-		$('.nav-pills.nav-stacked').append('<li><a href="#'+$(this).text() +'">'+$(this).text() +'</a></li>');
-		$(this).attr('id', $(this).text());
-	});
+	<script src="http://172.168.1.88:3000/javascripts/seajs-3.0.0/dist/sea.js"></script>
 
-	loadl('project');
+	<script>
+	  seajs.config({
+	    base: "/javascripts/",
+	    alias: {
+	    	"jquery": "http://172.168.1.88:3000/javascripts/jquery/jquery-seajs.js",
+	    	"bootstrap-js": "http://172.168.1.88:3000/stylesheets/bootstrap/js/bootstrap-seajs.js",
+	    	"less": "http://172.168.1.88:3000/javascripts/less.js"
+	    }
+	  });
 
-	$(document).ready(function () {
-		$('.portfolio-link img').on("click", function () {
-			$('#portfolioModal1 img').attr('src', $(this).attr('src'));
-		})
-	})
+	   seajs.use("project/main-project");
 	</script>
-
-	<script type="text/javascript" src="http://172.168.1.88:3000/javascripts/less.js">
-	</script>
-
 
 </body>
 </html>
