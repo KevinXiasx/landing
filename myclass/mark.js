@@ -30,14 +30,14 @@ function readmarkdir(pa , callback){
 				if( path.extname(files[i]) == ".md" ){
 					count++;
 					readmark(path.join(pa, files[i]), function (data) {
-						$ = cheerio.load(data);
+						let $ = cheerio.load(data);
 						let img = '';
 						if( $('img').length != 0 )
 							img = $('img').attr('src');
 						$('img').remove();
 						marks.push({"text":$.html(), "img":img});
 						count--;
-						if(count == 0 && contu2 == 1)
+						if(count == 0 && count2 == 1)
 							callback( marks , index);
 					})
 				}
@@ -46,12 +46,12 @@ function readmarkdir(pa , callback){
 					readmark(path.join(pa, files[i]), function (data) {
 						index = data;
 						count--;
-						if(count == 0 && contu2 == 1)
+						if(count == 0 && count2 == 1)
 							callback( marks , index);
 					});
 				}
 			}
-			contu2 = 1;
+			count2 = 1;
 		}
 	})
 }
@@ -61,7 +61,7 @@ function readmarkdirs(pa , callback){
 	let marks = new Array();
 	let index;
 	let count = 0,
-		contu2 = 0;
+		count2 = 0;
 	fs.readdir(pa, function (err, files) {
 		if(err)
 			console.log(err);
@@ -70,7 +70,7 @@ function readmarkdirs(pa , callback){
 				if( path.extname(files[i]) == ".md" ){
 					count++;
 					readmark(path.join(pa, files[i]), function (data) {
-						$ = cheerio.load(data);
+						let $ = cheerio.load(data);
 						let img = new Array();
 						let ele = $('img');
 						if( ele.length != 0 ){
@@ -81,7 +81,7 @@ function readmarkdirs(pa , callback){
 						$('img').remove();
 						marks.push({"text":$.html(), "imgs":img});
 						count--;
-						if(count == 0 && contu2 == 1)
+						if(count == 0 && count2 == 1)
 							callback( marks , index);
 					})
 				}
@@ -90,12 +90,12 @@ function readmarkdirs(pa , callback){
 					readmark(path.join(pa, files[i]), function (data) {
 						index = data;
 						count--;
-						if(count == 0 && contu2 == 1)
+						if(count == 0 && count2 == 1)
 							callback( marks , index);
 					});
 				}
 			}
-			contu2 = 1;
+			count2 = 1;
 		}
 	})
 }
@@ -120,7 +120,7 @@ function readnameimg(pa , callback){
 	let marks = new Array();
 	let index;
 	let count = 0,
-		contu2 = 0;
+		count2 = 0;
 	fs.readdir(pa, function (err, files) {
 		if(err)
 			console.log(err);
@@ -135,12 +135,12 @@ function readnameimg(pa , callback){
 						$('img').remove();
 						marks.push({"name":tit, "imgs":ele});
 						count--;
-						if(count == 0 && contu2 == 1)
+						if(count == 0 && count2 == 1)
 							callback( marks );
 					})
 				}
 			}
-			contu2 = 1;
+			count2 = 1;
 		}
 	})
 }
