@@ -5,14 +5,7 @@
 	<link rel="stylesheet" type="text/css" href="http://172.168.1.88:3000/stylesheets/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="/stylesheets/Font-Awesome/css/font-awesome.min.css">
 
-
-	<script type="text/javascript" src="http://172.168.1.88:3000/javascripts/jquery/jquery-1.11.2.js"></script>
-	<script type="text/javascript" src="http://172.168.1.88:3000/javascripts/jquery/jq-mousewheel.js"></script>
-	<script type="text/javascript" src="http://172.168.1.88:3000/javascripts/jquery/jq-transition.js"></script>
-	<script type="text/javascript" src="http://172.168.1.88:3000/stylesheets/bootstrap/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="/stylesheets/homepage/font.css">
-	<link rel="stylesheet" type="text/css" href="/stylesheets/homepage/landing.css">
-
 	<link rel="stylesheet/less" type="text/css" href="/less/landing.less">
 
 </head>
@@ -41,16 +34,23 @@
 		</div>
 
 		<% include ../bottom %>
-<!-- 	</div>
-	<div class="rightframe">
-	</div>
-	 -->
-	<!--<script type="text/javascript" src="/javascripts/landing.js"></script> -->
-	<script type="text/javascript" src="http://172.168.1.88:3000/javascripts/less.js"></script>
-	<script type="text/javascript"  src="/javascripts/animate.js"></script>
-	<script type="text/javascript">
-		loadl('home');
-		animatefuncs();
+
+	<script src="http://172.168.1.88:3000/javascripts/seajs-3.0.0/dist/sea.js"></script>
+
+	<script>
+	  seajs.config({
+	    base: "/javascripts/",
+	    alias: {
+	    	"jquery": "http://172.168.1.88:3000/javascripts/jquery/jquery-seajs.js",
+	    	"jq-transition": "http://172.168.1.88:3000/javascripts/jquery/jq-transition-seajs.js",
+	    	"bootstrap-js": "http://172.168.1.88:3000/stylesheets/bootstrap/js/bootstrap-seajs.js",
+	    	"less": "http://172.168.1.88:3000/javascripts/less.js"
+	    }
+	  });
+
+	   seajs.use("main");
+
 	</script>
+
 </body>
 </html>
