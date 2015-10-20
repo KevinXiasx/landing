@@ -11,8 +11,7 @@ const dataurl = 'mongodb://localhost:27017/landing';
 
 /* GET home page. */
 router.get('/', (req, res, next) => {
-	mark.readnameimg('views/project/markdown-ch/', function (data) {
-		console.log(data);
+	mark.readnameimg('views/project/markdown-ch/', function (data) {	
 		res.render("home/landing", {"projectname": data});
 	})
 });
@@ -41,11 +40,29 @@ router.get('/project', (req, res, next) => {
 	});
 })
 
+router.get('/designservice', (req, res, next) => {
+	mark.readmarkdirs('views/more/design-mark-ch/', function (data, index) {
+		res.render('project/projectpage', {"marks": data, "index": index});
+	});
+})
 
-router.get('/more', (req, res, next) => {
+
+router.get('/platform-ch', (req, res, next) => {
 	mark.readmarkdir('views/more/plat-mark-ch/', function (data, index) {
 		res.render('more/more', {"marks": data, "index": index});
 	});
+})
+
+router.get('/platform-en', (req, res, next) => {
+	mark.readmarkdir('views/more/plat-mark-en/', function (data, index) {
+		res.render('more/more', {"marks": data, "index": index});
+	});
+})
+
+
+router.post('/contactform', (req, res, next) => {
+	console.log(req.body);
+	res.send('succese');
 })
 
 

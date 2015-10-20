@@ -2,7 +2,7 @@ define(function(require, exports, module) {
 
 	var $ = require('jquery');
 
-	
+
 	function loadlang(lang, page) {
 		$.ajax({
 			'url':'/gettext',
@@ -22,19 +22,52 @@ define(function(require, exports, module) {
 
 	function loadlangpage (lang, page) {
 		loadlang(lang, 'header');
-		loadlang(lang, page);
+		if( page == 'home')
+			loadlang(lang, page);
 		setfontfamily(lang);
+		console.log(lang);
+		var langtag = (lang == "中文" ||lang == "")?"ch":(lang == "English"?"en":"");
+
+		$('.en-ch').each(function(){
+			var str = $(this).attr('href');
+			var len = str.indexOf('-');
+			len = len==-1?str.length:len;
+			$(this).attr('href', str.substr(0,len) + '-' +langtag);
+		})
 	}
+
 
 	exports.loadl =  function ( page) {
 		
-		var lang = sessionStorage.getItem('language') == "null"?"中文":sessionStorage.getItem('language');
+		var lang = sessionStorage.getItem('language') === null?"中文":sessionStorage.getItem('language');
+		console.log(lang);
+		$(document).ready(function(){
+			loadlangpage(lang, page);
 
-		$(document).ready(loadlangpage(lang, page));
+			if( page == "home"){
+				$('.changelanguage').on('click', function () {
+					loadlangpage($(this).text(), page);
+				});
+			}
+			else if( page == "more"){
+				$('.changelanguage').on('click', function () {
 
-		$('.changelanguage').on('click', function () {
-			loadlangpage($(this).text(), page);
-		});
+					var lang = $(this).text();
+					sessionStorage.setItem('language', lang);
+
+					var hre = location.href;
+					var len = hre.lastIndexOf('-');
+					var tmphref = hre.substr(0, len);
+					if( lang == '中文'){
+						tmphref += '-ch';
+					}
+					else if( lang == 'English' ){
+						tmphref += '-en';
+					}
+					location.href = tmphref;
+				});
+			}
+		})
 	}
 
 	function setfontfamily (lang) {
