@@ -181,3 +181,8 @@ font-family: LithosPro-Black;
 font-family: LithosPro-Regular; 
  src:url("/fonts/Englist_font/LithosPro-Regular.otf") format("opentype");
 }
+
+@font-face { 
+font-family: sss; 
+ src:url("/fonts/sss.ttf") format("truetype");
+}

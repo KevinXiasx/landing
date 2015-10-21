@@ -1,19 +1,19 @@
 @import "animation.less";
 
 h1{
-	font-family: msjh;
+	Font-family: "msjh";
 	font-size: 45px;
 }
 
 h2{
 	color: @radxa-sdark;
-	font-family: msjh;
+	Font-family: "msjh";
 	font-size: 25px;
 
 }
 h3{
 	color: #686767;
-	font-family: msjh;
+	Font-family: "msjh";
 	font-size: 18px;
 }
 
@@ -25,9 +25,9 @@ h3{
 	width: 100%;
 	background-color:#101010;
 	height:800px;
-	font-family: msjh;
+	Font-family: "msjh";
 	position: relative;
-	background: url("/images/banner.png") no-repeat center center;
+	background: url("/images/home/banner.png") no-repeat center center;
 	background-size: cover;
 	.cover{
 		background-color: black;
@@ -66,9 +66,6 @@ h3{
 	padding-top: 50px;
 	padding-bottom: 50px;
 	overflow: hidden;
-	div{
-/*		border: 1px solid #ccc;*/
-	}
 
 	.title-line{
 		color: @radxa-sdark;
@@ -117,10 +114,10 @@ h3{
 				background-image: url("/images/home/new icons1.png");
 			}
 			&:nth-of-type(2) .iconimg{
-				background-image: url("/images/home/new icons2.png");
+				background-image: url("/images/home/new icons3.png");
 			}
 			&:nth-of-type(3) .iconimg{
-				background-image: url("/images/home/new icons3.png");
+				background-image: url("/images/home/new icons2.png");
 			}
 			.texts{
 				min-height: 100px;
@@ -134,33 +131,41 @@ h3{
 	padding-bottom: 0px;
 	background-color: #f5eeeb;
 	.texts{
+		float: left;
+		align-items: flex-start;
 		h1,h2,h3{
-			text-align: left;
+
 		}
 	}
-	.row:nth-of-type(1){
-		@iconwidth: 150px;
+	.morebtn{
+		margin-top:50px;
+	}
+	.col:nth-of-type(1){
+		position: relative;
+		@iconwidth:600px;
+		align-items: flex-start;
+		height: @iconwidth;
 		.iconimg{
+			@iconwidth:100px;
+			float: left;
 			width: @iconwidth;
 			height: @iconwidth;
-			background-image: url("/images/pages/hardware.png");
+			background: url("/images/home/hardware.png") no-repeat;
 			background-size: 90% auto;
 		}
-		#col-2{
-			min-height: @iconwidth;
+		.title{
+			margin-bottom:50px;
 		}
-		margin-bottom:50px;
 	}
-	.row:nth-of-type(2){
+	.col:nth-of-type(2){
 		.col,  .col .texts{
 			align-items: flex-start;
 		}
 		@iconwidth: 600px;
-		.iconimg{
+		.iconimg{		
 			width: @iconwidth;
 			height: @iconwidth;
-			background-image: url("/images/web/open platform/board.png");
-			background-position: top left;
+			background-image: url("/images/home/board.png");
 			background-size: 100% auto;
 		}
 	}

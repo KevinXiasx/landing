@@ -4,6 +4,8 @@
 		
 		"h1":"Radxa Limited",
 
+		"more":"see more",
+
 		"p1_t1":"What we offer", 
 
 		"p2_t1":"Open Source Hardwarefor everyone",
@@ -23,6 +25,8 @@
 		"language_active": "中文",
 
 		"h1":"个性化的科技让生活更美好",
+
+		"more":"了解更多",
 
 		"p1_t1":"我们提供", 
 

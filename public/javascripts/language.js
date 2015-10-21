@@ -13,6 +13,8 @@ define(function(require, exports, module) {
 					$('[txt]').each(function () {
 						$(this).text(data[$(this).attr('txt')]);
 					})
+					var time2 = new Date().getTime();
+					console.log('time2 ='+ time2);
 				},
 			'error' : function () {
 					alert('loading fail, network disconnect');
@@ -22,9 +24,11 @@ define(function(require, exports, module) {
 
 	function loadlangpage (lang, page) {
 		loadlang(lang, 'header');
-		if( page == 'home')
+		if( page == 'home'){
 			loadlang(lang, page);
-		console.log(lang);
+			var time1 = new Date().getTime();
+			console.log('time1 ='+ time1);
+		}
 		var langtag = (lang == "中文" ||lang == "")?"ch":(lang == "English"?"en":"");
 
 		$('.en-ch').each(function(){
@@ -38,8 +42,9 @@ define(function(require, exports, module) {
 
 	exports.loadl =  function ( page) {
 		
+/*		var time1 = new Date().getTime();
+		console.log('time1 ='+ time1);*/
 		var lang = sessionStorage.getItem('language') === null?"中文":sessionStorage.getItem('language');
-		console.log(lang);
 		$(document).ready(function(){
 			loadlangpage(lang, page);
 
@@ -67,7 +72,12 @@ define(function(require, exports, module) {
 					location.href = tmphref;
 				});
 			}
+			else if( page == "project"){
+				setfontfamily(lang);
+			}
 		})
+/*		var time2 = new Date().getTime();
+		console.log('time2 ='+ time2);*/
 	}
 
 	function setfontfamily (lang) {
@@ -83,6 +93,9 @@ define(function(require, exports, module) {
 			$('h2').css('font-family', 'msjh');
 			$('h3').css('font-family', 'msjh');
 		}
+/*		var time3 = new Date().getTime();
+		console.log('time3 ='+ time3);*/
 	}
+
 });
 
