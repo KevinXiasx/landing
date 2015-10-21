@@ -26,7 +26,6 @@ define(function(require, exports, module) {
 				var myhigh = $(document).scrollTop();
 				if( myhigh < 1000 ){
 					$('.cover').css("opacity", 0.8 - myhigh/200);		
-					$('.cover span').css('font-size', siz+myhigh/3);
 				}
 			})
 		});
@@ -43,7 +42,7 @@ define(function(require, exports, module) {
 			if( arrive('#page-1') ){
 				var timerout = 0;				
 				myshowfunc($('#page-1 .allcontent'), {scale:0.9, y:100}, {"amtime":1000});
-				setTimeout(function(){myshowfunc($('#page-1 .allcontent .showner'), {scale:0.6, y:100}, {"amtime":1000})}, timerout+=700);
+				setTimeout(function(){myshowfunc($('#page-1 .allcontent .showner'), {scale:0.6, y:100}, {"amtime":1500})}, timerout+=400);
 				$(document).off('scroll', pageshowlist['page-1']);
 			}
 		}

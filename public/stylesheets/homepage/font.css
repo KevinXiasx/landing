@@ -172,3 +172,12 @@ font-family: Candara;
  src:url("/fonts/Candara/Candara.ttf") format("truetype");
 }
 
+@font-face { 
+font-family: LithosPro-Black; 
+ src:url("/fonts/Englist_font/LithosPro-Black.otf") format("opentype");
+}
+
+@font-face { 
+font-family: LithosPro-Regular; 
+ src:url("/fonts/Englist_font/LithosPro-Regular.otf") format("opentype");
+}

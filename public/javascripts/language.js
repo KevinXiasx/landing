@@ -24,7 +24,6 @@ define(function(require, exports, module) {
 		loadlang(lang, 'header');
 		if( page == 'home')
 			loadlang(lang, page);
-		setfontfamily(lang);
 		console.log(lang);
 		var langtag = (lang == "中文" ||lang == "")?"ch":(lang == "English"?"en":"");
 
@@ -47,6 +46,7 @@ define(function(require, exports, module) {
 			if( page == "home"){
 				$('.changelanguage').on('click', function () {
 					loadlangpage($(this).text(), page);
+					setfontfamily($(this).text());
 				});
 			}
 			else if( page == "more"){
@@ -72,16 +72,16 @@ define(function(require, exports, module) {
 
 	function setfontfamily (lang) {
 		if( lang ==  'English'){
-			$('.maintitle span').css('font-family', 'Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif');
+			$('.maintitle span').css('font-family', 'LithosPro-Black');
 			$('h1').css('font-family', 'Roboto-Regular');
 			$('h2').css('font-family', 'Candara');
 			$('h3').css('font-family', 'Roboto-Condensed');
 		}
 		else if( lang == '中文'){
-			$('.maintitle span').css('font-family', 'AdobeHeitiStd-Regular');
-			$('h1').css('font-family', 'msjhbd');
+			$('.maintitle span').css('font-family', 'msjh');
+			$('h1').css('font-family', 'msjh');
 			$('h2').css('font-family', 'msjh');
-			$('h3').css('font-family', 'simhei');
+			$('h3').css('font-family', 'msjh');
 		}
 	}
 });

@@ -16,23 +16,23 @@ router.get('/', (req, res, next) => {
 	})
 });
 
-
 router.get('/gettext', (req, res, next) => {
+	let paths = {"header":"views/header.txt", "home":"views/home/home.txt"};
 	let params = url.parse(req.url, true).query;
-	MongoClient.connect(dataurl, function(err, db) {
-		if(err)	 {
+	fs.readFile(paths[params.page], (err, data) => {
+		if(err)
 			console.log(err);
-			db.close();
+		else{
+			let txt = JSON.parse(data);
+			if( params.language == '' || params.language == '中文'){
+				res.send(txt.ch);
+			}
+			else{
+				res.send(txt.en);
+			}
 		}
-	  	else{
-	  		let collection = db.collection( params.page );
-	  		let language = (params.language == '')||(params.language == 'null')||(params.language == undefined)?'中文':params.language;
-	  		collection.find({"language_active":language}).toArray(function(err, docs) {
-	  			res.send(docs[0]);
-	  		});
-	  	}
 	});
-})
+});
 
 router.get('/project', (req, res, next) => {
 	mark.readmarkdirs('views/project/markdown-ch/', function (data, index) {
