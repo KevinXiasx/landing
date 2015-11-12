@@ -8,7 +8,7 @@
 
 		"p1_t1":"What we offer", 
 
-		"p2_t1":"Open Source Hardwarefor everyone",
+		"p2_t1":"Open Hardwarefor",
 		"p2_t2":"Free access to the design of modern electronic devices by us",
 		"p2_t3":"We provide open source hardware platform for prototyping, the software hardware design is freely available from the internet, no NDA required. These software/hardware design is verified and ready to use. Anyone can edit/modify to develop their own products.",
 
@@ -18,7 +18,13 @@
 
 		"p4_t1":"factory",
 		"p4_t2":"make it in here",
-		"p4_t3":"灵活的按需生产，无论是一个还是一万个，我们同样对待。"
+		"p4_t3":"灵活的按需生产，无论是一个还是一万个，我们同样对待。",
+
+		"workingwith":"They are working with Radxa",
+
+		"project":"Project",
+
+		"hello":"\"Hello, I`m Radxa\""
 	},
 
 	"ch":{
@@ -40,6 +46,12 @@
 
 		"p4_t1":"生产服务",
 		"p4_t2":"原型变成产品到每个人手上",
-		"p4_t3":"灵活的按需生产，无论是一个还是一万个，我们同样对待。"
+		"p4_t3":"灵活的按需生产，无论是一个还是一万个，我们同样对待。",
+
+		"workingwith":"他们，和瑞莎一起并肩作战",
+
+		"project":"项目展示",
+
+		"hello":"\"你好，我是瑞莎科技\""
 	}
 }

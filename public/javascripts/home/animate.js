@@ -3,6 +3,7 @@ define(function(require, exports, module) {
 
  	var $ = require('jquery');
  	require('jq-transition');
+ 	$('#page-4').css('height', parseInt($(window).height()) - parseInt($('.bottomframe').css('height')) );
 
 	var myshowfunc =  function (obj, anima, time, event, func) {
 		obj.transition(anima, 0);
@@ -32,7 +33,7 @@ define(function(require, exports, module) {
 
 		var pageshowlist = {};
 
-		function arrive (selector) {
+		var arrive = function (selector) {
 			var currenHight = $(document).scrollTop()+$(window).height();
 			var eleHight = parseInt($(selector).offset().top);
 			return eleHight+200 < currenHight;
@@ -51,7 +52,7 @@ define(function(require, exports, module) {
 			if( arrive('#page-2') ){
 				var timerout = 0;
 				myshowfunc($('#page-2 .allcontent'), {scale:0.9, y:100}, {"amtime":1000});
-				setTimeout(function(){myshowfunc($("#page-2 .iconimg.showner"), {x:300}, {"amtime":1500})},timerout+=500);
+				setTimeout(function(){myshowfunc($("#page-2 img.showner"), {x:300}, {"amtime":1500})},timerout+=500);
 				$(document).off('scroll', pageshowlist['page-2']);
 			}
 		}
@@ -64,11 +65,37 @@ define(function(require, exports, module) {
 			}
 		}
 
+		var stdhight = 0;
+		var state = "white";
+		var direc ;
+
 		pageshowlist['page-4'] = function () {
-			if( arrive('#page-4') ){
-				var timerout = 0;
-				myshowfunc($('#page-4 .allcontent'), {scale:0.9, y:100}, {"amtime":1000});
-				$(document).off('scroll', pageshowlist['page-4']);
+	
+			var selector = $('#page-4');
+			var currenHight = $(document).scrollTop()+$(window).height();
+			var eleHight = parseInt($(selector).offset().top);
+			var heightself = parseInt($(selector).css('height'));
+			if( currenHight > eleHight - 600 ){
+				direc = $(document).scrollTop() - stdhight > 0?"down":"up";
+				stdhight = $(document).scrollTop();
+
+/*				var eles = {
+					selector:{'feature':'background-color', 'state-1':'#FFFFFF', 'state-2':'#0199cb'},
+					$('#page-4 .form'):{'feature':'color', 'state-1':'#0199cb', 'state-2':'#FFFFFF'},
+					$('#page-4 .form input'):{'feature':'color', 'state-1':'#000000', 'state-2':'#0199cb'},
+					$('#page-4 .form textarea'):{'feature':'color', 'state-1':'#000000', 'state-2':'#0199cb'}
+				};*/
+				
+				if( direc == "down" && currenHight > eleHight+600 && state=="white"){
+					selector.transition({'background-color':'#0199cb'});
+					$('#page-4 .form').transition({'color':'#FFFFFF'});
+					state = "blue";
+				}
+				if( direc == "up" && currenHight <= eleHight+600 && state=="blue"){
+					selector.transition({'background-color':'#FFFFFF'});
+					$('#page-4 .form').transition({'color':'#0199cb'});
+					state = "white";
+				}
 			}
 		}
 

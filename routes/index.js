@@ -9,6 +9,12 @@ let mark = require("../myclass/mark.js");
 
 const dataurl = 'mongodb://localhost:27017/landing';
 
+router.get('/mp4', (req, res, next) => {
+	res.download("public/testfile.mp4");
+});
+
+
+
 /* GET home page. */
 router.get('/', (req, res, next) => {
 	mark.readnameimg('views/project/markdown-ch/', function (data) {	

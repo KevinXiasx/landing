@@ -5,6 +5,9 @@
 
 
 #header {
+	min-height: 100px;
+	margin: 0;
+	border: none;
 	background-color: #FFFFFF;
 	.logo{
 		height: 60px;
@@ -15,28 +18,32 @@
 	}
 	.container{
 		margin-top: 20px;
-		margin-bottom: 10px;
+		margin-bottom: 0px;
 	}
 	.logo{
 		font-size:60px;
 		color: @radxa-dark;
-		font-family: Roboto-Black; 	
+		font-family: Roboto-Black;
 	}
 	.dropdown-menu,
 	.links{
-		font-size:24px;
+		font-size:26px;
 		cursor: pointer;
 		color: @radxa-sdark;
-		font-family: Candara;
+		font-family: "Candara","sans-serif";
 	}
 	.navbar-right{
-		margin-top: 10px;
-		border-top: 2px solid @radxa-blue;
+		margin-top: 27px;
+		border-top: 3px solid @radxa-blue;
 		a:hover{
 			color:@radxa-blue;
 		}
 		li{
 			margin-left: 0px;
+			a{
+				padding-left: 5px;
+				padding-right: 5px;
+			}
 		}
 		[txt='language_active']{
 			&:after{
@@ -44,5 +51,13 @@
 				font-size: 20px;
 			}
 		}
+	}
+}
+
+@media (min-width: @padwidth ){
+	#header .navbar-right{
+		width: 50%;
+		display: flex;
+		justify-content: space-between;
 	}
 }

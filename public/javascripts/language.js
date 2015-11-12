@@ -41,9 +41,6 @@ define(function(require, exports, module) {
 
 
 	exports.loadl =  function ( page) {
-		
-/*		var time1 = new Date().getTime();
-		console.log('time1 ='+ time1);*/
 		var lang = sessionStorage.getItem('language') === null?"中文":sessionStorage.getItem('language');
 		$(document).ready(function(){
 			loadlangpage(lang, page);
@@ -51,7 +48,6 @@ define(function(require, exports, module) {
 			if( page == "home"){
 				$('.changelanguage').on('click', function () {
 					loadlangpage($(this).text(), page);
-					setfontfamily($(this).text());
 				});
 			}
 			else if( page == "more"){
@@ -72,30 +68,7 @@ define(function(require, exports, module) {
 					location.href = tmphref;
 				});
 			}
-			else if( page == "project"){
-				setfontfamily(lang);
-			}
 		})
-/*		var time2 = new Date().getTime();
-		console.log('time2 ='+ time2);*/
 	}
-
-	function setfontfamily (lang) {
-		if( lang ==  'English'){
-			$('.maintitle span').css('font-family', 'LithosPro-Black');
-			$('h1').css('font-family', 'Roboto-Regular');
-			$('h2').css('font-family', 'Candara');
-			$('h3').css('font-family', 'Roboto-Condensed');
-		}
-		else if( lang == '中文'){
-			$('.maintitle span').css('font-family', 'msjh');
-			$('h1').css('font-family', 'msjh');
-			$('h2').css('font-family', 'msjh');
-			$('h3').css('font-family', 'msjh');
-		}
-/*		var time3 = new Date().getTime();
-		console.log('time3 ='+ time3);*/
-	}
-
 });
 
