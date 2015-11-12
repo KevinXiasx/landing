@@ -16,4 +16,4 @@ Lear more about Rock Pro and Rock Lite
 * Home Automation
 
 
-![img](http://172.168.1.88:3003/images/plat/Rock_lite.png)
+![img](http://172.168.1.88:3003/images/plat/PRO.png)

@@ -11,36 +11,35 @@
 <body >
 	<% include ../header %>
 	<div class="jumbotron marked">
-		<div class="back"></div>
 		<div class="container" id="bigbord">
 	  		<%- index %>
 	  	</div>
 	</div>
 	<div class="content marked">
-		<% var color = [{"bgd": "#E55E5E", "border": "#2DE89A", "font": "#F2F2F2"},{"bgd": "#E8C95E", "border": "#C05EE5" , "font": "#000000"},{"bgd": "#5E68E5", "border": "#E5755E", "font": "#1A1A1A"}]%>
+		<% var color = [{"bgd": "#FFFFFF"},{"bgd": "#F3F3F3"}]%>
 		<% for( var s = 0; s < marks.length; s++ ){ %>
 			<% if( s%2 == 0){ %>
-			<section class="boxborder flexbox" style="background-color:<%= color[s%3].bgd %>;color:<%= color[s%3].font %>;">
+			<section class="boxborder flexbox" style="background-color:<%= color[s%2].bgd %>;">
 			<div class="container">
-				<div class="row flexbox " >
+				<div class="row flexbox" style="align-items:flex-end;">
 					<div class="col-xs-7">
 						 <%- marks[s].text %>
 					</div>
 					<div class="col-xs-5">
 					<a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
-						<img src="<%- marks[s].img %>" style="border:6px solid <%= color[s%3].border %>;">
+						<img src="<%- marks[s].img %>" style="margin-bottom:10px;">
 						</a>
 					</div>
 				</div>
 				</div>
 			</section>
 			<% } else { %>
-			<section class="boxborder flexbox" style="background-color:<%= color[s%3].bgd %>;color:<%= color[s%3].font %>;">
+			<section class="boxborder flexbox" style="background-color:<%= color[s%2].bgd %>;">
 			<div class="container">
-				<div class="row flexbox ">					
+				<div class="row flexbox " style="align-items:flex-end;">					
 					<div class="col-xs-5">
 					<a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
-						<img src="<%- marks[s].img %>" style="border:6px solid <%= color[s%3].border %>;">
+						<img src="<%- marks[s].img %>" style="margin-bottom:10px;">
 						</a>
 					</div>
 					<div class="col-xs-7">

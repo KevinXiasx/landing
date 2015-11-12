@@ -10,4 +10,4 @@ Rock2 targets are high performance application development platform, it's made b
 * Robotics   
 * 4k Kiosk  
 
-![img](http://172.168.1.88:3003/images/plat/600px-Rock2_base_top2.png)
+![img](http://172.168.1.88:3003/images/plat/ROCK2.png)

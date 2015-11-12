@@ -12,4 +12,4 @@ ary development style.
 Lear more about CHIRENMEN
 
 
-![img](http://172.168.1.88:3003/images/plat/red board.png)
+![img](http://172.168.1.88:3003/images/plat/red board new.png)

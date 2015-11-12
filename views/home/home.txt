@@ -24,7 +24,9 @@
 
 		"project":"Project",
 
-		"hello":"\"Hello, I`m Radxa\""
+		"hello":"\"Hello, I`m Radxa\"",
+
+		"submit":"Submit"
 	},
 
 	"ch":{
@@ -52,6 +54,8 @@
 
 		"project":"项目展示",
 
-		"hello":"\"你好，我是瑞莎科技\""
+		"hello":"\"你好，我是瑞莎科技\"",
+
+		"submit":"寄出"
 	}
 }

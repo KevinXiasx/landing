@@ -6,14 +6,9 @@ let router = express.Router();
 let MongoClient = require('mongodb').MongoClient;
 let url = require("url");
 let mark = require("../myclass/mark.js");
+let email = require("../myclass/email.js");
 
 const dataurl = 'mongodb://localhost:27017/landing';
-
-router.get('/mp4', (req, res, next) => {
-	res.download("public/testfile.mp4");
-});
-
-
 
 /* GET home page. */
 router.get('/', (req, res, next) => {
@@ -65,9 +60,9 @@ router.get('/platform-en', (req, res, next) => {
 	});
 })
 
-
 router.post('/contactform', (req, res, next) => {
-	console.log(req.body);
+	let content = "Tom: \n    "+req.body.name+" send a message to you via radxa landing page.\n His email is '"+req.body.email +"', message is :\n    "+req.body.message+'\n';
+	email.emailtom(content);
 	res.send('succese');
 })
 
