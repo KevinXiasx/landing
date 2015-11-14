@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Radxa project</title>
+	<link rel="stylesheet" type="text/css" href="http://172.168.1.88:3000/stylesheets/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/stylesheets/Font-Awesome/css/font-awesome.min.css">	
+	<link rel="stylesheet" type="text/css" href="/stylesheets/homepage/font.css">
+	<link rel="stylesheet" type="text/less" href="/less/design.less">
+</head>
+
+<body >
+	<% include ../header %>
+	<header class="flexbox secon-end">
+		<div class="rotatebg" id="bg-1"></div>
+		<img src="/images/design/notebooka1i.png">
+	</header>
+	<section id="sec-1" class="flexbox direc-col ">
+		<div  class="flexbox ttt main-around secon-start"> 
+			<h3 txt="t_1"></h3>
+			<h3 txt="t_2"></h3>
+		</div>
+		<div class="container">
+			<div class="row " id="row-1">
+				<div class="col-lg-12 ">
+					<div class="title-line flexbox main-between">
+					<strong txt="des_p1_t1"></strong>
+					</div>
+				</div>
+			</div>
+		
+			<div class="row " id="row-2">
+				<% var tags = [4, 4, 3]; %>
+				<% for(var i = 0; i< 3 ; i++){ %>
+					<div class="col col-sm-4 flexbox direc-col main-start">
+						<strong txt="p1_s<%= i+1 %>_1"></strong>
+						
+						<ul class="tags">
+							<% for(var j = 0; j< tags[i] ; j++){ %>
+								<li txt="p1_s<%= i+1 %>_<%= j+2 %>"></li>
+							<% }%>
+						</ul>
+						<img src="/images/design/title/title<%= i+1 %>.png">
+					</div>
+				<% }%>
+			</div>
+		</div>
+	</section>
+	<section id="sec-2">
+		<div class="rotatebg" id="bg-2"></div>
+		<div class="container">
+			<div class="row " id="row-1">
+				<div class="col col-xs-12  flexbox direc-col main-between">
+					<h1 txt="des_p2_t1"></h1>
+					<div class="line"></div>
+				</div>		
+			</div>
+
+			<div class="row " id="row-2">
+				<% for(var k = 0; k< 7 ; k++){ %>
+					<div class="col col-sm-3 flexbox direc-col main-around">
+						<img src="/images/design/setp/setp0<%= k+1 %>.png">
+						<h3 txt="p2_t1_<%= k+1 %>"></h3>
+					</div>
+					<% if(k==3){ %>
+						</div>
+						<div class="row " id="row-3">
+					<% } %>					
+				<% } %>
+			</div>
+		</div>
+	</section>
+	<% include ../bottom %>
+
+	<script src="http://172.168.1.88:3000/javascripts/seajs-3.0.0/dist/sea.js"></script>
+
+	<script>
+	  seajs.config({
+	    base: "/javascripts/",
+	    alias: {
+	    	"jquery": "http://172.168.1.88:3000/javascripts/jquery/jquery-seajs.js",
+	    	"bootstrap-js": "http://172.168.1.88:3000/stylesheets/bootstrap/js/bootstrap-seajs.js",
+	    	"less": "http://172.168.1.88:3000/javascripts/less.js"
+	    }
+	  });
+	   seajs.use("design/main-design");
+
+	</script>
+
+</body>
+</html>

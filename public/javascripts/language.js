@@ -13,8 +13,6 @@ define(function(require, exports, module) {
 					$('[txt]').each(function () {
 						$(this).text(data[$(this).attr('txt')]);
 					})
-					var time2 = new Date().getTime();
-					console.log('time2 ='+ time2);
 				},
 			'error' : function () {
 					alert('loading fail, network disconnect');
@@ -24,10 +22,9 @@ define(function(require, exports, module) {
 
 	function loadlangpage (lang, page) {
 		loadlang(lang, 'header');
-		if( page == 'home'){
+		loadlang(lang, 'bottom');
+		if( page == 'home' || page == 'design'){
 			loadlang(lang, page);
-			var time1 = new Date().getTime();
-			console.log('time1 ='+ time1);
 		}
 		var langtag = (lang == "中文" ||lang == "")?"ch":(lang == "English"?"en":"");
 
@@ -67,6 +64,10 @@ define(function(require, exports, module) {
 					}
 					location.href = tmphref;
 				});
+			}
+			else{
+				$('.changelanguage').css('color','#ccc');
+				$('.changelanguage').css('cursor','default');
 			}
 		})
 	}

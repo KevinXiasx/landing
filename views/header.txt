@@ -3,21 +3,27 @@
 		"language_active": "中文",
 		"language_2":"English",
 
-		"company":"瑞莎科技",
-		"menu_1":"维客",
-		"menu_2":"商城",
-		"menu_3":"社区",
-		"menu_4":"项目"
+		"home":"主页",
+		"menu_1":"产品",
+		"menu_2":"服务",
+		"menu_3":"案例",
+		"menu_4":"支持",
+
+		"p4_1":"维基",
+		"p4_2":"社区"
 	},
 
 	"en":{
 		"language_active": "English",
 		"language_2":"中文",
 
-		"company":"Radxa",
-		"menu_1":"Wiki",
-		"menu_2":"Store",
-		"menu_3":"Community",
-		"menu_4":"Project"
+		"home":"Home",
+		"menu_1":"Product",
+		"menu_2":"Service",
+		"menu_3":"Case",
+		"menu_4":"Support",
+
+		"p4_1":"Wiki",
+		"p4_2":"Community"
 	}
 }

@@ -2,9 +2,21 @@
 
 for file in ./*
 do
-    if test -f $file
+    if test -f "$file"
     then
-        lessc $file ${file%.*}.css
+	if [ "${file##*.}" = "less" ]
+	then
+        	lessc "$file" "../css/${file%.*}.css"
+	fi
+        # if [ "${file##*.}" = "png" ]
+        # then
+        # 	convert $file ${file%.*}.jpg
+        # fi
+
+#         if [ "${file##*.}" = "JPG" ]
+ #        then
+  #       	echo $file
+   #      fi
     fi
 done
 

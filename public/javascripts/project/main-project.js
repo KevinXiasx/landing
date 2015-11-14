@@ -15,7 +15,10 @@ define(function(require) {
 	
 	$(document).ready(function () {
 		$('.portfolio-link img').on("click", function () {
-			$('#portfolioModal1 img').attr('src', $(this).attr('src'));
+			var src = $(this).attr('src');
+			var len = src.lastIndexOf('-');
+			var tmpsrc = src.substr(0, len);
+			$('#portfolioModal1 img').attr('src', tmpsrc);
 		})
 	})
 });

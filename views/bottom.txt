@@ -1,0 +1,13 @@
+{
+	"ch":{
+		"company": "瑞莎科技",
+		"p1":"版权所有.深圳瑞莎",
+		"p2":"周边支持"
+	},
+
+	"en":{
+		"company": "RADXA",
+		"p1":"Copyright © China ShenZhen RADXA  2015",
+		"p2":"AROUND AREAS"
+	}
+}

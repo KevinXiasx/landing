@@ -14,22 +14,28 @@ const dataurl = 'mongodb://localhost:27017/landing';
 router.get('/', (req, res, next) => {
 	mark.readnameimg('views/project/markdown-ch/', function (data) {	
 		res.render("home/landing", {"projectname": data});
-	})
+	});
 });
 
 router.get('/gettext', (req, res, next) => {
-	let paths = {"header":"views/header.txt", "home":"views/home/home.txt"};
+	let paths = {"header":"views/header.txt", 
+				"home":"views/home/home.txt", 
+				"design":"views/design/design.txt",
+				"bottom":"views/bottom.txt"};
 	let params = url.parse(req.url, true).query;
 	fs.readFile(paths[params.page], (err, data) => {
 		if(err)
 			console.log(err);
 		else{
 			let txt = JSON.parse(data);
-			if( params.language == '' || params.language == '中文'){
+			if( params.language == '' || params.language == '中文' ){
 				res.send(txt.ch);
 			}
 			else{
-				res.send(txt.en);
+				if( typeof txt.en == 'undefined')
+					res.send(txt.ch);
+				else
+					res.send(txt.en);
 			}
 		}
 	});
@@ -42,11 +48,9 @@ router.get('/project', (req, res, next) => {
 })
 
 router.get('/designservice', (req, res, next) => {
-	mark.readmarkdirs('views/more/design-mark-ch/', function (data, index) {
-		res.render('project/projectpage', {"marks": data, "index": index});
-	});
+	
+	res.render('design/design');
 })
-
 
 router.get('/platform-ch', (req, res, next) => {
 	mark.readmarkdir('views/more/plat-mark-ch/', function (data, index) {

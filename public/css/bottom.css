@@ -1,0 +1,21 @@
+/*====================   bottom  ====================*/
+.bottomframe {
+  width: 100%;
+  background-color: #2C3E50;
+  color: white;
+  font-size: 12px;
+}
+.bottomframe a {
+  text: expression(target="_blank");
+}
+.bottomframe .col {
+  min-height: 100px;
+}
+.bottomframe .col > div {
+  align-items: flex-start;
+  -webkit-align-items: flex-start;
+}
+.bottomframe .col .links span {
+  display: inline-block;
+  min-width: 70px;
+}

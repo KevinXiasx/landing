@@ -75,7 +75,7 @@ function readmarkdirs(pa , callback){
 						let ele = $('img');
 						if( ele.length != 0 ){
 							for (let k = ele.length - 1; k >= 0; k--) {
-								img.push('<img src="'+ele.eq(k).attr('src')+'"/>');
+								img.push('<img src="'+ele.eq(k).attr('src')+'-min'+'"/>');
 							};
 						}
 						$('img').remove();

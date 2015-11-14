@@ -1,18 +1,18 @@
 @import "animation.less";
 
 h1{
-	Font-family:"Candara","SimHei";
+	Font-family:"LithosPro-Black","Hiragino Sans GB", "Microsoft YaHei","WenQuanYi Micro Hei", sans-serif;;
 	font-size: 42px;
 }
 
 h2{
 	color: @radxa-sdark;
-	font-family:"Hiragino Sans GB", "Microsoft YaHei","WenQuanYi Micro Hei", sans-serif;
+	font-family:"Candara", "Hiragino Sans GB", "Microsoft YaHei","WenQuanYi Micro Hei", sans-serif;
 	font-size: 30px;
 }
 h3{
 	color: #686767;
-	font-family:"Hiragino Sans GB", "Microsoft YaHei","WenQuanYi Micro Hei", sans-serif;
+	font-family:"Candara","Hiragino Sans GB", "Microsoft YaHei","WenQuanYi Micro Hei", sans-serif;
 	font-size: 20px;
 }
 
@@ -27,7 +27,7 @@ h3{
 	background-color:#101010;
 	height:768px;
 	position: relative;
-	background: url("/images/home/banner.png") no-repeat center center;
+	background: url("/images/home/banner.jpg") no-repeat center center;
 	background-size: cover;
 	.cover{
 		background-color: black;
@@ -76,7 +76,7 @@ h3{
 			content: "";
 			display: inline-block;
 			height: 3px;
-			width: 35%;
+			width: 30%;
 			background-color: @radxa-blue;			
 		}
 		h1{
@@ -148,36 +148,26 @@ h3{
 	#page-1 #row-2{
 		a{
 			.iconimg{
-				-moz-transition: all 0.3s linear;
-				-webkit-transition: all 0.3s linear;
-				-o-transition: all 0.3s linear;
-				transition: all 0.3s linear;
+				-moz-transition: all 0.2s linear;
+				-webkit-transition: all 0.2s linear;
+				-o-transition: all 0.2s linear;
+				transition: all 0.2s linear;
 				z-index: 10;
 			}
 			&:hover{
 				.iconimg{
-					-moz-transform: scale(2) translateY(25px);
-					-webkit-transform: scale(2) translateY(25px);
-					-o-transform: scale(2) translateY(25px);
-					transform: scale(2) translateY(25px);
-					background-image:none!important;
-					border: 1px solid @radxa-blue;
+					-moz-transform: scale(1.2);
+					-webkit-transform: scale(1.2);
+					-o-transform: scale(1.2);
+					transform: scale(1.2);
 					background-color: white;
-					&:after{
-						content:"More";
-						position: relative;
-						top: 35%;
-						left: 25%;
-						font-size: 30px;
-						color: @radxa-blue;
-					}
 				}
 			}
 		}
 	}
 }
 #page-2{
-	min-height: 770px;
+	min-height: 700px;
 	padding-bottom: 0px;
 	background-color: #f5eeeb;
 	.allcontent{
@@ -225,7 +215,7 @@ h3{
 }
 
 #page-3{
-	min-height: 770px;
+	min-height: 700px;
 	padding-bottom: 0px;
 	.allcontent{
 		margin-top: 10px;
@@ -442,6 +432,7 @@ h3{
 }
 
 #page-7{
+	min-height: 700px;
 	background-color: #f5eeeb;
 	#row-1{
 		.line{
@@ -453,6 +444,9 @@ h3{
 	}
 	#row-2{
 		margin-top: 70px;
+		.col{
+			height:365px;
+		}
 		#carousel-example-generic{
 			.carousel-indicators{
 				bottom: -60px;

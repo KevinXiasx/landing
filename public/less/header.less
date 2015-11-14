@@ -19,6 +19,7 @@
 	.container{
 		margin-top: 20px;
 		margin-bottom: 0px;
+		position: relative;
 	}
 	.logo{
 		font-size:60px;
@@ -44,14 +45,22 @@
 				padding-right: 5px;
 			}
 		}
-		[txt='language_active']{
-			&:after{
-				content:'▼';
-				font-size: 20px;
-			}
-		}
+	}
+	.dropdown-toggle{
+		&:after{
+			content:'▼';
+			font-size: 20px;
+		}		
+	}
+	.changelanguage{
+		position: absolute;
+		top: 0px;
+		right: 1%;
+		font-size: 17px;
+		cursor: pointer;
 	}
 }
+
 
 @media (min-width: @padwidth ){
 	#header .navbar-right{

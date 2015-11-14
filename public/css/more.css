@@ -1,0 +1,58 @@
+.marked h1 {
+  font-size: 50px;
+  line-height: 100px;
+}
+.marked h2 {
+  font-size: 45px;
+  line-height: 90px;
+}
+.marked h3 {
+  font-size: 40px;
+  line-height: 30px;
+  margin-top: 50px;
+}
+.marked h4 {
+  font-size: 35px;
+  line-height: 30px;
+  margin-top: 50px;
+}
+.marked h5 {
+  font-size: 30px;
+  line-height: 30px;
+  margin-top: 50px;
+}
+.marked p {
+  font-size: 20px;
+  line-height: 30px;
+  opacity: 0.8;
+}
+.marked li {
+  font-size: 20px;
+  line-height: 40px;
+  opacity: 0.8;
+}
+.jumbotron {
+  position: relative;
+  background-color: #F3F3F3;
+  margin-bottom: 0px;
+  padding-bottom: 150px;
+  padding-top: 0px;
+}
+.jumbotron #bigbord {
+  position: relative;
+  top: 100px;
+}
+.content div {
+  box-sizing: border-box;
+}
+.content .boxborder {
+  width: 100%;
+  height: 700px;
+}
+.content .row {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.content img {
+  width: 100%;
+}

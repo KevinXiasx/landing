@@ -16,8 +16,8 @@
 		"p3_t2":"Your idea to a real prototype , in 4 weeks",
 		"p3_t3":"By re-use the design of open source hardware(including the software stack, supply chain), we can provide quick customised prototyping service. Customer can choose various hardware platform and configuration.",
 
-		"p4_t1":"factory",
-		"p4_t2":"make it in here",
+		"p4_t1":"Factory",
+		"p4_t2":"Make it in here",
 		"p4_t3":"灵活的按需生产，无论是一个还是一万个，我们同样对待。",
 
 		"workingwith":"They are working with Radxa",
@@ -48,9 +48,9 @@
 
 		"p4_t1":"生产服务",
 		"p4_t2":"原型变成产品到每个人手上",
-		"p4_t3":"灵活的按需生产，无论是一个还是一万个，我们同样对待。",
+		"p4_t3":"灵活的按需生产，无论是一个还是一万个，我们同样对待",
 
-		"workingwith":"他们，和瑞莎一起并肩作战",
+		"workingwith":"合作伙伴",
 
 		"project":"项目展示",
 
