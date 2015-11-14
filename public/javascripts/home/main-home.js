@@ -1,5 +1,5 @@
 define(function(require) {
-	require('less');
+	//require('less');
 	require('bootstrap-js');
 	require('./contactform');
 	var language = require('../language');
