@@ -7,7 +7,7 @@
 	
 	<link rel="stylesheet" type="text/css" href="/stylesheets/homepage/font.css">
 	<link rel="stylesheet" type="text/less" href="/less/project.less">
-	
+	<meta http-equiv="X-UA-Compatible" content="IE=10" />
 </head>
 
 <body data-spy="scroll" data-target=".hehee">
@@ -26,7 +26,7 @@
             		</ul>
 				</div>
 			</div>
-			<div class="centerframe col-md-8 col-xs-12 marked">
+			<div class="centerframe col-md-9 col-xs-12 marked">
 				<% for( var s = 0; s < marks.length; s++ ){ %>
 					<section class="sec">
 					<div class="marktext">
@@ -42,7 +42,7 @@
 					</section> 
 				<% } %>
 			</div>
-			<div class="leftframe col-md-2 visible-md visible-lg">
+			<div class="leftframe col-md-1 visible-md visible-lg">
 			<a href="#header">
 				<div class="gototop flexbox direc-col " data-spy="affix" data-offset-top="500">
 					<i class="fa fa-hand-o-up"></i>
@@ -58,7 +58,7 @@
             <div class="container">
                 <div class="modal-body flexbox direc-col">
                 	<button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                    <img src="" class="img-responsive img-centered" alt="">
+                    <img src="" class="img-responsive img-centered" data-dismiss="modal" alt="">
                 </div>
             </div>
         </div>

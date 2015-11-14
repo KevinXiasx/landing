@@ -133,7 +133,8 @@ function readnameimg(pa , callback){
 						let ele = $('img').first().attr('src');
 						let tit = $('h2').text();
 						$('img').remove();
-						marks.push({"name":tit, "imgs":ele});
+						if(marks.length < 4)
+							marks.push({"name":tit, "imgs":ele});
 						count--;
 						if(count == 0 && count2 == 1)
 							callback( marks );
