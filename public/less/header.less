@@ -5,12 +5,10 @@
 
 
 #header {
+	min-height: 100px;
+	margin: 0;
+	border: none;
 	background-color: #FFFFFF;
-/*	.logo{
-		background: url("/images/radxa.png") no-repeat center center;
-		background-size: cover;
-		overflow: visible;
-	}*/
 	.logo{
 		height: 60px;
 		img{
@@ -18,36 +16,62 @@
 		}
 		padding: 0px;
 	}
+	.navbar-toggle{
+		margin-top: 30px;
+	}
 	.container{
 		margin-top: 20px;
-		margin-bottom: 10px;
+		margin-bottom: 0px;
+		position: relative;
 	}
 	.logo{
 		font-size:60px;
 		color: @radxa-dark;
-		font-family: Roboto-Black; 	
 	}
 	.dropdown-menu,
 	.links{
-		font-size:24px;
+		font-size:26px;
 		cursor: pointer;
 		color: @radxa-sdark;
-		font-family: Candara;
+		font-family: "Candara","sans-serif";
 	}
 	.navbar-right{
-		margin-top: 10px;
-		border-top: 2px solid @radxa-blue;
+		margin-top: 27px;
+		border-top: 3px solid @radxa-blue;
 		a:hover{
 			color:@radxa-blue;
 		}
 		li{
 			margin-left: 0px;
-		}
-		[txt='language_active']{
-			&:after{
-				content:'▼';
-				font-size: 20px;
+			a{
+				padding-left: 5px;
+				padding-right: 5px;
 			}
 		}
+	}
+	.dropdown-toggle{
+		&:after{
+			content:'▼';
+			font-size: 20px;
+		}		
+	}
+	.changelanguage{
+		position: absolute;
+		top: 0px;
+		right: 1%;
+		font-size: 17px;
+		cursor: pointer;
+		&:hover{
+			text-decoration:none;
+		}
+	}
+}
+
+
+@media (min-width: @padwidth ){
+	#header .navbar-right{
+		width: 50%;
+		display: flex;
+		justify-content: space-between;
 	}
 }

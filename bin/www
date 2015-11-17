@@ -9,8 +9,12 @@ var debug = require('debug')('landing:server');
 var http = require('http');
 
 /**
- * Get port from environment and store in Express.
+ * Initialise log4js first, so we don't miss any log messages
  */
+var log4js = require('log4js');
+log4js.configure('./log/logconfig.json');
+
+var log = log4js.getLogger("startup");
 
 var port = normalizePort(process.env.PORT || '3003');
 app.set('port', port);

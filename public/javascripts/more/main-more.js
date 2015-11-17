@@ -1,8 +1,8 @@
 define(function(require) {
 
-	require('less');
+	//require('less');
 	require('bootstrap-js');
-	
+	require('../header');
 	var language = require('../language');
 
 	language.loadl("more");

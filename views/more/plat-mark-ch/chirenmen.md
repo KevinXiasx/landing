@@ -9,4 +9,4 @@ CHIRIMEN 开发板是为web开发者设计的，通过浏览器技术，来制�
 了解更多关于CHIRENMEN
 
 
-![img](http://172.168.1.88:3003/images/plat/red board.png)
+![img](http://172.168.1.88:3003/images/plat/red board new.png)

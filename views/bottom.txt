@@ -1,0 +1,19 @@
+{
+	"ch":{
+		"company": "瑞莎科技",
+		"bm_p1":"版权所有.深圳瑞莎",
+		"bm_p2":"周边支持",
+		"bm_p3":"联系我们",
+		"phone":"电话:0755-23948936",
+		"address":"公司地址:中国深圳南山区同发路T6艺术区二楼A21"
+	},
+
+	"en":{
+		"company": "RADXA",
+		"bm_p1":"Copyright © China ShenZhen RADXA  2015",
+		"bm_p2":"AROUND AREAS",
+		"bm_p3":"Contact Us",
+		"phone":"Phone:0755-23948936(China)",
+		"address":"Address: China.ShenZhen.NanShan.Tongfa-street.T6art.Second-floor. A21"
+	}
+}

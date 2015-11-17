@@ -2,12 +2,12 @@
 <html lang="zh-cn">
 <head>
 	<title></title>
-	<link rel="stylesheet" type="text/css" href="http://172.168.1.88:3000/stylesheets/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="/stylesheets/Font-Awesome/css/font-awesome.min.css">
 
 	<link rel="stylesheet" type="text/css" href="/stylesheets/homepage/font.css">
-	<link rel="stylesheet/less" type="text/css" href="/less/landing.less">
-
+	<link rel="stylesheet" type="text/css" href="/css/landing.css">
+	<meta http-equiv="X-UA-Compatible" content="IE=10" />
 </head>
 <body>
 	<div class="leftframe"></div>
@@ -16,10 +16,7 @@
 		<div class="topframe" data-title="Home">
 			<div class="cover flexbox full">
 				<div class="maintitle flexbox direc-col full">
-					<span txt="h1"></span>
-				</div>
-				<div class="downdir">
-					<li class="nextpage fa fa-angle-double-down" style='color:white;'></li>	
+					<span txt="h1" class="bigpage"></span>
 				</div>
 			</div>
 		</div>
@@ -34,23 +31,7 @@
 		</div>
 
 		<% include ../bottom %>
-
-	<script src="http://172.168.1.88:3000/javascripts/seajs-3.0.0/dist/sea.js"></script>
-
-	<script>
-	  seajs.config({
-	    base: "/javascripts/",
-	    alias: {
-	    	"jquery": "http://172.168.1.88:3000/javascripts/jquery/jquery-seajs.js",
-	    	"jq-transition": "http://172.168.1.88:3000/javascripts/jquery/jq-transition-seajs.js",
-	    	"bootstrap-js": "http://172.168.1.88:3000/stylesheets/bootstrap/js/bootstrap-seajs.js",
-	    	"less": "http://172.168.1.88:3000/javascripts/less.js"
-	    }
-	  });
-
-	   seajs.use("home/main-home");
-
-	</script>
+		<% include ../seajs %>
 
 </body>
 </html>

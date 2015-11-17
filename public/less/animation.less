@@ -3,10 +3,12 @@
 @radxa-dark: #404040;
 @radxa-sdark: #333333;
 @radxa-oring: #f4972a;
+@radxa-main: #F3F3F3;
 
 @phonewidth: 767px;
 @padwidth: 1200px;
 @mdwidth:992px;
+@pcwidth:1300px;
 
 
 .flexbox{
@@ -43,6 +45,28 @@
 	justify-content: space-around;
 }
 
+.secon-start{
+	-webkit-align-items: flex-start;
+	align-items: flex-start;
+}
+
+.secon-end{
+	-webkit-align-items: flex-end;
+	align-items: flex-end;
+}
+
+.secon-between{
+	-webkit-align-items: space-between;
+	align-items: space-between;
+}
+
+.secon-around{
+	-webkit-align-items: space-around;
+	align-items: space-around;
+}
+
+
+
 
 .full{
 	width: 100%;
@@ -61,9 +85,11 @@
 	    text-align: center;
 		img {
 			margin-bottom: 30px;
+			cursor: pointer;
 		}
 		.item-details {
 			margin: 30px 0;
 		}
 	}
+
 }

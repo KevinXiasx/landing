@@ -2,7 +2,7 @@ define(function(require, exports, module) {
 
 	var $ = require('jquery');
 
-	
+
 	function loadlang(lang, page) {
 		$.ajax({
 			'url':'/gettext',
@@ -22,34 +22,54 @@ define(function(require, exports, module) {
 
 	function loadlangpage (lang, page) {
 		loadlang(lang, 'header');
-		loadlang(lang, page);
-		setfontfamily(lang);
+		loadlang(lang, 'bottom');
+		if( page == 'home' || page == 'design'){
+			loadlang(lang, page);
+		}
+		var langtag = (lang == "中文" ||lang == "")?"ch":(lang == "English"?"en":"");
+
+		$('.en-ch').each(function(){
+			var str = $(this).attr('href');
+			var len = str.indexOf('-');
+			len = len==-1?str.length:len;
+			$(this).attr('href', str.substr(0,len) + '-' +langtag);
+		})
 	}
+
 
 	exports.loadl =  function ( page) {
-		
-		var lang = sessionStorage.getItem('language') == "null"?"中文":sessionStorage.getItem('language');
+		var lang = sessionStorage.getItem('language') === null?"中文":sessionStorage.getItem('language');
+		$(document).ready(function(){
+			loadlangpage(lang, page);
 
-		$(document).ready(loadlangpage(lang, page));
+			if( page == "home"){
+				$('.changelanguage').on('click', function () {
+					loadlangpage($(this).text(), page);
+				});
+			}
+			else if( page == "more"){
+				$('.changelanguage').on('click', function () {
 
-		$('.changelanguage').on('click', function () {
-			loadlangpage($(this).text(), page);
-		});
-	}
+					var lang = $(this).text();
+					sessionStorage.setItem('language', lang);
 
-	function setfontfamily (lang) {
-		if( lang ==  'English'){
-			$('.maintitle span').css('font-family', 'Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif');
-			$('h1').css('font-family', 'Roboto-Regular');
-			$('h2').css('font-family', 'Candara');
-			$('h3').css('font-family', 'Roboto-Condensed');
-		}
-		else if( lang == '中文'){
-			$('.maintitle span').css('font-family', 'AdobeHeitiStd-Regular');
-			$('h1').css('font-family', 'msjhbd');
-			$('h2').css('font-family', 'msjh');
-			$('h3').css('font-family', 'simhei');
-		}
+					var hre = location.href;
+					var len = hre.lastIndexOf('-');
+					var tmphref = hre.substr(0, len);
+					if( lang == '中文'){
+						tmphref += '-ch';
+					}
+					else if( lang == 'English' ){
+						tmphref += '-en';
+					}
+					location.href = tmphref;
+				});
+			}
+			else{
+				$('.changelanguage').css('color','#ccc');
+				$('.changelanguage').css('cursor','default');
+			}
+		})
 	}
 });
 

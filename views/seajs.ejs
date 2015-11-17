@@ -1,0 +1,16 @@
+<script src="/javascripts/seajs-3.0.0/dist/sea.js"></script>
+
+<script>
+  seajs.config({
+    base: "/javascripts/",
+    alias: {
+    	"jquery": "/javascripts/jquery/jquery-seajs.js",
+    	"jq-transition": "/javascripts/jquery/jq-transition-seajs.js",
+    	"bootstrap-js": "/stylesheets/bootstrap/js/bootstrap-seajs.js",
+    	"less": "/javascripts/less.js"
+    }
+  });
+
+   seajs.use('<%= page %>/main-<%= page %>');
+
+</script>

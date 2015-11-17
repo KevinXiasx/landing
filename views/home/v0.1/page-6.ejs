@@ -4,16 +4,21 @@
 <div class="container">
  	<div class="row " id="row-1">
 		<div class="col-sm-12 ">
-			<div class="projecttil">Project</div>
+			<div class="projecttil"><a href="/project" txt="project" class="bigpage"></a></div>
 		</div>
 		<div class="shadowbox"></div>
 	</div>
 </div>
  	<div class="row pro">
+ 		<% var offset = parseInt((12 - 3*projectname.length)/2); %>
  		<% for( var s = 0; s < projectname.length; s++ ){ %>
- 			<div class="col-lg-3 col-sm-4  projectborder showner" id="project-<%= s+1 %>">
+ 			<% if( s == 0) {%>
+ 				<div class="col-md-3 col-sm-6  col-md-offset-<%= offset %> projectborder showner" id="project-<%= s+1 %>">
+ 			<% }else{ %>
+ 				<div class="col-md-3 col-sm-6 projectborder showner" id="project-<%= s+1 %>">
+ 			<% } %>
  			<a href="/project/#<%= projectname[s].name %>" class="flexbox direc-col">
-				<div class="project" id="project-1" style='background-image: url("<%= projectname[s].imgs %>");'></div>
+				<div class="project" id="project-1" style='background-image: url("<%= projectname[s].imgs %>-min");'></div>
 				<div class="project-text"><%= projectname[s].name %></div>
 			</a>
 			</div>

@@ -1,0 +1,32 @@
+{
+	"ch":{
+		"language_active": "中文",
+		"language_2":"English",
+
+		"home":"主页",
+		"menu_1":"产品",
+		"menu_2":"服务",
+		"menu_3":"案例",
+		"menu_4":"支持",
+
+		"link_1":"维基",
+		"link_2":"社区",
+		"link_3":"中文文档",
+		"link_4":"Community"
+	},
+	"en":{
+		"language_active": "English",
+		"language_2":"中文",
+
+		"home":"Home",
+		"menu_1":"Product",
+		"menu_2":"Service",
+		"menu_3":"Case",
+		"menu_4":"Support",
+
+		"link_1":"Wiki",
+		"link_2":"社区",
+		"link_3":"Document-CH",
+		"link_4":"Community"
+	}
+}

@@ -1,0 +1,183 @@
+@import "animation.less";
+
+html{
+	overflow-x:hidden;
+}
+.rotatebg-argument(@x,@y){
+	-moz-transform: rotate(-4deg) translate(@x ,@y);
+	-webkit-transform: rotate(-4deg) translate(@x ,@y);
+	-o-transform: rotate(-4deg) translate(@x ,@y);
+	transform: rotate(-4deg) translate(@x ,@y);
+}
+
+.rotatebg{
+	@addwidth: 50%;
+	width: 100% + @addwidth;
+	background-color: #f3f3f3;
+	z-index: -10;
+	position: absolute;
+	left: -@addwidth/2;
+	background-color: #f3f3f3;
+}
+
+strong{
+	font-size: 48px;
+	font-weight: normal;
+}
+h1{
+	font-size: 48px;
+}
+h2{
+	font-size: 24px;
+	font-family:"Helvetica Neue","Microsoft Yahei","Hiragino Sans GB","WenQuanYi Micro Hei","sans-serif";
+}
+h3{
+	font-size: 20px;
+	font-family:"Helvetica Neue","Microsoft Yahei","Hiragino Sans GB","WenQuanYi Micro Hei","sans-serif";
+}
+
+header{
+	height: 500px;
+	position: relative;
+	overflow: hidden;
+	#bg-1{
+		.rotatebg-argument(0px,-50px);
+		bottom: 0px;
+		height: 120%;
+	}
+	img{
+		height: 300px;
+	}
+}
+
+#sec-1{
+	position: relative;
+	
+	.ttt{
+		width: 800px;
+		h3{
+			width: 300px;
+		}
+	}
+	#row-1{
+		margin-top: 80px;
+		.title-line{
+			color: @radxa-sdark;
+			height: 50px;
+			width: 100%;
+			&:before,
+			&:after{
+				content: "";
+				display: inline-block;
+				height: 3px;
+				width: 30%;
+				background-color: @radxa-blue;			
+			}
+			h1{
+				margin-top: 15px;
+				margin-bottom: 15px;
+			}
+		}
+	}
+	#row-2{
+		margin-top: 40px;
+		strong{
+			font-size: 25px;
+		}
+		ul{
+			margin-top: 25px;
+			padding: 0px;
+			min-height: 80px;
+		}
+		img{
+			margin-top: 20px;
+			height: 90px;
+		}
+	}
+}
+
+#sec-2{
+	position: relative;
+	overflow: hidden;
+	#bg-2{
+		.rotatebg-argument(0px,0px);
+		top: 80px;
+		height: 120%;
+	}
+	#row-1{
+		margin-top: 100px;
+		.line{
+			height: 2px;
+			width: 442px;
+			background-color: @radxa-blue;
+			margin-top: 40px;
+		}
+	}
+	#row-2{
+		margin-top: 50px;
+	}
+	#row-3{
+		margin-bottom: 50px;
+	}
+	#row-2, #row-3{
+		img{
+			width: 100px;
+		}
+	}
+}
+
+#sec-3{
+	width: 100%;
+	background-color: white;
+	min-height: 700px;
+	.allcon{
+		width: 550px;
+	}
+	[txt='hello']{
+		font-size: 60px;
+		color: black;
+	}
+	.form{
+		.form-horizontal{
+			.form-group{
+				position: relative;
+				margin-left: 0px;
+				margin-right: 0px;
+				i{
+					position: absolute;
+					width: 40px;
+					height: 40px;
+					left: -50px;
+					top:5px;
+					text-align: center;
+				}
+				span{
+					font-size: 40px;
+					position: absolute;
+					width: 40px;
+					height: 40px;
+					left: 100%;
+					top:5px;
+					text-align: center;
+				}
+			}
+		}
+		font-size: 30px;
+		color: @radxa-blue;
+		textarea,
+		input{
+			height: 100%;
+			width: 100%;
+			font-size: 20px;
+		}
+		.form-control::-moz-placeholder{
+			color: black;
+			opacity: 0.4;
+		}
+		button{
+			height: 60px;
+			font-size: 30px;
+			color: white;
+		}
+	}
+}

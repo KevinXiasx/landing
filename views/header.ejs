@@ -1,32 +1,34 @@
 
-<link rel="stylesheet/less" type="text/css" href="/less/header.less">
+<link rel="stylesheet" type="text/css" href="/css/header.css">
 
-<nav class="navbar navbar-default " role="navigation" id='header'>
-<div class="container">
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation" id='header'>
+  <div class="container">
   <div class="navbar-header">
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand logo" href="/" ><img src="/images/radxa.png"></a>
+    <a class="navbar-brand logo" href="/" ><img src="/images/home/radxa2.png"></a>
   </div>
 
   <div class="collapse navbar-collapse links" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="/more" txt="menu_1"></a></li>
-      <li><a href="#" txt="menu_2"></a></li>
-      <li><a href="#" txt="menu_3"></a></li>
-      <li><a href="/project" txt="menu_4"></a></li>
-
-
-      <li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" txt="language_active">Dropdown</a>
-        <ul class="dropdown-menu">
-          <li><a class="changelanguage" txt="language_2">Dropdown</a></li>
-        </ul>
+      <li><a href="/" txt="home"></a></li>
+      <li><a href="/platform" class="en-ch" txt="menu_1"></a></li>
+      <li><a href="/designservice" txt="menu_2"></a></li>
+      <li><a href="/project" txt="menu_3"></a></li>
+     <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" txt="menu_4"><b class="caret"></b></a>
+          <ul class="dropdown-menu">
+              <li><a href="http://wiki.radxa.com/Home" txt="link_1"></a></li>
+              <li><a href="http://cn.radxa.com/forum.php" txt="link_2"></a></li>
+              <li><a href="http://talk.radxa.com/" txt="link_4"></a></li>
+              <li><a href="http://docs.radxa.us/" txt="link_3"></a></li>
+          </ul>
       </li>
     </ul>
   </div>
+  <a class="changelanguage" txt="language_2"></a>
   </div>
 </nav>

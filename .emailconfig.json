@@ -1,0 +1,12 @@
+{
+	"fromemail":{
+		"emailhost":"smtp.exmail.qq.com",
+		"user":"kevin@radxa.com",
+		"password":"danjina0"
+	},
+	"toemail":{
+		"user":"xxiiaass@sina.com",
+		"title":"Landing message"
+	},
+	"savefile":"message.md"
+}

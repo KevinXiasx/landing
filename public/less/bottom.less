@@ -1,11 +1,17 @@
+@import "animation.less";
 
 /*====================   bottom  ====================*/
 .bottomframe{
+	a{
+		text:expression(target="_blank");
+	}
 	width: 100%;
-	background-color: #2C3E50;
-	color: white;
+	background-color:@radxa-main;
 	font-size:12px;
 	.col{
+		.bmtitle{
+			font-size: 15px;
+		}
 		& > div{
 			align-items: flex-start;
 			-webkit-align-items: flex-start;
@@ -14,6 +20,9 @@
 		.links span{
 			display: inline-block;
 			min-width: 70px;
+		}
+		.txtbox{
+			height: 100px;
 		}
 	}
 }
