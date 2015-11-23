@@ -4,27 +4,27 @@
 		
 		"h1":"Radxa Limited",
 
-		"more":"see more",
+		"more":"Learn More",
 
 		"p1_t1":"What we offer", 
 
-		"p2_t1":"Open Hardwarefor",
-		"p2_t2":"Free access to the design of modern electronic devices by us",
-		"p2_t3":"We provide open source hardware platform for prototyping, the software hardware design is freely available from the internet, no NDA required. These software/hardware design is verified and ready to use. Anyone can edit/modify to develop their own products.",
+		"p2_t1":"Dev Kits",
+		"p2_t2":"Open source hardware for everyone",
+		"p2_t3":"We provide open source hardware platform for prototyping, the hardware design is freely available from our website. These software/hardware design is verified and ready to use. Anyone can edit/modify to develop their own products.",
 
 		"p3_t1":"Design service",
-		"p3_t2":"Your idea to a real prototype , in 4 weeks",
-		"p3_t3":"By re-use the design of open source hardware(including the software stack, supply chain), we can provide quick customised prototyping service. Customer can choose various hardware platform and configuration.",
+		"p3_t2":"Idea to a real prototype can work",
+		"p3_t3":"By re-use the design of open source hardware(including the software stack, supply chain), we can provide rapid customizing prototyping service. Customer can choose various hardware platform and configuration.",
 
-		"p4_t1":"Factory",
-		"p4_t2":"Make it in here",
-		"p4_t3":"Flexible on-demand production, whether it is a or ten thousand, we  serious same",
+		"p4_t1":"Manufacturing Service",
+		"p4_t2":"Prototype to product ready to ship",
+		"p4_t3":"By modular design, we can provide flexible on-demand manufacturing service. No matter it is one or 10K, we put same effort in them",
 
 		"workingwith":"They are working with Radxa",
 
 		"project":"Project",
 
-		"hello":"\"Give me Five\"",
+		"hello":"Say hello",
 
 		"submit":"Submit"
 	},
