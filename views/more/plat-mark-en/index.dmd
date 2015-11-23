@@ -1,22 +1,19 @@
 # DEV KITS
 
-Radxa Limited is a hardware products solution designer and manufacturer based on open source 
-hardware and open source community. 
+Radxa Limited is a hardware designer and manufacturer based on open source hardware(OSHW) and open source community. 
 
-#### What is Open Source Hardware
+#### What is Open Source Hardware(OSHW)
 
 Open source hardware is hardware whose design is made publicly available so that anyone can study, modify, distribute, make, and sell the design or hardware based on that design. The hardware’s source, the design from which it is made, is available in the preferred format for making modifications to it.
 
 #### Radxa Provides:
 
-* The hardware itself
+* The hardware itself(Dev Kits)
 
 * The schematics and PCB of the hardware
 
-* Essential documents to make the hardware
-
-* Mechanical Design for the hardware
+* Essential documents to use the hardware
 
 * Software stack running on the hardware
 
-* Community and document suppor
+* Community and support
