@@ -8,4 +8,4 @@ Rock2 是面向高性能应用的开发平台，采用核心板+底板的方式�
 
 音乐播放器   机器人  大屏幕广告机 
 
-![img](http://172.168.1.88:3003/images/plat/ROCK2.png)
+![img](/images/plat/rock2.png)
