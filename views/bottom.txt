@@ -1,19 +1,21 @@
 {
 	"ch":{
-		"company": "瑞莎科技",
-		"bm_p1":"版权所有.深圳瑞莎",
-		"bm_p2":"周边支持",
+		"company": "关于",
+		"bm_p0":"版权所有©2015，瑞莎科技",
+		"bm_p1":"RADXA是深圳市瑞莎科技有限公司的注册商标",
+		"bm_p2":"关注我们",
 		"bm_p3":"联系我们",
 		"phone":"电话:0755-23948936",
-		"address":"公司地址:中国深圳南山区同发路T6艺术区二楼A21"
+		"address":"地址:深圳市南山区西丽同发路6号T6艺术区二楼A21"
 	},
 
 	"en":{
-		"company": "RADXA",
-		"bm_p1":"Copyright © China ShenZhen RADXA  2015",
-		"bm_p2":"AROUND AREAS",
+		"company": "About",
+		"bm_p0":"Copyright©2015 Radxa Limited",
+		"bm_p1":"RADXA® is a registered trademark of Radxa Limited",
+		"bm_p2":"Follow Us",
 		"bm_p3":"Contact Us",
-		"phone":"Phone:0755-23948936(China)",
-		"address":"Address: China.ShenZhen.NanShan.Tongfa-street.T6art.Second-floor. A21"
+		"phone":"Phone: (86) 0755-23948936",
+		"address":"Address: A21, 2F, T6 ART ZONE, No.6 TongFa Road, XiLi Town, Nanshan, Shenzhen, China"
 	}
 }
