@@ -6,6 +6,11 @@ font-family: Roboto-Condensed;
 }
 
 @font-face { 
+font-family: Roboto-Light;
+ src:url("/fonts/Roboto/Roboto-Light.ttf") format("truetype");
+}
+
+@font-face { 
 font-family: Candara; 
  src:url("/fonts/Candara/Candara.ttf") format("truetype");
 }
