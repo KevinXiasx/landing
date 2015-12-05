@@ -14,7 +14,7 @@
 
 		"p3_t1":"Design service",
 		"p3_t2":"Idea to a real prototype can work",
-		"p3_t3":"By re-use the design of open source hardware(including the software stack, supply chain), we can provide rapid customizing prototyping service. Customer can choose various hardware platform and configuration.",
+		"p3_t3":"By re-use the design of open source hardware, we can provide rapid customizing prototyping service. Customer can choose various hardware platform and configuration.",
 
 		"p4_t1":"Manufacturing Service",
 		"p4_t2":"Prototype to product ready to ship",
@@ -24,7 +24,7 @@
 
 		"project":"Project",
 
-		"hello":"Say hello",
+		"hello":"Say Hi",
 
 		"submit":"Submit"
 	},
