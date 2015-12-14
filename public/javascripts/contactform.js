@@ -7,6 +7,10 @@ define(function(require, exports, module) {
 			alert("Email\(*\) and Message\(*\) is necessary");
 			return ;
 		}
+		if( !/\w+@\w+(\.\w)+/.test($('#inputEmail3').val()) ){
+			alert("Email\(*\) format is invalid!");
+			return ;
+		}
 		$.ajax({
 			'url':'/contactform',
 			'type' : 'post',
