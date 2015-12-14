@@ -39,14 +39,14 @@ mongodbswitch()
 	if [ "$1" == "deve" ]; then
 		sed -e 's;user.*pass[^}]*};/*opt*/};g' -e 's;:27612;;' ./myclass/resolve.js.bp > ./myclass/resolve.js
 	else
-		sed -e 's;/\*opt\*/;user:"landingpage",pass:"R0ck.me@sz";' -e 's;\(mongodb://127.0.0.1\);\1:27612;' ./myclass/resolve.js.bp > ./myclass/resolve.js
+		sed -e 's;/\*opt\*/;user:"landingpage",pass:"R0ck.me@sz";' -e 's;\(mongodb://127.0.0.1\)/;\1:27612/;' ./myclass/resolve.js.bp > ./myclass/resolve.js
 	fi
 	rm 	./myclass/resolve.js.bp
 }
 
 if [ "$1" == "deve" ]; then
-	lessswitch less
-	mongodbswitch deve
+	lessswitch "less"
+	mongodbswitch "deve"
 elif [ "$1" == "product" ]; then
 	lessswitch "css"
 	mongodbswitch "product"

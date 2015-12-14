@@ -1,32 +1,23 @@
-var nodemailer = require('nodemailer');
 var fs = require('fs');
-
-var config = JSON.parse(fs.readFileSync('.emailconfig.json'));
-
-var transporter = nodemailer.createTransport({
-    host: config.fromemail.emailhost,
-    port:465,
-    secure:true,
-    auth: {
-        user: config.fromemail.user,
-        pass: config.fromemail.password
-    }
-});
+var exec = require('child_process').exec,
+    child;
+var ssmptconfig = fs.readFileSync('/etc/ssmtp/ssmtp.conf').toString('utf8');
+var sendServer = ssmptconfig.match(/^AuthUser=([@\w.]+\.com)/m)[1];
+var recivce = 'xxiiaass@sina.com';
 
 var emailtom = function (centent) {
-
-	transporter.sendMail({
-    	from: config.fromemail.user,
-    	to: config.toemail.user,
-    	subject: config.toemail.title,
-    	text: centent
-	}, function (err) {
-		if(err){
-			console.log(err);
-		}
+	var con = "To:"+recivce+"\nFrom: "+sendServer+"\nSubject: Landing page message!\n\n"
+	child = exec('echo "'+con+centent +'" | /usr/sbin/ssmtp '+recivce,
+		{"timeout":10000},
+	  function (error, stdout, stderr) {
+	    console.log('stdout: ' + stdout);
+	    console.log('stderr: ' + stderr);
+	    if (error) {
+	      console.log('exec error: ' + error);
+	    }
 	});
 	var time = new Date();
-	fs.appendFile(config.savefile , time + '\n' + centent + '\n' ,function (err) {
+	fs.appendFile("message.md", time + '\n' + centent + '\n' ,function (err) {
 		if(err)
 			console.log(err);
 	});
