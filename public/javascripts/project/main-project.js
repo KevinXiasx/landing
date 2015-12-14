@@ -1,6 +1,6 @@
 define(function(require) {
 
-	//require('less');
+ //require('less'); //less-css
 	require('bootstrap-js');
 	require('../header');
 	var language = require('../language');
