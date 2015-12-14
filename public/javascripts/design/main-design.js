@@ -5,6 +5,6 @@ define(function(require) {
 	require('../contactform');
 	require('../header');
 	var language = require('../language');
-	language.loadl("design");
+	language.beginSwitch("design");
 });
 

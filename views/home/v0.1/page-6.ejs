@@ -10,6 +10,7 @@
 	</div>
 </div>
  	<div class="row pro">
+ 	<% if(projectname){%>
  		<% var offset = parseInt((12 - 3*projectname.length)/2); %>
  		<% for( var s = 0; s < projectname.length; s++ ){ %>
  			<% if( s == 0) {%>
@@ -17,12 +18,13 @@
  			<% }else{ %>
  				<div class="col-md-3 col-sm-6 projectborder showner" id="project-<%= s+1 %>">
  			<% } %>
- 			<a href="/project/#<%= projectname[s].name %>" class="flexbox direc-col">
+ 			<a href="/project-/#<%= projectname[s].name %>" class="flexbox direc-col en-ch" >
 				<div class="project" id="project-1" style='background-image: url("<%= projectname[s].imgs %>-min");'></div>
 				<div class="project-text"><%= projectname[s].name %></div>
 			</a>
 			</div>
  		<% } %>
+ 	<% } %>
 	</div> 
 </div>
 </section>

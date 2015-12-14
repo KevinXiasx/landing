@@ -79,13 +79,6 @@ define(function(require, exports, module) {
 				direc = $(document).scrollTop() - stdhight > 0?"down":"up";
 				stdhight = $(document).scrollTop();
 
-/*				var eles = {
-					selector:{'feature':'background-color', 'state-1':'#FFFFFF', 'state-2':'#0199cb'},
-					$('#page-4 .form'):{'feature':'color', 'state-1':'#0199cb', 'state-2':'#FFFFFF'},
-					$('#page-4 .form input'):{'feature':'color', 'state-1':'#000000', 'state-2':'#0199cb'},
-					$('#page-4 .form textarea'):{'feature':'color', 'state-1':'#000000', 'state-2':'#0199cb'}
-				};*/
-				
 				if( direc == "down" && currenHight > eleHight+600 && state=="white"){
 					selector.transition({'background-color':'#0199cb'});
 					$('#page-4 .form').transition({'color':'#FFFFFF'});

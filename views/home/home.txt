@@ -1,6 +1,6 @@
 {
 	"en":{
-		"language_active": "English",
+		"language_active": "en",
 		
 		"h1":"Radxa Limited",
 
@@ -14,7 +14,7 @@
 
 		"p3_t1":"Design service",
 		"p3_t2":"Idea to a real prototype can work",
-		"p3_t3":"By re-use the design of open source hardware, we can provide rapid customizing prototyping service. Customer can choose various hardware platform and configuration.",
+		"p3_t3":"By re-use the design of open source hardware(including the software stack, supply chain), we can provide rapid customizing prototyping service. Customer can choose various hardware platform and configuration.",
 
 		"p4_t1":"Manufacturing Service",
 		"p4_t2":"Prototype to product ready to ship",
@@ -24,13 +24,13 @@
 
 		"project":"Project",
 
-		"hello":"Say Hi",
+		"hello":"Say hello",
 
 		"submit":"Submit"
 	},
 
-	"ch":{
-		"language_active": "中文",
+	"zh":{
+		"language_active": "zh",
 
 		"h1":"个性化的科技让生活更美好",
 

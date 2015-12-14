@@ -5,7 +5,7 @@ define(function(require) {
 	require('../header');
 	var language = require('../language');
 
-	language.loadl("more");
+	language.beginSwitch("more");
 
 	var $ = require('jquery');
 	$(document).ready(function () {

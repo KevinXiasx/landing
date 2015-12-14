@@ -1,7 +1,7 @@
 {
-	"ch":{
-		"language_active": "中文",
-		"language_2":"English",
+	"zh":{
+		"language_active": "zh",
+		"language_2":"en",
 
 		"home":"主页",
 		"menu_1":"产品",
@@ -15,8 +15,8 @@
 		"link_4":"Community"
 	},
 	"en":{
-		"language_active": "English",
-		"language_2":"中文",
+		"language_active": "en",
+		"language_2":"ch",
 
 		"home":"Home",
 		"menu_1":"Product",
@@ -26,7 +26,7 @@
 
 		"link_1":"Wiki",
 		"link_2":"社区",
-		"link_3":"Document-CH",
+		"link_3":"Document-ZH",
 		"link_4":"Community"
 	}
 }

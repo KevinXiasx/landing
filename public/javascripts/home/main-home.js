@@ -6,7 +6,8 @@ define(function(require) {
 	var language = require('../language');
 	var animate = require('./animate');
 
+	language.beginSwitch('home');
 	animate.animatefuncs();
-	language.loadl("home");
+
 });
 

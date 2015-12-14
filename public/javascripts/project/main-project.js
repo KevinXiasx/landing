@@ -4,7 +4,7 @@ define(function(require) {
 	require('bootstrap-js');
 	require('../header');
 	var language = require('../language');
-	language.loadl("project");
+	language.beginSwitch("project");
 
 	var $ = require('jquery');
 
