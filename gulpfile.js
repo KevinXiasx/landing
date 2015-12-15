@@ -1,15 +1,33 @@
 var gulp = require('gulp');
 var rename = require('gulp-rename');
 var uglify = require('gulp-uglify');
+var htmlmin = require('gulp-htmlmin');
+var minifyCss = require('gulp-minify-css');
+var fs = require('fs');
 
-var DEST = 'build/';
+var DEST_CSS = 'public/css/';
+gulp.task('css', function() {
+  return gulp.src('public/css/*.css')
+    .pipe(minifyCss())
+    .pipe(gulp.dest(DEST_CSS));
+});
 
-gulp.task('compress', function() {
-  return gulp.src('foo.js')
-    // 这会输出一个未压缩过的版本
-    .pipe(gulp.dest(DEST))
-    // 这会输出一个压缩过的并且重命名未 foo.min.js 的文件
+
+var DEST_JS = 'public/javascripts/';
+gulp.task('js', function() {
+  return gulp.src('public/javascripts/**/*.js')
     .pipe(uglify())
-    .pipe(rename({ extname: '.min.js' }))
-    .pipe(gulp.dest(DEST));
+    .pipe(gulp.dest(DEST_JS));
+});
+
+var DEST_EJS = 'views/';
+gulp.task('ejs', function() {
+  return gulp.src('views/**/**/**/*.ejs')
+    .pipe(htmlmin({collapseWhitespace: true}))
+    //.pipe(rename({"extname":".min.ejs"}))
+    .pipe(gulp.dest(DEST_EJS));
+});
+
+gulp.task('default', function () {
+	 gulp.start('css', 'js', 'ejs');
 });

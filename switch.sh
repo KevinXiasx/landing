@@ -44,6 +44,7 @@ mongodbswitch()
 	rm 	./myclass/resolve.js.bp
 }
 
+
 if [ "$1" == "deve" ]; then
 	lessswitch "less"
 	mongodbswitch "deve"
@@ -52,4 +53,6 @@ elif [ "$1" == "product" ]; then
 	mongodbswitch "product"
 	cd ./public/less/
 	./less.sh
+	cd ..
+	gulp css
 fi
