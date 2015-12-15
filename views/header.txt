@@ -9,10 +9,9 @@
 		"menu_3":"案例",
 		"menu_4":"支持",
 
-		"link_1":"维基",
-		"link_2":"社区",
-		"link_3":"中文文档",
-		"link_4":"Community"
+		"link_1":{"text":"维基", "href":"http://wiki.radxa.com/Home"},
+		"link_2":{"text":"社区", "href":"http://cn.radxa.com/forum.php"},
+		"link_3":{"text":"中文文档", "href":"http://docs.radxa.us/"}
 	},
 	"en":{
 		"language_active": "en",
@@ -24,9 +23,8 @@
 		"menu_3":"Case",
 		"menu_4":"Support",
 
-		"link_1":"Wiki",
-		"link_2":"社区",
-		"link_3":"Document-ZH",
-		"link_4":"Community"
+		"link_1":{"text":"Wiki", "href":"http://wiki.radxa.com/Home"},
+		"link_2":{"text":"Document-ZH", "href":"http://docs.radxa.us/"},
+		"link_3":{"text":"Community", "href":"http://talk.radxa.com/"}
 	}
 }

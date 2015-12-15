@@ -64,7 +64,7 @@
   margin: 30px 0;
 }
 h1 {
-  Font-family: "Roboto-Light", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+  Font-family: "LithosPro-Black", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
   font-size: 42px;
 }
 h2 {
@@ -78,7 +78,7 @@ h3 {
   font-size: 20px;
 }
 .bigpage {
-  Font-family: "Roboto-Light", "SimHei";
+  Font-family: "LithosPro-Black";
   -moz-user-select: none;
   -webkit-user-select: none;
   -o-user-select: none;
@@ -479,6 +479,9 @@ h3 {
 }
 #page-7 #row-2 .col {
   height: 365px;
+}
+#page-7 #row-2 h3 {
+  text-align: right;
 }
 #page-7 #row-2 #carousel-example-generic .carousel-indicators {
   bottom: -60px;

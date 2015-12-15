@@ -2,7 +2,7 @@ define(function(require, exports, module) {
 
 	var $ = require('jquery');
 
-	var ajaxDownText = function (lang, page, cb) {
+	var ajaxDownText = function (lang, page, cb) { //用于下载该语言文本
 		$.ajax({
 			'url':'/gettext',
 			'type' : 'get',
@@ -14,7 +14,7 @@ define(function(require, exports, module) {
 		});		
 	};
 
-	var ajaxGetLang = function (cb) {
+	var ajaxGetLang = function (cb) { //用于在未本地标记语言的情况下，向服务器请求判定IP地址
 		$.ajax({
 			'url':'/getarea',
 			'type' : 'get',
@@ -29,7 +29,7 @@ define(function(require, exports, module) {
 		return sessionStorage.getItem('language');
 	};
 
-	function SpanDoubleLang(page) {
+	function SpanDoubleLang(page) { //这个类是在html中拥有txt属性的标签，会在切换中英文时，自动加载想对应文本
 		this.page = page;
 		this.renderPart = ['header','bottom'];
 		if( page == 'home' || page == 'design' )
@@ -37,10 +37,26 @@ define(function(require, exports, module) {
 	}
 
 	SpanDoubleLang.prototype.render = function() {
+		$('.collapse .dropdown-menu').children().remove();//先移除‘surpose’中的子标签
+		console.log('remove over');
 		for (var i = 0; i < this.renderPart.length; i++) {
 			ajaxDownText( getLang(), this.renderPart[i], function (data) {
+				
 				for(var tag in data	){
-					$('[txt="' +tag+'"]').text(data[tag]);
+					if(/link\w+/.test(tag)){ //假如是顶部的链接元素，则需要生成一个链接后再设置文本
+						$('.collapse .dropdown-menu').append('<li><a txt="'+tag+'"></a></li>');
+						console.log('add');
+					}
+					if( typeof data[tag] === 'object' ){
+						for( var attrs in data[tag]){
+							if(attrs === 'text')
+								$('[txt="' +tag+'"]').text((data[tag])[attrs]);
+							else
+								$('[txt="' +tag+'"]').attr(attrs, (data[tag])[attrs]);
+						}
+					}	
+					else
+						$('[txt="' +tag+'"]').text(data[tag]);//否则直接设置文本
 				}
 				var langtxt = (getLang() =='en')?'中文':'English';
 				$('[txt="language_2"').text(langtxt);
@@ -48,7 +64,7 @@ define(function(require, exports, module) {
 		};
 	};
 
-	function LinkDoubleLang ( ) {
+	function LinkDoubleLang ( ) { //这个类是首页上，和顶部上的导航按钮，会在切换中英文时，自动切换链接目标的语言
 		this.render = function() {
 			$('.en-ch').each(function(){
 				//将该类标签中的href替换为目前语言的链接， 正则表达式匹配将替换原href中‘-xx/’中的xx
@@ -59,7 +75,7 @@ define(function(require, exports, module) {
 		};
 	}
 
-	function BtnDoubleLang(page){
+	function BtnDoubleLang(page){ //顶部的切换中英文按钮
 		this.page = page;
 	}
 
@@ -83,7 +99,7 @@ define(function(require, exports, module) {
 		}
 	};
 
-	function LangRender (lang, page) {
+	function LangRender (lang, page) { 
 		sessionStorage.setItem('language', lang);
 		this.span = new SpanDoubleLang(page);
 		this.link = new LinkDoubleLang();

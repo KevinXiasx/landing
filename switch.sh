@@ -50,4 +50,6 @@ if [ "$1" == "deve" ]; then
 elif [ "$1" == "product" ]; then
 	lessswitch "css"
 	mongodbswitch "product"
+	cd ./public/less/
+	./less.sh
 fi
