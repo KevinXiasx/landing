@@ -53,6 +53,4 @@ elif [ "$1" == "product" ]; then
 	mongodbswitch "product"
 	cd ./public/less/
 	./less.sh
-	cd ..
-	gulp css
 fi
