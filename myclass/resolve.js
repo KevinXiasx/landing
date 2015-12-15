@@ -29,7 +29,7 @@ var istype = function (type) {
 	}
 }
 
-//将parseIp4()得到的字符串数组，转化为一个int类型的ip
+//将得到的字符串ip，转化为一个int类型的ip
 var strip_to_Intip = function(strIp){
 	var isString = istype('String');
 	if( isString(strIp) ){
