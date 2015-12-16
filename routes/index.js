@@ -9,6 +9,7 @@ var logger = require('log4js').getLogger("index");
 var Promise = require('promise');
 var path = require('path');
 
+console.log('sf');
 router.get('/', function(req, res) {　//首页的路由
 	var _resfunc_ = function (da) {
 		var projs = [];

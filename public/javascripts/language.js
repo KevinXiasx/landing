@@ -38,14 +38,12 @@ define(function(require, exports, module) {
 
 	SpanDoubleLang.prototype.render = function() {
 		$('.collapse .dropdown-menu').children().remove();//先移除‘surpose’中的子标签
-		console.log('remove over');
 		for (var i = 0; i < this.renderPart.length; i++) {
 			ajaxDownText( getLang(), this.renderPart[i], function (data) {
 				
 				for(var tag in data	){
 					if(/link\w+/.test(tag)){ //假如是顶部的链接元素，则需要生成一个链接后再设置文本
 						$('.collapse .dropdown-menu').append('<li><a txt="'+tag+'"></a></li>');
-						console.log('add');
 					}
 					if( typeof data[tag] === 'object' ){
 						for( var attrs in data[tag]){
@@ -64,7 +62,7 @@ define(function(require, exports, module) {
 		};
 	};
 
-	function LinkDoubleLang ( ) { //这个类是首页上，和顶部上的导航按钮，会在切换中英文时，自动切换链接目标的语言
+	function LinkDoubleLang ( ) { //这个类是首页上，顶部上的导航按钮，会在切换中英文时，自动切换链接目标的语言
 		this.render = function() {
 			$('.en-ch').each(function(){
 				//将该类标签中的href替换为目前语言的链接， 正则表达式匹配将替换原href中‘-xx/’中的xx
