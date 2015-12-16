@@ -25,4 +25,12 @@ define(function(require, exports, module) {
 		 	state_header = 'hight';		
 		}
 	});
+
+	$('#myModal, #portfolioModal1').on('show.bs.modal', function (e) {
+  		$('#header').css('padding-right', '13px');
+	});
+
+	$('#myModal, #portfolioModal1').on('hidden.bs.modal', function (e) {
+  		$('#header').css('padding-right', '0px');
+	});
 });

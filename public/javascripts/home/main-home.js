@@ -8,6 +8,5 @@ define(function(require) {
 
 	language.beginSwitch('home');
 	animate.animatefuncs();
-
 });
 

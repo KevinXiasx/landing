@@ -6,5 +6,6 @@ define(function(require) {
 	require('../header');
 	var language = require('../language');
 	language.beginSwitch("design");
+
 });
 
