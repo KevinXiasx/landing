@@ -18,5 +18,5 @@
     "morgan": "~1.6.1",
     "promise": "*",
     "serve-favicon": "~2.3.0"
-  },
+  }
 }
