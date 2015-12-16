@@ -20,8 +20,8 @@ define(function(require, exports, module) {
 			'type' : 'get',
 			'success' : cb,
 			'error' : function () {
-					alert('loading fail, network disconnect');
-				}
+				alert('loading fail, network disconnect');
+			}
 		});
 	};
 

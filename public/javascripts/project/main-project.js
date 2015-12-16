@@ -5,7 +5,6 @@ define(function(require) {
 	require('../header');
 	var language = require('../language');
 	language.beginSwitch("project");
-
 	var $ = require('jquery');
 
 	$('.marktext').children('h2').each(function () {
