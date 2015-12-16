@@ -1,1 +1,149 @@
-.flexbox{justify-content:center;align-items:center;display:-webkit-flex;-webkit-justify-content:center;-webkit-align-items:center}.direc-col{-webkit-flex-direction:column;flex-direction:column}.main-start{-webkit-justify-content:flex-start;justify-content:flex-start}.main-end{-webkit-justify-content:flex-end;justify-content:flex-end}.main-between{-webkit-justify-content:space-between;justify-content:space-between}.main-around{-webkit-justify-content:space-around;justify-content:space-around}.secon-start{-webkit-align-items:flex-start;align-items:flex-start}.secon-end{-webkit-align-items:flex-end;align-items:flex-end}.secon-between{-webkit-align-items:space-between;align-items:space-between}.secon-around{-webkit-align-items:space-around;align-items:space-around}.full{width:100%;height:100%}.portfolio-modal .modal-content{border-radius:0;background-clip:border-box;-webkit-box-shadow:none;box-shadow:none;border:none;min-height:100%;padding:0;text-align:center}.portfolio-modal .modal-content img{margin-bottom:30px;cursor:pointer}.portfolio-modal .modal-content .item-details{margin:30px 0}.marked h1{font-size:50px;line-height:100px}.marked h2{font-size:45px;line-height:90px}.marked h3,.marked h4,.marked h5,.marked p{line-height:30px}.marked h3{font-size:40px;margin-top:50px}.marked h4{font-size:35px;margin-top:50px}.marked h5{font-size:30px;margin-top:50px}.marked li,.marked p{font-size:20px;opacity:.8}.marked li{line-height:40px}.jumbotron{margin-top:100px;text-shadow:1px 1px 2px #000;background:url(/images/project/download20.jpg) top center no-repeat;background-size:cover;height:400px;margin-bottom:0;color:#fff}.jumbotron #bigbord{position:relative}.allcontent h2:after{content:"";display:block;height:1px;width:100%;background-color:#0199cb}.allcontent .sec{margin-bottom:150px}.allcontent .sec a:hover{opacity:.8}.allcontent img{max-width:30%;margin-bottom:10px;margin-right:10px;width:100%;max-height:180px}.allcontent .rightframe .active{font-weight:700}.allcontent .rightframe .active a{background-color:#0199cb;color:#fff}.allcontent .rightframe .affix{top:60px}.allcontent .centerframe{left:-30px;background-color:#F5FFFA;border-left:1px solid #ccc;border-right:1px solid #ccc}.allcontent .centerframe #ss{height:300px}
+.flexbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: -webkit-flex;
+  -webkit-justify-content: center;
+  -webkit-align-items: center;
+}
+.direc-col {
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+.main-start {
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+}
+.main-end {
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+}
+.main-between {
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+.main-around {
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+}
+.secon-start {
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+}
+.secon-end {
+  -webkit-align-items: flex-end;
+  align-items: flex-end;
+}
+.secon-between {
+  -webkit-align-items: space-between;
+  align-items: space-between;
+}
+.secon-around {
+  -webkit-align-items: space-around;
+  align-items: space-around;
+}
+.full {
+  width: 100%;
+  height: 100%;
+}
+.portfolio-modal .modal-content {
+  border-radius: 0;
+  background-clip: border-box;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: none;
+  min-height: 100%;
+  padding: 0px;
+  text-align: center;
+}
+.portfolio-modal .modal-content img {
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+.portfolio-modal .modal-content .item-details {
+  margin: 30px 0;
+}
+.marked h1 {
+  font-size: 50px;
+  line-height: 100px;
+}
+.marked h2 {
+  font-size: 45px;
+  line-height: 90px;
+}
+.marked h3 {
+  font-size: 40px;
+  line-height: 30px;
+  margin-top: 50px;
+}
+.marked h4 {
+  font-size: 35px;
+  line-height: 30px;
+  margin-top: 50px;
+}
+.marked h5 {
+  font-size: 30px;
+  line-height: 30px;
+  margin-top: 50px;
+}
+.marked p {
+  font-size: 20px;
+  line-height: 30px;
+  opacity: 0.8;
+}
+.marked li {
+  font-size: 20px;
+  line-height: 40px;
+  opacity: 0.8;
+}
+.jumbotron {
+  margin-top: 100px;
+  text-shadow: 1px 1px 2px black;
+  background: url("/images/project/download20.jpg") no-repeat top center;
+  background-size: cover;
+  height: 400px;
+  margin-bottom: 0px;
+  color: white;
+}
+.jumbotron #bigbord {
+  position: relative;
+}
+.allcontent h2:after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 100%;
+  background-color: #0199cb;
+}
+.allcontent .sec {
+  margin-bottom: 150px;
+}
+.allcontent .sec a:hover {
+  opacity: 0.8;
+}
+.allcontent img {
+  max-width: 30%;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  width: 100%;
+  max-height: 180px;
+}
+.allcontent .rightframe .active {
+  font-weight: bold;
+}
+.allcontent .rightframe .active a {
+  background-color: #0199cb;
+  color: white ;
+}
+.allcontent .rightframe .affix {
+  top: 60px;
+}
+.allcontent .centerframe {
+  left: -30px;
+  background-color: #F5FFFA;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+.allcontent .centerframe #ss {
+  height: 300px;
+}

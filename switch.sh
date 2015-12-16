@@ -57,7 +57,7 @@ cdn()
 		while read file
 		do
 			sed -e '\:<!--'$1'-->: s;\(.\{10,\}\)\(<!--\);\2\1;' \
-				-e '\:<!--.\{10,\}'$2'-->: s;\(<!--\)\(.\('$2'\);\2\1\3;' \
+				-e '\:<!--.\{10,\}'$2'-->: s;\(<!--\)\(.\{10,\}\)\('$2'\);\2\1\3;' \
 				< "$file" > "${file%.*}"
 			rm "$file"
 		done
@@ -72,5 +72,6 @@ elif [ "$1" == "product" ]; then
 	mongodbswitch "product"
 	cdn deve product 
 	cd ./public/less/
-	./less.sh　
+	./less.sh
+	cd ../..
 fi
