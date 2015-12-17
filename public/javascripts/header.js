@@ -6,8 +6,7 @@ define(function(require, exports, module) {
 	var stdhight_header = 0;
 	var state_header = "hight";
 	var direc_header;
-
-	$(document).on('scroll', function () {
+	$(document).on('scroll', function () {　//这个函数同于控制顶部的控件伸缩大小
 		if( $(window).scrollTop() - stdhight_header <= 0 )	
 			direc_header = 'up';
 		else
@@ -24,5 +23,24 @@ define(function(require, exports, module) {
 			$('#header .navbar-header').transition({scale: 1, y:0});	
 		 	state_header = 'hight';		
 		}
+	});
+
+
+//下面的代码用于补偿显示图片、弹窗的模态框弹出时，header的偏移。
+	var measureScrollbar = function () {
+	    var scrollDiv = document.createElement('div');
+	    scrollDiv.className = 'modal-scrollbar-measure';
+	    $(document.body).append(scrollDiv);
+	    var scrollbarWidth = scrollDiv.offsetWidth - scrollDiv.clientWidth;
+	    $(document.body)[0].removeChild(scrollDiv);
+	    return scrollbarWidth;
+	}
+
+	$('#myModal, #portfolioModal1').on('show.bs.modal', function (e) {
+  		$('#header').css('padding-right', measureScrollbar()+'px');
+	});
+
+	$('#myModal, #portfolioModal1').on('hidden.bs.modal', function (e) {
+  		$('#header').css('padding-right', '0px');
 	});
 });

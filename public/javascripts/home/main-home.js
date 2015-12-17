@@ -1,5 +1,5 @@
 define(function(require) {
- //require('less'); //less-css
+ ////require('less'); //less-css
 	require('bootstrap-js');
 	require('../contactform');
 	require('../header');
@@ -8,6 +8,5 @@ define(function(require) {
 
 	language.beginSwitch('home');
 	animate.animatefuncs();
-
 });
 

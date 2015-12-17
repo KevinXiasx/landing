@@ -4,7 +4,17 @@ define(function(require, exports, module) {
 	$('button[type=submit]').on('click', function (event) {
 		event.preventDefault();
 		if( $('#inputEmail3').val() == "" || $('#textarea3').val() == "" ){
-			alert("Email\(*\) and Message\(*\) is necessary");
+			$('.formmessage').text('Email\(*\) and Message\(*\) is necessary');
+			$('#myModal').modal({
+			  keyboard: false
+			});
+			return ;
+		}
+		if( !/\w+@\w+(\.\w)+/.test($('#inputEmail3').val()) ){
+			$('.formmessage').text('Email\(*\) format is invalid!');
+			$('#myModal').modal({
+			  keyboard: false
+			});
 			return ;
 		}
 		if( !/\w+@\w+(\.\w)+/.test($('#inputEmail3').val()) ){
@@ -21,10 +31,16 @@ define(function(require, exports, module) {
 			'success' : function (data) {
 					$('#textarea3').val('');
 					$('#textarea3').focus();
-					alert('message has received !')
+					$('.formmessage').text('message has received');
+					$('#myModal').modal({
+					  keyboard: false
+					});
 				},
 			'error' : function () {
-					alert('loading fail, network disconnect');
+					$('.formmessage').text('loading fail, network disconnect');
+					$('#myModal').modal({
+					  keyboard: false
+					});
 				}
 		});
 	})

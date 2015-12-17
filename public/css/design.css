@@ -64,7 +64,7 @@
   margin: 30px 0;
 }
 html {
-  overflow-x: hidden;
+  overflow-x: visible;
 }
 .rotatebg {
   width: 150%;

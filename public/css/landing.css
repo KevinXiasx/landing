@@ -78,7 +78,7 @@ h3 {
   font-size: 20px;
 }
 .bigpage {
-  Font-family: "Roboto-Light", "SimHei";
+  Font-family: "Roboto-Light";
   -moz-user-select: none;
   -webkit-user-select: none;
   -o-user-select: none;
@@ -158,7 +158,7 @@ h3 {
   color: #f4972a;
   border-radius: 0px;
   height: 45px;
-  width: 140px;
+  width: 150px;
 }
 .page .morebtn button:after {
   content: ">>";
@@ -479,6 +479,9 @@ h3 {
 }
 #page-7 #row-2 .col {
   height: 365px;
+}
+#page-7 #row-2 h3 {
+  text-align: right;
 }
 #page-7 #row-2 #carousel-example-generic .carousel-indicators {
   bottom: -60px;

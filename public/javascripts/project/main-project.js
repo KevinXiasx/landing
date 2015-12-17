@@ -1,11 +1,10 @@
 define(function(require) {
 
- //require('less'); //less-css
+ ////require('less'); //less-css
 	require('bootstrap-js');
 	require('../header');
 	var language = require('../language');
 	language.beginSwitch("project");
-
 	var $ = require('jquery');
 
 	$('.marktext').children('h2').each(function () {
@@ -19,7 +18,8 @@ define(function(require) {
 			var len = src.lastIndexOf('-');
 			var tmpsrc = src.substr(0, len);
 			$('#portfolioModal1 img').attr('src', tmpsrc);
-		})
+		});
+
 	})
 });
 
