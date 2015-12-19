@@ -31,6 +31,8 @@ MarkFile.prototype.parse = function( callback) {
 			var $ = cheerio.load( marked(data) );
 			self.imgs = $('img');
 			self.html = $.html();
+			self.video = $('video');
+			$('video').remove();
 			$('img').remove();
 			self.htmlNoImg = $.html();
 			callback();
@@ -44,6 +46,14 @@ MarkFile.prototype.getHtml = function () {
 
 MarkFile.prototype.getHtmlNoimg = function () {
 	return this.htmlNoImg;
+}
+
+MarkFile.prototype.getVideoSrc = function () {
+	var videoSrc = [];
+	for (var i = 0; i < this.video.length; i++) {
+		videoSrc.push(this.video.eq(i).attr('src'));
+	};
+	return videoSrc;
 }
 
 MarkFile.prototype.getImgSrc = function(size) {

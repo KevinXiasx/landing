@@ -38,7 +38,7 @@ router.get('/project-:lang', function(req, res) {　
 		var dmk,
 			mks=[];
 		da.getMdArray().forEach(function(mkele){
-			mks.push({'text' : mkele.getHtmlNoimg(), 'imgs' : mkele.getImgMinTag()});
+			mks.push({'text' : mkele.getHtmlNoimg(), 'imgs_min' : mkele.getImgMinTag(), 'imgsrc':mkele.getImgSrc(), 'video':mkele.getVideoSrc()});
 		});
 		dmk = da.getDmd().getHtml();
 		
