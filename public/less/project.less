@@ -51,11 +51,39 @@
 	.centerframe{
 		left: -30px;
 		background-color: #F5FFFA;
-		border-left: 1px solid #ccc;
-		border-right: 1px solid #ccc;
 		#ss{
 			height: 300px;
 		}
-	}
-}
+		.videos{
+			figure{
+				max-width:30%;
+				min-height: 180px;
+				position: relative;
+				.fa{
+					position: absolute;
+					font-size: 100px;
+					display: inline-block;
+					top: 20%;
+					left: 35%;
+					opacity: 0.2;
+					cursor: pointer;
+				}
+				video{
+					position: absolute;
+					max-height: 180px;
+					cursor: pointer;
+				}
+				&:hover{
+					video{
+						opacity: 0.5;
+					}
+					.fa{
+						opacity: 1;
+					}
+				}
+			}
+		}
 
+	}
+
+}

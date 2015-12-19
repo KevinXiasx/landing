@@ -1,6 +1,6 @@
 define(function(require) {
 
- ////require('less'); //less-css
+ require('less'); //less-css
 	require('bootstrap-js');
 	require('../header');
 	var language = require('../language');
@@ -13,12 +13,25 @@ define(function(require) {
 	});
 	
 	$(document).ready(function () {
-		$('.portfolio-link img').on("click", function () {
-			var src = $(this).attr('src');
-			var len = src.lastIndexOf('-');
-			var tmpsrc = src.substr(0, len);
-			$('#portfolioModal1 img').attr('src', tmpsrc);
+		$('a.portfolio-link').on("click", function () {
+			$('.portfolio-modal .carousel-inner .item').remove();
+			var attrindex = $(this).attr('index');
+			var regres = attrindex.match(/a\d-(\d)-(\d)/);
+			var count = parseInt(regres[1]);
+			var index = parseInt(regres[2]);
+			console.log(attrindex, regres, count, index);
+			for (var i = 0; i < count; i++) {
+				var choose = attrindex.replace(/\d$/, i.toString());
+				console.log(choose);
+				var src = $('[index="'+choose+'"] img').attr('src').replace(/-min/, '');
+				var active = i==index?'active':'';
+				$('.portfolio-modal .carousel-inner').append('<div class="item '+active+'"><img src="'+src+'" data-dismiss="modal" class="img-responsive img-thumbnail" alt="Responsive image" style="display: inline-block;background-color:white;"></div>');
+			};
 		});
+
+		$('.videos figure').on('click', function () {
+			$('#portfolioModal2 video').attr('src', $('.videos video').attr('src'));
+		})
 
 	})
 });
