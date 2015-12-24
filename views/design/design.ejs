@@ -7,7 +7,8 @@
 	<link rel="stylesheet" href="/stylesheets/bootstrap/css/bootstrap.min.css"><!--deve-->
 	<link rel="stylesheet" href="/stylesheets/font-awesome/css/font-awesome.min.css"><!--deve-->
 	<link rel="stylesheet" type="text/css" href="/stylesheets/homepage/font.css">
-	<link rel="stylesheet" type="text/less" href="/less/design.less"> <!-- less-css -->
+	<link rel="stylesheet" type="text/css" href="/less/design.css">
+	<link rel="stylesheet" href="/stylesheets/bootstrap/css/animate.min.css" type="text/css">
 
 	<meta http-equiv="X-UA-Compatible" content="IE=11" />
 </head>
@@ -16,7 +17,7 @@
 	<% include ../header %> 
 	<header class="flexbox secon-end">
 		<div class="rotatebg" id="bg-1"></div>
-		<img src="/images/design/notebooka1i.png">
+		<img src="/images/design/notebooka1i.png"  class="wow tada">
 	</header>
 	<section id="sec-1" class="flexbox direc-col ">
 		<div  class="flexbox ttt main-around secon-start"> 
@@ -35,7 +36,7 @@
 			<div class="row " id="row-2">
 				<% var tags = [4, 4, 3]; %>
 				<% for(var i = 0; i< 3 ; i++){ %>
-					<div class="col col-sm-4 flexbox direc-col main-start">
+					<div class="col col-sm-4 flexbox direc-col main-start ">
 						<strong txt="p1_s<%= i+1 %>_1"></strong>
 						
 						<ul class="tags">
@@ -43,7 +44,7 @@
 								<li txt="p1_s<%= i+1 %>_<%= j+2 %>"></li>
 							<% }%>
 						</ul>
-						<img src="/images/design/title/title<%= i+1 %>.png">
+						<img src="/images/design/title/title<%= i+1 %>.png" class="">
 					</div>
 				<% }%>
 			</div>
@@ -79,26 +80,26 @@
 			<div class="form ">
 				<form class="form-horizontal" role="form">
 					<div class="form-group">
-				    	<i class="fa fa-user "></i>
+				    	<i class="fa fa-user wow bounceIn" ></i>
 				    	<div >
 				      		<input type="text" class="form-control" id="inputName3" placeholder="Name">
 				      	</div>
 				    </div>
 				    <div class="form-group">
-				    	<i class="fa fa-lightbulb-o "></i>
+				    	<i class="fa fa-lightbulb-o wow bounceIn"></i>
 				    	<div >
 				     		<input type="company" class="form-control" id="companyname" placeholder="Project/Company">
 				    	</div>
 				  	</div>
 				  	<div class="form-group">
-				    	<i class="fa fa-envelope-o"></i>
+				    	<i class="fa fa-envelope-o wow bounceIn"></i>
 				    	<div >
 				     		<input type="email" class="form-control" id="inputEmail3" placeholder="Email">
 				    	</div>
 				    	<span>*</span>
 				  	</div>
 				  	<div class="form-group">
-				    	<i class="fa fa-paper-plane"></i>
+				    	<i class="fa fa-paper-plane wow bounceIn"></i>
 				   		<div >
 				    		<textarea class="form-control" rows="8" placeholder="Message" id="textarea3"></textarea>
 				    	</div>

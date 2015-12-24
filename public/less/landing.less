@@ -462,6 +462,14 @@ h3{
 		.col{
 			height:365px;
 		}
+		@media (max-width: @mdwidth ){
+			.col{
+				height:auto;
+			}
+			.carousel-control{
+				background-image: none;
+			}
+		}
 		h3{
 			text-align: right;
 		}
@@ -482,6 +490,7 @@ h3{
 			.wrap{
 				img{
 					width: 550px;
+					display: inline-block;
 				}
 			}
 		}

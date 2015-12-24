@@ -12,6 +12,7 @@
     "debug": "~2.2.0",
     "ejs": "~2.3.3",
     "express": "~4.13.1",
+    "less-middleware": "^2.0.1",
     "log4js": "^0.6.27",
     "marked": "*",
     "mongoose": "^4.2.9",

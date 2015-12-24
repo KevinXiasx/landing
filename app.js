@@ -4,7 +4,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-
+var lessMiddleware = require('less-middleware');
 var routes = require('./routes/index');
 
 var app = express();
@@ -23,6 +23,7 @@ loggers.setLevel('INFO');
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 
 app.use(log4js.connectLogger(log4js.getLogger("http"), { level: 'auto' }));
+app.use(lessMiddleware(path.join(__dirname ,'public')));
 
 app.use(logger('dev'));
 app.use(bodyParser.json());

@@ -64,14 +64,11 @@ cdn()
 }
 
 if [ "$1" == "deve" ]; then
-	lessswitch "less"
+#	lessswitch "less"
 	mongodbswitch "deve"
 	cdn product deve
 elif [ "$1" == "product" ]; then
-	lessswitch "css"
+#	lessswitch "css"
 	mongodbswitch "product"
 	cdn deve product 
-	cd ./public/less/
-	./less.sh
-	cd ../..
 fi

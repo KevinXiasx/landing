@@ -7,8 +7,8 @@
 	<link rel="stylesheet" href="/stylesheets/bootstrap/css/bootstrap.min.css"><!--deve-->
 	<link rel="stylesheet" href="/stylesheets/font-awesome/css/font-awesome.min.css"><!--deve-->
 	<link rel="stylesheet" type="text/css" href="/stylesheets/homepage/font.css">
-	<link rel="stylesheet" type="text/less" href="/less/more.less"> <!-- less-css -->
-
+	<link rel="stylesheet" type="text/css" href="/less/more.css">
+	<link rel="stylesheet" href="/stylesheets/bootstrap/css/animate.min.css" type="text/css">
 	<meta http-equiv="X-UA-Compatible" content="IE=11" />
 </head>
 
@@ -23,7 +23,7 @@
 		<% var color = [{"bgd": "#FFFFFF"},{"bgd": "#F3F3F3"}]%>
 		<% for( var s = 0; s < marks.length; s++ ){ %>
 			<% if( s%2 == 0){ %>
-			<section class="boxborder " style="background-color:<%= color[s%2].bgd %>;">
+			<section class="boxborder" style="background-color:<%= color[s%2].bgd %>;">
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-7">
@@ -38,11 +38,11 @@
 				</div>
 			</section>
 			<% } else { %>
-			<section class="boxborder " style="background-color:<%= color[s%2].bgd %>;">
+			<section class="boxborder" style="background-color:<%= color[s%2].bgd %>;">
 			<div class="container">
 				<div class="row">					
 					<div class="col-xs-5">
-					<a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+					<a href="#portfolioModal1" class="portfolio-link " data-toggle="modal">
 						<img src="<%- marks[s].img %>" style="margin-bottom:10px;">
 						</a>
 					</div>

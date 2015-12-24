@@ -1,6 +1,6 @@
 define(function(require) {
- require('less'); //less-css
 	require('bootstrap-js');
+	require('wow');
 	require('../contactform');
 	require('../header');
 	var language = require('../language');
@@ -8,5 +8,7 @@ define(function(require) {
 
 	language.beginSwitch('home');
 	animate.animatefuncs();
+	new WOW().init();
 });
 
+ 

@@ -1,7 +1,6 @@
 define(function(require) {
-
- require('less'); //less-css
 	require('bootstrap-js');
+	require('wow');
 	require('../header');
 	var language = require('../language');
 
@@ -13,6 +12,6 @@ define(function(require) {
 			$('#portfolioModal1 img').attr('src', $(this).attr('src'));
 		});
 	});
+	new WOW().init();
 
 });
-
