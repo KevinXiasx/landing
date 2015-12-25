@@ -3,13 +3,14 @@ define(function(require) {
 	require('../header');
 	var language = require('../language');
 	language.beginSwitch("project");
-	var $ = require('jquery');
+	var $ = require('jquery'); 
 
 	$('.marktext').children('h2').each(function () {
-		$('.nav-pills.nav-stacked').append('<li><a href="#'+$(this).text() +'">'+$(this).text() +'</a></li>');
+		$('.nav-pills.nav-stacked').append('<li><a class="page-scroll" href="#'+$(this).text() +'">'+$(this).text() +'</a></li>');
 		$(this).attr('id', $(this).text());
 	});
 	
+
 	$(document).ready(function () {
 		$('a.portfolio-link').on("click", function () {
 			$('.portfolio-modal .carousel-inner .item').remove();

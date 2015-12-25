@@ -3,6 +3,13 @@ define(function(require, exports, module) {
 
  	var $ = require('jquery');
  	require('jq-transition');
+ 	require('fittext');
+ 	$('.bigpage').fitText(
+        1.4, {
+            minFontSize: '50px',
+            maxFontSize: '100px'
+        }
+    );
 
  	/*用于执行动画的函数，动画对象应该要添加到shower类中，或者opacity属性初始为0
 

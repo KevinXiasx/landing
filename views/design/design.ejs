@@ -17,14 +17,14 @@
 	<% include ../header %> 
 	<header class="flexbox secon-end">
 		<div class="rotatebg" id="bg-1"></div>
-		<img src="/images/design/notebooka1i.png"  class="wow tada">
+		<img src="/images/design/notebooka1i.png"  class="wow bounce"> 
 	</header>
-	<section id="sec-1" class="flexbox direc-col ">
-		<div  class="flexbox ttt main-around secon-start"> 
-			<h3 txt="t_1"></h3>
-			<h3 txt="t_2"></h3>
-		</div>
+	<section id="sec-1" class="flexbox direc-col ">	
 		<div class="container">
+			<div class="text-center"> 
+				<h2 txt="t_1"></h2>
+				<h2 txt="t_2"></h2>
+			</div>
 			<div class="row " id="row-1">
 				<div class="col-lg-12 ">
 					<div class="title-line flexbox main-between">
@@ -36,12 +36,11 @@
 			<div class="row " id="row-2">
 				<% var tags = [4, 4, 3]; %>
 				<% for(var i = 0; i< 3 ; i++){ %>
-					<div class="col col-sm-4 flexbox direc-col main-start ">
+					<div class="col col-sm-4 text-center">
 						<strong txt="p1_s<%= i+1 %>_1"></strong>
-						
 						<ul class="tags">
 							<% for(var j = 0; j< tags[i] ; j++){ %>
-								<li txt="p1_s<%= i+1 %>_<%= j+2 %>"></li>
+								<li txt="p1_s<%= i+1 %>_<%= j+2 %>" data-toggle="tooltip" data-original-title="Tooltip on top" data-placement="left" ></li>
 							<% }%>
 						</ul>
 						<img src="/images/design/title/title<%= i+1 %>.png" class="">
@@ -60,22 +59,22 @@
 				</div>		
 			</div>
 
+		<% for(var k = 0; k< 7 ; k++){ %>
 			<div class="row " id="row-2">
-				<% for(var k = 0; k< 7 ; k++){ %>
-					<div class="col col-sm-3 flexbox direc-col main-around">
-						<img src="/images/design/setp/setp0<%= k+1 %>.png">
-						<h3 txt="p2_t1_<%= k+1 %>"></h3>
-					</div>
-					<% if(k==3){ %>
-						</div>
-						<div class="row " id="row-3">
-					<% } %>					
-				<% } %>
+				<div class="col-md-3 col-md-offset-1 text-center">
+					<img class="img-responsive" src="/images/design/setp/setp0<%= k+1 %>.png">
+				</div>
+				<div class="col-md-6 text-left">
+					<h3 txt="p2_t1_<%= k+1 %>"></h3>
+					<p txt="p2_t1_<%= k+1 %>_d"></p>			
+				</div>
 			</div>
+			<hr/>
+		<% } %>
 		</div>
 	</section>
 	<section class="flexbox direc-col " id="sec-3">
-		<div txt="hello" class="bigpage"></div>
+		<div txt="hello" class="bigpage"></div> 
 		<div class="allcon " >
 			<div class="form ">
 				<form class="form-horizontal" role="form">

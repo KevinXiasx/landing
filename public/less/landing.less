@@ -1,7 +1,7 @@
 @import "animation.less";
 
 h1{
-	Font-family:"Roboto-Light","Hiragino Sans GB", "Microsoft YaHei","WenQuanYi Micro Hei", sans-serif;;
+	Font-family:"Roboto-Light", "Microsoft YaHei", "Hiragino Sans GB","WenQuanYi Micro Hei", sans-serif;
 	font-size: 42px;
 }
 
@@ -17,10 +17,12 @@ h3{
 }
 
 .bigpage{
-	Font-family: "Roboto-Light";
+	Font-family: "Roboto-Light", "Microsoft YaHei", "Hiragino Sans GB","WenQuanYi Micro Hei", sans-serif;
 	&:hover{
 		text-decoration: none;
 	}
+	display:block;
+	width:100%;
 	-moz-user-select:none;
 	-webkit-user-select:none;
 	-o-user-select:none;
@@ -528,14 +530,6 @@ h3{
 
 
 @media (max-width: @padwidth ) and (min-width: @phonewidth){
-	.maintitle span{
-		&:nth-child(1){
-			font-size:50px;
-		}
-		&:nth-child(2){
-			font-size:30px;
-		}
-	}
 	.page {
 		.title-line:before,
 		.title-line:after{
@@ -547,8 +541,4 @@ h3{
 			}
 		}
 	}
-}
-
-@media (max-width: @padwidth){
-
 }

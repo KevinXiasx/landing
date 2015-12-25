@@ -10,6 +10,12 @@ var Promise = require('promise');
 var path = require('path');
 
 router.get('/', function(req, res) {　//首页的路由
+
+	var promise = new Promise(function(reslove, reject){
+		ipresolve.isChina(req, function (result) {
+			reslove(result?'zh':'en');
+		});
+	});
 	var _resfunc_ = function (da) {
 		var projs = [];
 		var mdArray = da.getMdArray();
@@ -19,11 +25,13 @@ router.get('/', function(req, res) {　//首页的路由
 		res.render("home/landing", {"projectname": projs,'page':'home'});		
 	}
 
-	hasLang('zh', 'views/project', function (found, data) {　//查找首页中的项目内容，渲染后发送
-		if(!data)
-			res.render("home/landing", {"projectname": null,'page':'home'});	
-		else
-			_resfunc_(data);
+	promise.then(function(lang){
+		hasLang(lang, 'views/project', function (found, data) {　//查找首页中的项目内容，渲染后发送
+			if(!data)
+				res.render("home/landing", {"projectname": null,'page':'home'});	
+			else
+				_resfunc_(data);
+		});
 	});
 });
 //设计服务页面路由
