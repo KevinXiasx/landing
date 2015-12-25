@@ -14,11 +14,11 @@
 
 		"p3_t1":"Design service",
 		"p3_t2":"Idea to a real prototype that works",
-		"p3_t3":"By re-use the design of open source hardware(including the software stack, supply chain), we can provide rapid customizing prototype service. Customer can choose various hardware platform and configuration.",
+		"p3_t3":"By re-use the design of open source hardware(including the software stack, supply chain and our intellectual), we provide rapid prototype customization service.",
 
 		"p4_t1":"Manufacturing Service",
 		"p4_t2":"Prototype to products ready to ship",
-		"p4_t3":"By modular design, we can provide flexible on-demand manufacturing service. No matter it is one or 10K, we put same effort in them",
+		"p4_t3":"Flexible on-demand turn-key manufacturing service with love and heart.",
 
 		"workingwith":"They are working with Radxa",
 
