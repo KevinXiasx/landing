@@ -1,4 +1,56 @@
 {
+	"en":{
+		"des_p1_t1":"Design Service",
+
+		"t_1":"Radxa provides turnkey hardware products design and manufacturing service to save the time and cost for the customer. The customer can focus on the marketing and the users, to create more value.",
+
+		"t_2":"We provide customizaton solution for each customer. In house experienced designer and engineer works closely with partner facotry to provide the best service for you.",
+
+		"p1_s1_1":"Industrial Design",
+		"p1_s1_2":"Mechanical Design",
+		"p1_s1_3":"Mould Design",
+		"p1_s1_4":"3D Printing",
+
+		"p1_s2_1":"Schematic Design",
+		"p1_s2_2":"PCB layout",
+		"p1_s2_3":"Making Sample PCB",
+		"p1_s2_4":"Certification and testing",
+
+		"p1_s3_1":"Firmware customization",
+		"p1_s3_2":"System Integration",
+		"p1_s3_3":"Driver Development",
+		"p1_s3_4":"Application development",
+
+		"des_p2_t1":"Service Process",
+		"p2_t1_1":"① Requirement confirmation",
+		"p2_t1_2":"② Business contract",
+		"p2_t1_3":"③ Industrial/Hardware design",
+		"p2_t1_4":"④ Prototype debugging and testing",
+		"p2_t1_5":"⑤ Apply final sample",
+		"p2_t1_6":"⑥ Small batch manufacturing",
+		"p2_t1_7":"⑦ Massive manufacturing",
+
+		"p2_t1_1_d":"Work closely with the customer to definte the product and confirm requirement",
+		"p2_t1_2_d":"Sign the contract about the project schedule, quotation and NRE.",
+		"p2_t1_3_d":"Start the design process, customers is highly involved in the design procesure.",
+		"p2_t1_4_d":"Make prototypes, debugging the prototype.",
+		"p2_t1_5_d":"Apply the final prototype to the customer and get feedback.",
+		"p2_t1_6_d":"Improve the design according the customer and make small batch of samples.",
+		"p2_t1_7_d":"Start the massive production and shipment.",
+
+		"p2_t2_1":"Prototype",
+		"p2_t2_2":"DFM",
+		"p2_t2_3":"Massive Production",
+
+		"p2_t2_1_d":"The hardware prototype is something you create and use to test your idea or to get some feedback, the prototype is not necessary exactly the same as the final product but it should show your idea as complete as possible. Usually a hardware prototype comes up with the case, the PCB board fits the case and working software. With 3D printer, modular hardware block and experienced designers and engineers from radxa, we can help you make your very first prototype very quickly.",
+		"p2_t2_2_d":"After you have the working prototype and get good feedback from customers, you start to consider making more but reduce the cost. So we need to (re)design the prototype for manufacturing(DFM). In the DFM process, we try to make it easier for engineering and manufacturing, saving every cost and reduce risk. We will use different approach for making the case, such as moulding, compression, injection. We need to re-design the PCB board also to fit best for the software application and the mechanical design. Usually a small batch of samples will be made to verify the DFM. The number varies from 50 to 500 depends on the product. These samples should be the same as the final products in ID, hardware and software. We will practise each manufacuring procesure to make sure it's the most time and cost efficent. ",
+		"p2_t2_3_d":"Based in the “World Factory” - Shenzhen, China, Radxa can provide the turn-key manufacturing service from accessories sourcing, assembling to shipment. In house designers and engineers work closely with partner factories together to deliver the best product to you. Not only delivering the product, we will also show you how the products are made and the people who put efforts in it in an open philosophy. ",
+
+		"hello":"Quotation",
+
+		"submit":"Send"
+	},
+
 	"zh":{
 		"des_p1_t1":"设计服务",
 
@@ -6,40 +58,45 @@
 
 		"t_2":"我们基于经过验证的开源硬件，提供多种不同配置的硬件方案组合，设计客户专属的定制方案。经验丰富的内部工程师和配合紧密的外部工厂协同合作，为您的产品开发，提供最佳服务。",
 
-		"p1_s1_1":"外观设计",
-		"p1_s1_2":"结构设计",
-		"p1_s1_3":"工业设计",
-		"p1_s1_4":"模具制作",
-		"p1_s1_5":"样品制作",
+		"p1_s1_1":"结构设计",
+		"p1_s1_2":"工业设计",
+		"p1_s1_3":"模具制作",
+		"p1_s1_4":"样品制作",
 
-		"p1_s2_1":"硬件设计",
-		"p1_s2_2":"原理设计",
-		"p1_s2_3":"布局走线",
-		"p1_s2_4":"样品制作",
-		"p1_s2_5":"测试认证",
+		"p1_s2_1":"原理设计",
+		"p1_s2_2":"布局走线",
+		"p1_s2_3":"样品制作",
+		"p1_s2_4":"测试认证",
 
-		"p1_s3_1":"软件设计",
-		"p1_s3_2":"固件定制",
-		"p1_s3_3":"系统集成",
-		"p1_s3_4":"驱动开发",
-		"p1_s3_5":"应用开发",
+		"p1_s3_1":"固件定制",
+		"p1_s3_2":"系统集成",
+		"p1_s3_3":"驱动开发",
+		"p1_s3_4":"应用开发",
 
 		"des_p2_t1":"服务流程",
 		"p2_t1_1":"① 需求沟通和确认",
 		"p2_t1_2":"② 确定合同报价周期",
-		"p2_t1_3":"③ 外观软硬件设计与确认",
+		"p2_t1_3":"③ 外观软硬件设计",
 		"p2_t1_4":"④ 样品制作与调试 ",
 		"p2_t1_5":"⑤ 样机交付与验收",
 		"p2_t1_6":"⑥ 小批量生产与测试",
 		"p2_t1_7":"⑦ 大批量生产",
 
-		"p2_t1_1_d":"请在此处添加详细信息请在此处添加详细信息请在此处添加详细信息请在此处添加详细信息请在此处添加详细信",
-		"p2_t1_2_d":"请在此处添加详细信息请在此处添加详细信息请在此处添加详细信息请在此处添加详细信息请在此处添加详细信",
-		"p2_t1_3_d":"请在此处添加详细信息请在此处添加详细信息请在此处添加详细信息请在此处添加详细信息请在此处添加详细信",
-		"p2_t1_4_d":"请在此处添加详细信息请在此处添加详细信息请在此处添加详细信息请在此处添加详细信息请在此处添加详细信息",
-		"p2_t1_5_d":"请在此处添加详细信息请在此处添加详细信息请在此处添加详细信息请在此处添加详细信息请在此处添加详细信",
-		"p2_t1_6_d":"请在此处添加详细信息请在此处添加详细信息请在此处添加详细信息请在此处添加详细信息请在此处添加详细信",
-		"p2_t1_7_d":"请在此处添加详细信息请在此处添加详细信息请在此处添加详细信息请在此处添加详细信息请在此处添加详细信",
+		"p2_t1_1_d":"双方共同讨论和定义产品，确认需求。",
+		"p2_t1_2_d":"签订合作协议，确定开发周期，获取产品报价及开发费用。",
+		"p2_t1_3_d":"开始产品原型设计，包括工业设计，硬件设计等等。",
+		"p2_t1_4_d":"制作第一个原型样品，调试样品。",
+		"p2_t1_5_d":"样机交付客户，客户确认与验收，提出修改意见。",
+		"p2_t1_6_d":"根据客户意见，继续改进产品，做小批量的样机测试。",
+		"p2_t1_7_d":"最终样品确认，大批量生产与出货。",
+
+		"p2_t2_1":"产品原型",
+		"p2_t2_2":"为生产设计",
+		"p2_t2_3":"大批量量产",
+
+		"p2_t2_1_d":"硬件产品原型是为了验证想法，或者是获取反馈的样品机器。原型不必和最终产品一模一样但是必须能够尽可能的展现产品的想法和创意。通常一个硬件产品模型包含外壳，硬件电路和可以工作的软件。利用3D打印机和模块化硬件，瑞莎有经验的设计师和工程师可以很快的帮助创业团队做出第一个硬件原型。",
+		"p2_t2_2_d":"当你有了第一个可以工作的硬件原型，得到了不少反馈，你开始考虑再多做一点设备，把成本再降低一些。这时候，我们需要针对生产重新设计(DFM)了。在DFM过程中，我们的目的是为了工程上和生产上的便利，同时降低成本和风险。我们不再用3D打印外壳了，改用模具，压缩，注塑等生产工艺来做外壳。我们要重新设计硬件电路以便成本最低，生产上最可靠。通常，我们会做一些小批量的样品来验证DFM，这些小批量的样品制作方式和最终产品一样，最终出来的样品也尽可能接近最终产品。",
+		"p2_t2_3_d":"在深圳的供应链优势加上瑞莎科技多年的积累，我们为客户提供全套生产服务，从模具到包装到配件，我们可以全部帮您搞定。内部的设计师，工程师跟外部合作伙伴工厂紧密配合，为您提供最优质的服务，把最好的产品交付到您的手上。与此同时，我们保持开放心态，在服务过程中，随时听取客户意见，信息开放透明，保证产品设计与质量。",
 
 		"hello":"获取报价",
 

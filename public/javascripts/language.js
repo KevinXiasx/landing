@@ -32,6 +32,10 @@ define(function(require, exports, module) {
         return sessionStorage.getItem('language');
     };
 
+    var getBackLang = function () {
+        return getLang() == 'zh' ? 'en' : 'zh';
+    }
+
     function SpanDoubleLang(page) { //这个类是在html中拥有txt属性的标签，会在切换中英文时，自动加载想对应文本
         this.page = page;
         this.renderPart = ['header', 'bottom'];
@@ -79,18 +83,25 @@ define(function(require, exports, module) {
         this.page = page;
     }
 
+    BtnDoubleLang.prototype.changIcon = function (lang) {
+        $('.changelanguage img').attr('src', '/images/'+lang+'.png');
+    }
+
     BtnDoubleLang.prototype.render = function(obj) {
+        this.changIcon(getBackLang());
+        var btnself = this;
         switch (this.page) {
             case 'home':
             case 'design':
                 $('.changelanguage').on('click', function() {
-                    obj.change(getLang() == 'zh' ? 'en' : 'zh');
+                    btnself.changIcon(getLang());
+                    obj.change(getBackLang());
                 });
                 break;
             case 'more':
             case 'project':
                 $('.changelanguage').on('click', function() {
-                    var switchToLang = (getLang() == 'zh') ? 'en' : 'zh';
+                    var switchToLang = getBackLang();
                     obj.setLang(switchToLang);
                     var hre = location.href;
                     location.href = hre.replace(/-[\w]+$/, '-' + switchToLang);

@@ -5,10 +5,10 @@ html{
 }
 
 .rotatebg-argument(@x,@y){
-	-moz-transform: rotate(-4deg) translate(@x ,@y);
-	-webkit-transform: rotate(-4deg) translate(@x ,@y);
-	-o-transform: rotate(-4deg) translate(@x ,@y);
-	transform: rotate(-4deg) translate(@x ,@y);
+	-moz-transform: rotate(0deg) translate(@x ,@y);
+	-webkit-transform: rotate(0deg) translate(@x ,@y);
+	-o-transform: rotate(0deg) translate(@x ,@y);
+	transform: rotate(0deg) translate(@x ,@y);
 }
 
 .rotatebg{
@@ -53,6 +53,10 @@ header{
 
 #sec-1{
 	position: relative;
+	h2{
+		width: 70%;
+		display: inline-block;
+	}
 	#row-1{
 		margin-top: 80px;
 		.title-line{
@@ -67,10 +71,6 @@ header{
 				width: 30%;
 				background-color: @radxa-blue;			
 			}
-			h1{
-				margin-top: 15px;
-				margin-bottom: 15px;
-			}
 		}
 	}
 	#row-2{
@@ -82,6 +82,9 @@ header{
 			margin-top: 25px;
 			padding: 0px;
 			min-height: 80px;
+			p{
+				margin: 0px;
+			}
 		}
 		img{
 			margin-top: 20px;
@@ -91,19 +94,21 @@ header{
 }
 
 #sec-2{
+	margin-top: 80px;
 	position: relative;
 	overflow: hidden;
 	#bg-2{
 		.rotatebg-argument(0px,0px);
-		top: 80px;
 		height: 120%;
 	}
+	p{
+		opacity: 0.8;
+	}
 	#left{
-		margin-top: 280px;
+		font-size: 16px;
 	}
 	#right {
 		#row-1{
-			margin-top: 100px;
 			.line{
 				height: 2px;
 				width: 442px;
