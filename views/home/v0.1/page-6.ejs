@@ -12,15 +12,15 @@
  	<div class="row pro">
  	<% if(projectname){%>
  		<% var offset = parseInt((12 - 3*projectname.length)/2); %>
- 		<% for( var s = 0; s < projectname.length; s++ ){ %>
+ 		<% for( var s = 0; s < projectname.length && s< 4; s++ ){ %>
  			<% if( s == 0) {%>
  				<div class="col-md-3 col-sm-6  col-md-offset-<%= offset %> projectborder showner" id="project-<%= s+1 %>">
  			<% }else{ %>
  				<div class="col-md-3 col-sm-6 projectborder showner" id="project-<%= s+1 %>">
  			<% } %>
- 			<a href="/project-/#<%= projectname[s].name %>" class="flexbox direc-col en-ch" >
+ 			<a href="/project-/#<%= 'proj-'+(s+1) %>" class="flexbox direc-col en-ch" >
 				<div class="project" id="project-1" style='background-image: url("<%= projectname[s].imgs %>-min");'></div>
-				<div class="project-text"><%= projectname[s].name %></div>
+				<div class="project-text" txt="proj<%= s+1 %>"></div>
 			</a>
 			</div>
  		<% } %>

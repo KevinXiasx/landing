@@ -20,7 +20,7 @@ router.get('/', function(req, res) {　//首页的路由
 		var projs = [];
 		var mdArray = da.getMdArray();
 		for (var i = 0; i < mdArray.length; i++) {
-			projs.push({'name': mdArray[i].name, 'imgs':mdArray[i].getImgSrc()[0]});
+			projs.push({'imgs':mdArray[i].getImgSrc()[0]});
 		};
 		res.render("home/landing", {"projectname": projs,'page':'home'});		
 	}
@@ -102,10 +102,20 @@ router.get('/gettext', function(req, res) {
 				res.send({});
 			else{
 				var txt = JSON.parse(data);
-				if( params.language == 'zh' )
-					res.send(txt.zh || txt.en);
-				if( params.language == 'en')
-					res.send(txt.en || txt.zh);
+				var l = txt[params.language] || txt.zh || txt.en;
+				if(params.page == 'home'){ //如果是首页的文本,需要额外加载项目的名字
+					hasLang(params.language, 'views/project', function (found, data){
+						if(!data){
+							res.send(l);
+							return ;
+						}
+						var mdArray = data.getMdArray();
+						for (var i = 0; i < mdArray.length; i++)
+							l['proj'+(i+1)] = mdArray[i].name;
+						res.send(l);
+					});
+				}else
+					res.send(l);
 			}
 		});
 	} catch(e){

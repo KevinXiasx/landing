@@ -2,7 +2,7 @@
 	"en":{
 		"language_active": "en",
 		
-		"h1":"Radxa Limited",
+		"h1":"Hardware Designer and manufacturer",
 
 		"more":"Learn More",
 
@@ -10,7 +10,7 @@
 
 		"p2_t1":"Dev Kits",
 		"p2_t2":"Open source hardware for everyone",
-		"p2_t3":"We provide open source hardware platform for prototyping, the hardware design is freely available from our website. These software/hardware design is verified and ready to use. Anyone can edit/modify to develop their own products.",
+		"p2_t3":"We provide open source hardware platform to make your prototype, the hardware design is freely available from our website. These software/hardware design is verified and ready to use. Anyone can edit/modify to develop their own products.",
 
 		"p3_t1":"Design service",
 		"p3_t2":"Idea to a real prototype that works",
@@ -32,7 +32,7 @@
 	"zh":{
 		"language_active": "zh",
 
-		"h1":"个性化的科技让生活更美好",
+		"h1":"开源的智能硬件方案提供商",
 
 		"more":"了解更多",
 

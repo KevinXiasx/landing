@@ -2,16 +2,16 @@
 <html>
 <head>
 	<title>Radxa project</title>
-<!--	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">product-->
-<!--	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">product-->
-	<link rel="stylesheet" href="/stylesheets/bootstrap/css/bootstrap.min.css"><!--deve-->
-	<link rel="stylesheet" href="/stylesheets/font-awesome/css/font-awesome.min.css"><!--deve-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"><!--product-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"><!--product-->
+<!--	<link rel="stylesheet" href="/stylesheets/bootstrap/css/bootstrap.min.css">deve-->
+<!--	<link rel="stylesheet" href="/stylesheets/font-awesome/css/font-awesome.min.css">deve-->
 	
 	<link rel="stylesheet" type="text/css" href="/stylesheets/homepage/font.css">
 	<link rel="stylesheet" type="text/css" href="/less/project.css">
 	<meta http-equiv="X-UA-Compatible" content="IE=10" />
 </head>
-
+ 
 <body data-spy="scroll" data-target=".hehee" data-offset="200">
 	<% include ../header %>
 	<div class="jumbotron marked">
@@ -31,7 +31,7 @@
 			<div class="centerframe col-md-9 col-xs-12 marked">
 				<% for( var s = 0; s < marks.length; s++ ){ %>
 					<section class="sec">
-					<div class="marktext">
+					<div class="marktext " id="<%= 'proj-'+(s+1) %>">
 						<%- marks[s].text %>
 					</div>
 					<% if (marks[s].imgs_min.length > 0) {%>

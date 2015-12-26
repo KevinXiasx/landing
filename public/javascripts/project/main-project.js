@@ -5,9 +5,8 @@ define(function(require) {
 	language.beginSwitch("project");
 	var $ = require('jquery'); 
 
-	$('.marktext').children('h2').each(function () {
-		$('.nav-pills.nav-stacked').append('<li><a class="page-scroll" href="#'+$(this).text().replace(/ /g, '-') +'">'+$(this).text() +'</a></li>');
-		$(this).attr('id', $(this).text().replace(/ /g, '-'));
+	$('.marktext h2').each(function () {
+		$('.nav-pills.nav-stacked').append('<li><a class="page-scroll" href="#'+$(this).parent().attr('id') +'">'+$(this).text() +'</a></li>');
 	});
 	
     $('a.page-scroll').bind('click', function(event) {
@@ -39,7 +38,6 @@ define(function(require) {
 		$('.videos figure').on('click', function () {
 			$('#portfolioModal2 video').attr('src', $('.videos video').attr('src'));
 		})
-
 	})
 });
 
