@@ -152,30 +152,31 @@ h3{
 			margin-top: 30px;
 		}
 	}
-}
-
-@media (min-width: @pcwidth){
-	#page-1 #row-2{
-		a{
-			.iconimg{
-				-moz-transition: all 0.2s linear;
-				-webkit-transition: all 0.2s linear;
-				-o-transition: all 0.2s linear;
-				transition: all 0.2s linear;
-				z-index: 10;
-			}
-			&:hover{
+	@media (min-width: @pcwidth){
+		#row-2{
+			a{
 				.iconimg{
-					-moz-transform: scale(1.2);
-					-webkit-transform: scale(1.2);
-					-o-transform: scale(1.2);
-					transform: scale(1.2);
-					background-color: white;
+					-moz-transition: all 0.2s linear;
+					-webkit-transition: all 0.2s linear;
+					-o-transition: all 0.2s linear;
+					transition: all 0.2s linear;
+					z-index: 10;
+				}
+				&:hover{
+					.iconimg{
+						-moz-transform: scale(1.2);
+						-webkit-transform: scale(1.2);
+						-o-transform: scale(1.2);
+						transform: scale(1.2);
+						background-color: white;
+					}
 				}
 			}
 		}
 	}
 }
+
+
 #page-2{
 	min-height: 700px;
 	padding-bottom: 0px;
@@ -280,12 +281,12 @@ h3{
 	width: 100%;
 	background-color: white;
 	min-height: 700px;
+	color: @radxa-blue;
 	.allcon{
 		width: 550px;
 	}
 	[txt='hello']{
 		font-size: 60px;
-		color: white;
 	}
 	.form{
 		.form-horizontal{
@@ -313,7 +314,6 @@ h3{
 			}
 		}
 		font-size: 30px;
-		color: @radxa-blue;
 		textarea,
 		input{
 			height: 100%;
@@ -321,7 +321,6 @@ h3{
 			font-size: 20px;
 		}
 		.form-control::-moz-placeholder{
-			color: @radxa-blue;
 			opacity: 0.4;
 		}
 		button{
@@ -412,6 +411,9 @@ h3{
 		border-bottom: 1px solid #EEE;
 		position: relative;
 		overflow: hidden;
+		h2 {
+			display: inline;
+		}
 	}
 	.pro{
 		width: 100%;

@@ -70,7 +70,7 @@ var getip =  function (req) {
 var isChina = function(req, cb){
 	var ip = getip(req);
 	if( ip == '127.0.0.1' ){
-		cb(true);
+		cb(false);
 		return ;
 	}
 	var intIp = strip_to_Intip(ip);

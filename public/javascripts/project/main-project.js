@@ -6,10 +6,18 @@ define(function(require) {
 	var $ = require('jquery'); 
 
 	$('.marktext').children('h2').each(function () {
-		$('.nav-pills.nav-stacked').append('<li><a class="page-scroll" href="#'+$(this).text() +'">'+$(this).text() +'</a></li>');
-		$(this).attr('id', $(this).text());
+		$('.nav-pills.nav-stacked').append('<li><a class="page-scroll" href="#'+$(this).text().replace(/ /g, '-') +'">'+$(this).text() +'</a></li>');
+		$(this).attr('id', $(this).text().replace(/ /g, '-'));
 	});
 	
+    $('a.page-scroll').bind('click', function(event) {
+        var $anchor = $(this);
+        console.log('here');
+        $('html, body').stop().animate({
+            scrollTop: $($anchor.attr('href')).offset().top-50
+        }, 700);
+        event.preventDefault();
+    }); 
 
 	$(document).ready(function () {
 		$('a.portfolio-link').on("click", function () {

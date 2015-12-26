@@ -120,12 +120,12 @@ header{
 	width: 100%;
 	background-color: white;
 	min-height: 700px;
+	color: @radxa-blue;
 	.allcon{
 		width: 550px;
 	}
 	[txt='hello']{
 		font-size: 60px;
-		color: black;
 	}
 	.form{
 		.form-horizontal{
@@ -168,6 +168,11 @@ header{
 			height: 60px;
 			font-size: 30px;
 			color: white;
+			background-color: @radxa-blue;
+			border: 3px solid white;
+			&:hover{
+				background-color:@radxa-blue + #111111;
+			}
 		}
 	}
 }
