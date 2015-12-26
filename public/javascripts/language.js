@@ -104,7 +104,7 @@ define(function(require, exports, module) {
                     var switchToLang = getBackLang();
                     obj.setLang(switchToLang);
                     var hre = location.href;
-                    location.href = hre.replace(/-[\w]+$/, '-' + switchToLang);
+                    location.href = hre.replace(/-[a-zA-Z]+/, '-' + switchToLang);
                 });
                 break;
             default:
