@@ -5,35 +5,39 @@
 .bottomframe {
     a {
         text: expression(target="_blank");
+        display: block;
+        opacity: 0.5;
+        color:black;
+        &:hover{
+            color:black;
+            text-decoration:none;
+        }
     }
     width: 100%;
     background-color:@radxa-main;
-    font-size:12px;
-    .col {
-        .bmtitle {
-            font-size: 15px;
-        }
-        p{
-            margin-bottom: 3px;
-        }
-        .links span {
-            display: inline-block;
-            min-width: 70px;
-            margin-bottom: 3px;
-        }
-    }
+    font-size:15px;
     padding-bottom:30px;
+    padding-top:30px;
     hr{
         border-color: #ccc;
     }
-    .content{
+    .line{
+        border-right:1px solid #E8E8E8;
     }
+    @media (max-width: 768px) { 
+        figure{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            display: -webkit-flex;
+            -webkit-justify-content: center;
+            -webkit-align-items: center;
+        }
+    } 
     .copyright{
-        border-top: 1px solid #ccc;
-        span{
+        img, h6{
             display: inline-block;
-            margin-top: 10px;
-            padding-right: 50px;
         }
     }
 }
