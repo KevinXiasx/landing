@@ -20,8 +20,7 @@ var loggers = log4js.getLogger('app');
 loggers.setLevel('INFO');
 
 // uncomment after placing your favicon in /public
-//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
-
+app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(log4js.connectLogger(log4js.getLogger("http"), { level: 'auto' }));
 app.use(lessMiddleware(path.join(__dirname ,'public')));
 

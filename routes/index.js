@@ -20,6 +20,8 @@ router.get('/', function(req, res) {　//首页的路由
 		var projs = [];
 		var mdArray = da.getMdArray();
 		for (var i = 0; i < mdArray.length; i++) {
+			if(!mdArray[i].getImgSrc()[0])
+				continue;
 			projs.push({'imgs':mdArray[i].getImgSrc()[0]});
 		};
 		res.render("home/landing", {"projectname": projs,'page':'home'});		

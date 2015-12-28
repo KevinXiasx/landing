@@ -100,15 +100,17 @@ MarkFolder.prototype.simpleParse = function(cb) {
 			logger.error(err);
 			cb(err);
 		}else{
-			for (var i = 0; i < files.length; i++)
-				Self.files.push(files[i]);
+			for (var i = 0; i < files.length; i++){
+				if(/\.d?md$/i.exec(files[i]))
+					Self.files.push(files[i]);
+			}
 			cb();
 		}
 	})
 };
 
 
-/*	深度parse，只读取文件夹内文件的名字，且读取内容，若调用时，未进行浅parse，则先调用simpleParse
+/*	深度parse，读取文件夹内文件的名字，且读取内容，若调用时，未进行浅parse，则先调用simpleParse
 
    	cb : 回调函数，参数只有一个err
 */
@@ -147,7 +149,7 @@ MarkFolder.prototype.deepParse = function(cb) {
 		_deepParse_();
 };
 
-//返回非banner的MarkFile实例数组
+//返回banner的MarkFile实例数组
 MarkFolder.prototype.getDmd = function () {
 	for (var i = 0; i < this.mkfiles.length; i++) {
 		if (this.mkfiles[i].type === '.dmd')
@@ -155,7 +157,7 @@ MarkFolder.prototype.getDmd = function () {
 	};
 }
 
-//返回banner的MarkFile实例
+//返回非banner的MarkFile实例
 MarkFolder.prototype.getMdArray= function () {
 	var result = [];
 	for (var i = 0; i < this.mkfiles.length; i++) {

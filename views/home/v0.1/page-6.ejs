@@ -11,9 +11,11 @@
 </div>
  	<div class="row pro">
  	<% if(projectname){%>
- 		<% var offset = parseInt((12 - 3*projectname.length)/2); %>
+ 		<% var offset = parseInt((12 - 3*projectname.length)/2); var first = 0;%>
  		<% for( var s = 0; s < projectname.length && s< 4; s++ ){ %>
- 			<% if( s == 0) {%>
+ 			<% if( !projectname[s].imgs) continue;%>
+ 			<% if( !first ) {%>
+ 				<% first++ ;%>
  				<div class="col-md-3 col-sm-6  col-md-offset-<%= offset %> projectborder showner" id="project-<%= s+1 %>">
  			<% }else{ %>
  				<div class="col-md-3 col-sm-6 projectborder showner" id="project-<%= s+1 %>">
