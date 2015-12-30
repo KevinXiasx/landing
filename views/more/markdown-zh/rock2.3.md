@@ -6,6 +6,8 @@ Rock2 是面向高性能应用的开发平台，采用核心板+底板的方式�
 
 #### 典型应用
 
-音乐播放器   机器人  大屏幕广告机 
+媒体设备   机器人  一体机   车载娱乐
+
+[了解更多关于 Rock2 系列](http://wiki.radxa.com/Rock2)
 
 ![img](/images/plat/rock2.png)
