@@ -6,8 +6,8 @@
     a {
         text: expression(target="_blank");
         display: block;
+        color: black;
         opacity: 0.5;
-        color:black;
         &:hover{
             color:black;
             text-decoration:none;
@@ -24,6 +24,62 @@
     .line{
         border-right:1px solid #E8E8E8;
     }
+    .content{
+        .icons{
+            line-height: 0px;
+            @linkicon:50px;
+            .right, .left{
+                display: inline-block;
+            }
+            .up{
+                .left{
+                    font-size: @linkicon;
+                    padding-left: @linkicon*0.07;
+                    padding-right: @linkicon*0.07;
+                }
+                .right{
+                    font-size: @linkicon/2;
+                    a{
+                        padding-right: @linkicon/2*0.07;
+                        padding-left: @linkicon/2*0.07;
+                    }
+                }
+            }
+            .down{
+                font-size: @linkicon/2;
+                a{
+                    display: inline-block;
+                    padding-right: @linkicon/2*0.07;
+                    padding-left: @linkicon/2*0.07;
+                }
+            }
+        }
+        .linkicon-1{
+            color:black;
+            opacity: 1;
+        }
+        .linkicon-2{
+            color:#308048;
+            opacity: 1;
+        }
+        .linkicon-3{
+            color:#9575CD;
+            opacity: 1;
+        }
+        .linkicon-4{
+            color:#4fc3f7;
+            opacity: 1;
+        }
+        .linkicon-5{
+            color:#4D4D4D;
+            opacity: 1;
+        }
+        .linkicon-6{
+            color: #FF1493;
+            opacity: 1;
+        }
+    }
+
     @media (max-width: 768px) { 
         figure{
             display: flex;
