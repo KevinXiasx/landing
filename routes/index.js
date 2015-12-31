@@ -142,15 +142,11 @@ router.post('/contactform', function(req, res) {
 });
 
 router.get('/about-:lang/:type', function (req, res) {
-	console.log(req.params.lang);
-	console.log(req.params.type);
 	if( !/^en$|^zh$/.test(req.params.lang) || !/^company$|^business$/.test(req.params.type) ){
 		res.send('not found');
 		return ;
 	}
 	hasLang(req.params.lang, 'views/about/'+req.params.type, function(found, data){
-		console.log(found);
-		console.log(data);
 		if(!data){
 			res.send('not found');
 			return ;
