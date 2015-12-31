@@ -36,7 +36,6 @@
 					</div>
 					<% if (marks[s].imgs_min.length > 0) {%>
 					<div class="imgswrap">
-						<h3 class="text-muted">Photo</h3>
 						<% for( var k = 0; k < (marks[s].imgs_min).length; k++ ){ %>	
 							<a href="#portfolioModal1" class="portfolio-link" data-toggle="modal" index="a<%= s %>-<%= (marks[s].imgs_min).length %>-<%= k %>">
 								<%- (marks[s].imgs_min)[k] %>
