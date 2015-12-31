@@ -1,14 +1,14 @@
 {
 	"zh":{
 		"footer_sec1_t": "关于瑞莎",
-		"footer_sec1_p1": {"text":"公司介绍", "href":"http://wiki.radxa.com/About"},
+		"footer_sec1_p1": "公司介绍",
 		"footer_sec1_p2": "联系我们",
-		"footer_sec1_p3": {"text":"加入瑞莎", "href":"#"},
+		"footer_sec1_p3": "加入瑞莎",
 
 		"footer_sec2_t": "购买售后",
-		"footer_sec2_p1": {"text":"代理商", "href":"#"},
-		"footer_sec2_p2": {"text":"保修条例", "href":"#"},
-		"footer_sec2_p3": {"text":"商务合作", "href":"#"},
+		"footer_sec2_p1": "代理商",
+		"footer_sec2_p2": "保修条例",
+		"footer_sec2_p3": "商务合作",
 
 		"footer_sec3_t": "服务支持",
 		"footer_sec3_p1": {"text":"瑞莎文档", "href":"#"},
@@ -16,27 +16,28 @@
 		"footer_sec3_p3": {"text":"中文论坛", "href":"#"},
 
 		"footer_sec4_t": "关注我们",
-		"footer_sec4_p1": {"text":"官方微博", "href":"#"},
-		"footer_sec4_p2": {"text":"微信公众号", "href":"#"},
-		"footer_sec4_p3": {"text":"开源项目托管", "href":"#"},
 
-		"footer_copyright":"版权所有2016，深市瑞莎科技有限公司，深圳市市场监督管理局440301109182948号",
-
-		"bm_p0":"版权所有©2015，瑞莎科技",
-		"bm_p1":"RADXA是深圳市瑞莎科技有限公司的注册商标",
-		"bm_p2":"关注我们",
-		"bm_p3":"联系我们",
-		"phone":"电话:0755-23948936",
-		"address":"地址:深圳市南山区西丽同发路6号T6艺术区二楼A21"
+		"footer_copyright":"版权所有2016，深市瑞莎科技有限公司，深圳市市场监督管理局440301109182948号"
 	},
 
 	"en":{
-		"company": "About", 
-		"bm_p0":"Copyright©2015 Radxa Limited",
-		"bm_p1":"RADXA® is a registered trademark of Radxa Limited",
-		"bm_p2":"Follow Us",
-		"bm_p3":"Contact Us",
-		"phone":"Phone: (86) 0755-23948936",
-		"address":"Address: A21, 2F, T6 ART ZONE, No.6 TongFa Road, XiLi Town, Nanshan, Shenzhen, China"
+		"footer_sec1_t": "关于瑞莎",
+		"footer_sec1_p1": "公司介绍",
+		"footer_sec1_p2": "联系我们",
+		"footer_sec1_p3": "加入瑞莎",
+
+		"footer_sec2_t": "购买售后",
+		"footer_sec2_p1": "代理商",
+		"footer_sec2_p2": "保修条例",
+		"footer_sec2_p3": "商务合作",
+
+		"footer_sec3_t": "服务支持",
+		"footer_sec3_p1": {"text":"瑞莎文档", "href":"#"},
+		"footer_sec3_p2": {"text":"技术讨论群", "href":"#"},
+		"footer_sec3_p3": {"text":"中文论坛", "href":"#"},
+
+		"footer_sec4_t": "关注我们",
+
+		"footer_copyright":"版权所有2016，深市瑞莎科技有限公司，深圳市市场监督管理局440301109182948号"
 	}
 }

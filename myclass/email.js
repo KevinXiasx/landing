@@ -3,7 +3,7 @@ var exec = require('child_process').exec,
     child;
 var ssmptconfig = fs.readFileSync('/etc/ssmtp/ssmtp.conf').toString('utf8');
 var sendServer = ssmptconfig.match(/^AuthUser=([@\w.]+\.com)/m)[1];
-var recivce = 'xxiiaass@sina.com';
+var recivce = ssmptconfig.match(/^ForUser=([@\w.]+\.com)/m)[1];
 
 var emailtom = function (centent) {
 	var con = "To:"+recivce+"\nFrom: "+sendServer+"\nSubject: Landing page message!\n\n"

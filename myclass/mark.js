@@ -119,6 +119,8 @@ MarkFolder.prototype.deepParse = function(cb) {
 	var _deepParse_ = function () {
 		Self.mkfiles = [];
 		var guard = Self.files.length;
+		if(!guard)
+			cb();
 		var _getPackFunc_ = function () {
 			var _tmpmk_ = {};
 			return function (name) {
@@ -180,7 +182,7 @@ MarkFolder.prototype.getMdArray= function () {
 var hasLang = function(lang, foldername, cb) {
 	var found = false;
 	fs.readdir(foldername, function (err, files) {
-		if(err){
+		if(err || files.length === 0){
 			logger.error(err, found);
 			cb(found);
 		}else{

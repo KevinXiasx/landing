@@ -70,7 +70,7 @@ define(function(require, exports, module) {
 
     function LinkDoubleLang() { //这个类是首页上，顶部上的导航按钮，会在切换中英文时，自动切换链接目标的语言
         this.render = function() {
-            $('.en-ch').each(function() {
+            $('.en-zh').each(function() {
                 //将该类标签中的href替换为目前语言的链接， 正则表达式匹配将替换原href中‘-xx/’中的xx
                 var hrefold = $(this).attr('href');
                 var hrefnew = hrefold.replace(/(^\/[\w]+)-?[\w]{0,3}/, '$1-' + getLang());

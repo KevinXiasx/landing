@@ -1,23 +1,23 @@
 @import "animation.less";
 h1 {
-    Font-family: "Roboto-Light", "Microsoft YaHei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
+    font-family: "Roboto-Light", "Helvetica", "Arial", "Hiragino Sans GB", "Microsoft Yahei", "微软雅黑", "STHeiti", "华文细黑";
     font-size: 42px;
 }
 
 h2 {
     color: @radxa-sdark;
-    font-family: "Candara", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+    font-family: "Candara", "Helvetica", "Arial", "Hiragino Sans GB", "Microsoft Yahei", "微软雅黑", "STHeiti", "华文细黑";
     font-size: 30px;
 }
 
 h3 {
     color: #686767;
-    font-family: "Candara", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+    font-family: "Candara", "Helvetica", "Arial", "Hiragino Sans GB", "Microsoft Yahei", "微软雅黑", "STHeiti", "华文细黑";
     font-size: 20px;
 }
 
 .bigpage {
-    Font-family: "Roboto-Light", "Microsoft YaHei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
+    font-family: "Roboto-Light", "Helvetica", "Arial", "Hiragino Sans GB", "Microsoft Yahei", "微软雅黑", "STHeiti", "华文细黑";
     &:hover {
         text-decoration: none;
     }
@@ -100,9 +100,10 @@ h3 {
     }
     .morebtn button {
         background-color: inherit;
-        border: 2px solid @radxa-blue;
-        color: @radxa-oring;
         border-radius: 0px;
+        background-color: @radxa-blue;
+        border: none;
+        color: white;
         height: 45px;
         width: 150px;
         &:after {
@@ -273,7 +274,6 @@ h3 {
                 width: 100%;
             }
         }
-        h3,
         .morebtn {
             margin-top: 50px;
         }
@@ -284,9 +284,9 @@ h3 {
     width: 100%;
     background-color: white;
     min-height: 700px;
-    color: @radxa-blue;
     .allcon {
         width: 550px;
+        color: @radxa-blue;
     }
     [txt='hello'] {
         font-size: 60px;
@@ -457,7 +457,7 @@ h3 {
     #row-2 {
         margin-top: 70px;
         .col {
-            height: 365px;
+            height: 311px;
         }
         @media (max-width: @mdwidth ) {
             .col {
@@ -466,6 +466,9 @@ h3 {
             .carousel-control {
                 background-image: none;
             }
+        }
+        .morebtn {
+            margin-top: 50px;
         }
         #carousel-example-generic {
             .carousel-indicators {
