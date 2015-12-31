@@ -21,23 +21,23 @@
 	},
 
 	"en":{
-		"footer_sec1_t": "关于瑞莎",
-		"footer_sec1_p1": "公司介绍",
-		"footer_sec1_p2": "联系我们",
-		"footer_sec1_p3": "加入瑞莎",
+		"footer_sec1_t": "About",
+		"footer_sec1_p1": "Company info",
+		"footer_sec1_p2": "Contact Us",
+		"footer_sec1_p3": "Join Radxa",
 
-		"footer_sec2_t": "购买售后",
-		"footer_sec2_p1": "代理商",
-		"footer_sec2_p2": "保修条例",
-		"footer_sec2_p3": "商务合作",
+		"footer_sec2_t": "Market",
+		"footer_sec2_p1": "Distributors",
+		"footer_sec2_p2": "Warranty",
+		"footer_sec2_p3": "Business inquery",
 
-		"footer_sec3_t": "服务支持",
-		"footer_sec3_p1": {"text":"瑞莎文档", "href":"#"},
-		"footer_sec3_p2": {"text":"技术讨论群", "href":"#"},
-		"footer_sec3_p3": {"text":"中文论坛", "href":"#"},
+		"footer_sec3_t": "Support",
+		"footer_sec3_p1": {"text":"Wiki", "href":"#"},
+		"footer_sec3_p2": {"text":"Discussion Group", "href":"#"},
+		"footer_sec3_p3": {"text":"Forum", "href":"#"},
 
-		"footer_sec4_t": "关注我们",
+		"footer_sec4_t": "Follow us",
 
-		"footer_copyright":"版权所有2016，深市瑞莎科技有限公司，深圳市市场监督管理局440301109182948号"
+		"footer_copyright":"All rights reserved 2016, Shenzhen Radxa Limited"
 	}
 }
