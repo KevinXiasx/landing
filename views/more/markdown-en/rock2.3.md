@@ -1,6 +1,6 @@
 ## Rock2
 
-Higher performance SoM with base board
+*Higher performance SoM with base board*
 
 Rock2 targets are high performance application development platform, made by the SoM plus the base board, which allow the users can reuse the design and adapt for their own application quickly. With high performance Cortex-A17 CPU, Mali T764 GPU, 4k hardware decoding, and max 4GB ram, rock2 som is capable of computing and multi media application
 

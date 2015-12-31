@@ -1,6 +1,7 @@
 ## Rock Pro/Lite
 
-四核ARM Linux/Android 开发平台 
+*四核ARM Linux/Android 开发平台*
+
 Rock Pro 和 Rock Lite是面向DIY爱好者的开发平台。
 
 Rock Pro和Rock Lite拥有入门级PC的性能，可以胜任瘦客户端，图像识别，1080p视频播放等任务。

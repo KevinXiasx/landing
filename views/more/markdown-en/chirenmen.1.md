@@ -1,6 +1,6 @@
 ## CHIRENMEN
 
-Web of Things dev platform base on Firefox OS
+*Web of Things dev platform base on Firefox OS*
 
 CHIRIMEN Board is designed for Web developers to MAKE Real things 
 that are connected to the Web via Browser technologies
