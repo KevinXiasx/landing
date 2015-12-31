@@ -2,8 +2,8 @@ var http = require('http');
 
 var mongoose = require('mongoose');
 
-var opts = { /*opt*/};
-mongoose.connect('mongodb://127.0.0.1/landingpage', opts);
+var opts = { user:"landingpage",pass:"R0ck.me@sz"};
+mongoose.connect('mongodb://127.0.0.1:27612/landingpage', opts);
 
 var ipaddr = new mongoose.Schema({
         ipfrom:Number,
