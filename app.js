@@ -6,7 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var lessMiddleware = require('less-middleware');
 var routes = require('./routes/index');
-//var redirect = require('./routes/redirect');
+var redirect = require('./routes/redirect');
 
 var app = express();
 
@@ -32,15 +32,15 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
-//app.use('/', redirect);
+app.use('/', redirect);
 
 // catch 404 and forward to error handler
 //404 page redirect to '/'
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
   err.status = 404;
-  //res.writeHead(302, {'Location' : '/'});
-  //res.end();
+  res.writeHead(302, {'Location' : '/'});
+  res.end();
   next(err);
 });
 

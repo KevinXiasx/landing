@@ -124,6 +124,7 @@ define(function(require, exports, module) {
     };
 
     LangRender.prototype.render = function() {
+        $('html').attr('lang', getLang());
         this.span.render();
         this.link.render();
         this.btn.render(this);
@@ -133,6 +134,7 @@ define(function(require, exports, module) {
         if (getLang() == lang)
             return;
         this.setLang(lang);
+        $('html').attr('lang', getLang());
         this.span.render();
         this.link.render();
     };
