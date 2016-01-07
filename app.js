@@ -30,7 +30,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
-app.use('/', redirect);
 
 // catch 404 and forward to error handler
 //404 page redirect to '/'
