@@ -6,14 +6,12 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var lessMiddleware = require('less-middleware');
 var routes = require('./routes/index');
-var redirect = require('./routes/redirect');
-
+var url = require('url');
 var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-
 
 var log4js = require('log4js');
 
@@ -37,11 +35,12 @@ app.use('/', redirect);
 // catch 404 and forward to error handler
 //404 page redirect to '/'
 app.use(function(req, res, next) {
-  var err = new Error('Not Found');
-  err.status = 404;
-  res.writeHead(302, {'Location' : '/'});
+  var redirecUrl = req.url.replace(/\/$/, '');
+  if(/^\/(Rock|Rock2)(\/\S*)?$|^\/mw\//i.test(redirecUrl))
+    res.writeHead(302, {'Location' : url.resolve("http://wiki.radxa.com", redirecUrl)});
+  else
+    res.writeHead(302, {'Location' : '/'});
   res.end();
-  next(err);
 });
 
 // production error handler
