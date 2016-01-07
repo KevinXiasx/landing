@@ -26,10 +26,10 @@
 		"footer_sec1_p2": "Contact Us",
 		"footer_sec1_p3": "Join Radxa",
 
-		"footer_sec2_t": "Market",
-		"footer_sec2_p1": "Distributors",
-		"footer_sec2_p2": "Warranty",
-		"footer_sec2_p3": "Business inquery",
+		"footer_sec2_t": "Buy",
+		"footer_sec2_p1": "Radxa Store",
+		"footer_sec2_p2": "Distributors",
+		"footer_sec2_p3": "Warranty",
 
 		"footer_sec3_t": "Support",
 		"footer_sec3_p1": {"text":"Wiki", "href":"#"},
