@@ -10,21 +10,21 @@
 		"menu_4":"支持",
 
 		"link_1":{"text":"维基", "href":"http://wiki.radxa.com/Home"},
-		"link_2":{"text":"社区", "href":"http://cn.radxa.com/forum.php"},
-		"link_3":{"text":"中文文档", "href":"http://docs.radxa.us/"}
+		"link_2":{"text":"论坛", "href":"http://cn.radxa.com/forum.php"},
+		"link_3":{"text":"文档", "href":"http://docs.radxa.us/"}
 	},
 	"en":{
 		"language_active": "en",
 		"language_2":"ch",
 
 		"home":"Home",
-		"menu_1":"Product",
+		"menu_1":"Products",
 		"menu_2":"Service",
 		"menu_3":"Case",
-		"menu_4":"Support",
+		"menu_4":"Community",
 
 		"link_1":{"text":"Wiki", "href":"http://wiki.radxa.com/Home"},
-		"link_2":{"text":"Document-ZH", "href":"http://docs.radxa.us/"},
-		"link_3":{"text":"Community", "href":"http://talk.radxa.com/"}
+		"link_2":{"text":"Github", "href":"https://github.com/radxa"},
+		"link_3":{"text":"Radxa Talk", "href":"http://talk.radxa.com/"}
 	}
 }
