@@ -102,14 +102,13 @@ define(function(require, exports, module) {
 		pageshowlist['page-5'] = function () {
 			if( arrive('#page-5') ){
 				var timerout = 0;
-				$('#page-5 #text1 .title').transition({scale:2, y:100}, 0);
-				myshowfunc($('#page-5 .allcontent'), {scale:0.9, y:100}, {"amtime":1000});
-				setTimeout(function(){$('#page-5 #text1 .title').transition({scale:1, y:0}, 1000)},timerout+=1500);
-				setTimeout(function(){myshowfunc( $("#page-5  #partner-1"),{y:100}, {"amtime":1500})},timerout+=250);
-				setTimeout(function(){myshowfunc( $("#page-5  #partner-2"),{y:100}, {"amtime":1500})},timerout+=250);
-				setTimeout(function(){myshowfunc( $("#page-5  #partner-3"),{y:100}, {"amtime":1500})},timerout+=250);
-				setTimeout(function(){myshowfunc( $("#page-5  #partner-4"),{y:100}, {"amtime":1500})},timerout+=250);
-				setTimeout(function(){myshowfunc( $("#page-5  #partner-5"),{y:100}, {"amtime":1500})},timerout+=250);
+				$('#page-5 #text1 .title').transition({scale:2, y:50}, 0);
+				myshowfunc($('#page-5 .allcontent'), {scale:0.9, y:100}, {"amtime":0});
+				setTimeout(function(){$('#page-5 #text1 .title').transition({scale:1, y:0}, 1000)},timerout+=700);
+				setTimeout(function(){myshowfunc( $("#page-5  #partner-hvpd"),{y:100}, {"amtime":800})},timerout);
+				setTimeout(function(){myshowfunc( $("#page-5  #partner-spectek"),{y:100}, {"amtime":800})},timerout);
+				setTimeout(function(){myshowfunc( $("#page-5  #partner-avalue"),{y:100}, {"amtime":800})},timerout);
+				setTimeout(function(){myshowfunc( $("#page-5  #partner-robotic"),{y:100}, {"amtime":800})},timerout+=500);
 				$(document).off('scroll', pageshowlist['page-5']);
 			}
 		}
