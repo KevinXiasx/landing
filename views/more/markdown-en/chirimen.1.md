@@ -1,4 +1,4 @@
-## CHIRENMEN
+## CHIRIMEN
 
 *Web of Things dev platform base on Firefox OS*
 
@@ -9,7 +9,7 @@ FirefoxOS 2.0 (or later) is installed, and CHIRIMEN simply extends GPI
 O/I2C WebAPIs to control devices. Web developers maintain own ordin
 ary development style.
 
-[Learn more about CHIRENMEN](http://mozopenhard.mozillafactory.org/)
+[Learn more about CHIRIMEN](http://mozopenhard.mozillafactory.org/)
 
 
-![img](/images/plat/chirenmen.png)
+![img](/images/plat/chirimen.png)
